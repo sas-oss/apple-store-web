@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac - Apple Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Css/mac.css">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <header id="navbar" class="nav-bar">
+        <div class="nav-container">
+            <nav class="nav-content">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <i class="fa fa-apple mr-2"></i>Store
+                </a>
+
+                <!-- 主导航 - 桌面版 -->
+                <div class="main-nav">
+                    <a href="iphone.html" class="nav-link">iPhone</a>
+                    <a href="ipad.html" class="nav-link">iPad</a>
+                    <a href="mac.html" class="nav-link active">Mac</a>
+                    <a href="watch.html" class="nav-link">Watch</a>
+                    <a href="airpods.html" class="nav-link">AirPods</a>
+                    <a href="accessories.html" class="nav-link">配件</a>
+                </div>
+
+                <!-- 导航工具 -->
+                <div class="nav-tools">
+                    <a href="#" class="tool-icon search-icon">
+                        <i class="fa fa-search text-lg"></i>
+                    </a>
+                    <a href="checkout.html" class="tool-icon cart-icon">
+                        <i class="fa fa-shopping-bag text-lg"></i>
+                        <span id="cart-count" class="cart-number">0</span>
+                    </a>
+
+                    <!-- 移动端菜单按钮 -->
+                    <button id="mobile-menu-button" class="tool-icon menu-icon">
+                        <i class="fa fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- 移动端菜单 -->
+            <div id="mobile-menu" class="mobile-menu hidden">
+                <div class="mobile-menu-items">
+                    <a href="iphone.html" class="mobile-menu-item">iPhone</a>
+                    <a href="ipad.html" class="mobile-menu-item">iPad</a>
+                    <a href="mac.html" class="mobile-menu-item active">Mac</a>
+                    <a href="watch.html" class="mobile-menu-item">Watch</a>
+                    <a href="airpods.html" class="mobile-menu-item">AirPods</a>
+                    <a href="accessories.html" class="mobile-menu-item">配件</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- 英雄区域 -->
+        <section class="hero-banner">
+            <div class="hero-overlay"></div>
+            <div class="container hero-container">
+                <div class="hero-text">
+                    <h1 class="hero-title">Mac 系列</h1>
+                    <p class="hero-desc">
+                        强大性能与精美设计的完美结合，为创意和生产力而生。
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#products" class="btn primary-btn">
+                            浏览产品
+                        </a>
+                        <a href="#compare" class="btn secondary-btn">
+                            对比型号
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 产品分类 -->
+        <section class="section product-categories">
+            <div class="container">
+                <h2 class="section-title">Mac 系列产品</h2>
+
+                <div class="category-grid">
+                    <a href="#macbook-air" class="category-item">
+                        <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/mba13-skyblue-select-202503?wid=904&hei=840&fmt=jpeg&qlt=90&.v=M2RyY09CWXlTQUp1KzEveHR6VXNxcTQ1bzN1SitYTU83Mm9wbk1xa1lWNC9UNzNvY2N5NXJTTDQ2YkVYYmVXakJkRlpCNVhYU3AwTldRQldlSnpRa0lIV0Fmdk9rUlVsZ3hnNXZ3K3lEVlk"
+                            alt="MacBook Air" class="category-img">
+                        <div class="category-info">
+                            <h3 class="category-name">MacBook Air</h3>
+                            <p class="category-desc">轻薄便携，性能强劲</p>
+                            <span class="more-link">了解更多 <i class="fa fa-arrow-right ml-1"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="#macbook-pro" class="category-item">
+                        <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/mbp14-spaceblack-select-202410?wid=904&hei=840&fmt=jpeg&qlt=90&.v=YnlWZDdpMFo0bUpJZnBpZjhKM2M3VGhTSEZFNjlmT2xUUDNBTjljV1BxWVk4UDMvOWNCVUEyZk1VN2FtQlpZWXZvdUZlR0V0VUdJSjBWaDVNVG95Yk15Y0c3T3Y4UWZwZExHUFdTUC9lN28"
+                            alt="MacBook Pro" class="category-img">
+                        <div class="category-info">
+                            <h3 class="category-name">MacBook Pro</h3>
+                            <p class="category-desc">M4专业级性能，极致体验</p>
+                            <span class="more-link">了解更多 <i class="fa fa-arrow-right ml-1"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="#imac" class="category-item">
+                        <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/imac-touch-id-silver-selection-hero-202410?wid=904&hei=840&fmt=jpeg&qlt=90&.v=blo1UmdobTcvdmwxbW9CbkdzZElFamFGVW4xbG4zQXlzZHFqeTdVbnk5c2hKdGhncm10RHd0YkhlWlRsVmdZaWFWbzF5MURaV05qZmt0VzRramY1VFlKWlgzZzdyUXEzcGE2bUxYbWVvdHB5WERrTk5yYThodUZzbmcwa01YVkY"
+                            alt="iMac" class="category-img">
+                        <div class="category-info">
+                            <h3 class="category-name">iMac</h3>
+                            <p class="category-desc">一体化设计，惊艳表现</p>
+                            <span class="more-link">了解更多 <i class="fa fa-arrow-right ml-1"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 产品列表 -->
+        <section id="products" class="section product-list">
+            <div class="container">
+                <h2 class="section-title">热门 Mac 机型</h2>
+                <div class="product-grid">
+                    <div class="product-list">
+                        <!-- MacBook Air M2 -->
+                        <div id="macbook-air" class="product-item">
+                            <div class="product-img-container">
+                                <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/mba15-silver-select-202503?wid=904&hei=840&fmt=jpeg&qlt=90&.v=YmVzOXFnNklRUk9jbTVLMFNybEcyS3RMSzFxakdDZHFiUkYyaDVGbE5SQnBXalhMVU5sWTJOK1MxYmlTTi9sTmdsbGZlRHV0Q3JlbHJxWXRlWjZpMmtNQU41aUVDNXRLT1EweGFCRHB1Rkk"
+                                    alt="MacBook Air M4" class="product-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">MacBook Air 15英寸 (M4)</h3>
+                                <p class="product-desc">轻薄设计，M4 芯片，全天续航</p>
+                                <div class="product-price">
+                                    <span class="price-number">¥9,499</span>
+                                    <span class="price-suffix">起</span>
+                                </div>
+                                <div class="product-actions">
+                                    <a href="product-macbookair.html" class="btn-detail">
+                                        查看详情
+                                    </a>
+                                    <button class="btn-addcart" data-product="MacBook Air M2">
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MacBook Pro 14 -->
+                    <div class="product-card" id="macbook-pro">
+                        <div class="product-img-container">
+                            <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/mbp14-silver-select-202410?wid=904&hei=840&fmt=jpeg&qlt=90&.v=TmFyblM0VWE4L3UyTlNOSEdPY3VqV2d4R2cxNzZhWDBDYmdmTDE5MDg3NXBXalhMVU5sWTJOK1MxYmlTTi9sTmdsbGZlRHV0Q3JlbHJxWXRlWjZpMmtsT0w0bW9TRXVmSzM3RnZrKzhDMTA"
+                                alt="MacBook Pro 14" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">MacBook Pro 14 英寸 (M4 M4 Pro M4 Max)</h3>
+                            <p class="product-desc">ProMotion 技术，Mini-LED 显示屏</p>
+                            <div class="product-price">
+                                <span class="price">¥15,999</span>
+                                <span class="price-suffix">起</span>
+                            </div>
+                            <div class="product-actions">
+                                <a href="product-macbookpro14.html" class="btn primary-btn action-btn">
+                                    查看详情
+                                </a>
+                                <button class="add-to-cart-btn" data-product="MacBook Pro 14">
+                                    <i class="fa fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- iMac 24 -->
+                    <div id="imac" class="product-card">
+                        <div class="product-img-container">
+                            <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/imac-touch-id-purple-selection-hero-202410?wid=904&hei=840&fmt=jpeg&qlt=90&.v=Sit0QW1LSHN2S0FGTFhNRzlQTis3V3FKcVRTNUhXNXFBWGJyVHVWR0JFa2hKdGhncm10RHd0YkhlWlRsVmdZaWFWbzF5MURaV05qZmt0VzRramY1VFlKWlgzZzdyUXEzcGE2bUxYbWVvdHAydTBudnI1QiszUnlTNUxHcldWL1E"
+                                alt="iMac 24" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">iMac 24 英寸 (M3)</h3>
+                            <p class="product-desc">绚丽 4.5K 视网膜显示屏，七种外观</p>
+                            <div class="product-price">
+                                <span class="price">¥9,999</span>
+                                <span class="price-suffix">起</span>
+                            </div>
+                            <div class="product-actions">
+                                <a href="product-imac24.html" class="btn primary-btn action-btn">查看详情
+                                </a>
+                                <button class="add-to-cart-btn" data-product="iMac 24">
+                                    <i class="fa fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mac mini -->
+                    <div id="mac-mini" class="product-card">
+                        <div class="product-img-container">
+                            <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/mac-mini-select-202410?wid=904&hei=840&fmt=jpeg&qlt=90&.v=WG0zcWo4VEd2YnZ3WTlBVlBwSHNCUnZ0SFlIdzZrSzBMWjRQMnF1U2Y2enZhWUNqTDdqTGdxV2EvMEFJcW1vNDg0SERaYTF4eEZ1aW9ZbGpONkszSXRhaHNubVVXOWRtVW4zMGQxeFF6U00"
+                                alt="Mac mini" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Mac mini (M4 / M4 Pro)</h3>
+                            <p class="product-desc">小身材，大能量，多种配置可选</p>
+                            <div class="product-price">
+                                <span class="price">¥4,499</span>
+                                <span class="price-suffix">起</span>
+                            </div>
+                            <div class="product-actions">
+                                <a href="product-macmini.html" class="btn primary-btn action-btn">
+                                    查看详情
+                                </a>
+                                <button class="add-to-cart-btn" data-product="Mac mini">
+                                    <i class="fa fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 产品对比 -->
+        <section id="compare" class="section compare-section">
+            <div class="container">
+                <h2 class="section-title">比较 Mac 机型</h2>
+
+                <div class="table-container">
+                    <table class="compare-table">
+                        <thead>
+                            <tr class="table-header">
+                                <th class="table-header-cell">功能</th>
+                                <th class="table-header-cell">MacBook Air</th>
+                                <th class="table-header-cell">MacBook Pro 14"</th>
+                                <th class="table-header-cell">iMac 24"</th>
+                                <th class="table-header-cell">Mac mini</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-row">
+                                <td class="table-cell feature-cell">芯片</td>
+                                <td class="table-cell">M4</td>
+                                <td class="table-cell">M4 / M4 Pro / M4 Max</td>
+                                <td class="table-cell">M3</td>
+                                <td class="table-cell">M4 / M4 Pro</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td class="table-cell feature-cell">显示屏</td>
+                                <td class="table-cell">13.6" Liquid 视网膜</td>
+                                <td class="table-cell">14.2" Liquid 视网膜 XDR</td>
+                                <td class="table-cell">24" 4.5K 视网膜</td>
+                                <td class="table-cell">无（需外接）</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td class="table-cell feature-cell">起售价</td>
+                                <td class="table-cell">¥9,499</td>
+                                <td class="table-cell">¥15,999</td>
+                                <td class="table-cell">¥9,999</td>
+                                <td class="table-cell">¥4,499</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td class="table-cell feature-cell">适用场景</td>
+                                <td class="table-cell">学生、日常办公</td>
+                                <td class="table-cell">专业创作者、开发者</td>
+                                <td class="table-cell">家庭用户、设计师</td>
+                                <td class="table-cell">开发者、自定义配置</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 购买指南 -->
+        <section class="section guide-section">
+            <div class="container guide-container">
+                <h2 class="section-title">需要购买建议？</h2>
+                <p class="section-desc">我们的专家可以帮助您找到最适合的 Mac</p>
+
+                <div class="guide-cards">
+                    <div class="guide-card">
+                        <i class="fa fa-file-text-o text-3xl guide-icon"></i>
+                        <h3 class="guide-title">Mac 购买指南</h3>
+                        <p class="guide-desc">了解如何选择适合您的 Mac 机型</p>
+                        <a href="buying-guide-mac.html" class="more-link">查看指南</a>
+                    </div>
+
+                    <div class="guide-card">
+                        <i class="fa fa-comments-o text-3xl guide-icon"></i>
+                        <h3 class="guide-title">在线咨询</h3>
+                        <p class="guide-desc">与我们的 Mac 专家实时交流</p>
+                        <a href="contact.html" class="more-link">开始咨询</a>
+                    </div>
+
+                    <div class="guide-card">
+                        <i class="fa fa-calendar text-3xl guide-icon"></i>
+                        <h3 class="guide-title">预约到店</h3>
+                        <p class="guide-desc">在 Apple Store 零售店体验 Mac</p>
+                        <a href="store-appointment.html" class="more-link">立即预约</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-column-title">商店</h3>
+                    <ul class="footer-links">
+                        <li><a href="iphone.html" class="footer-link">iPhone</a></li>
+                        <li><a href="ipad.html" class="footer-link">iPad</a></li>
+                        <li><a href="mac.html" class="footer-link active">Mac</a></li>
+                        <li><a href="watch.html" class="footer-link">Apple Watch</a></li>
+                        <li><a href="airpods.html" class="footer-link">AirPods</a></li>
+                        <li><a href="accessories.html" class="footer-link">配件</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-column-title">服务与支持</h3>
+                    <ul class="footer-links">
+                        <li><a href="support.html" class="footer-link">技术支持</a></li>
+                        <li><a href="repair.html" class="footer-link">产品维修</a></li>
+                        <li><a href="buying-guide.html" class="footer-link">购买建议</a></li>
+                        <li><a href="apple-care.html" class="footer-link">Apple Care+</a></li>
+                        <li><a href="finance.html" class="footer-link">分期付款</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-column-title">关于我们</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html" class="footer-link">公司简介</a></li>
+                        <li><a href="news.html" class="footer-link">新闻中心</a></li>
+                        <li><a href="careers.html" class="footer-link">招贤纳士</a></li>
+                        <li><a href="contact.html" class="footer-link">联系我们</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-column-title">法律信息</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html" class="footer-link">隐私政策</a></li>
+                        <li><a href="terms.html" class="footer-link">使用条款</a></li>
+                        <li><a href="cookies.html" class="footer-link">Cookie 政策</a></li>
+                        <li><a href="legal.html" class="footer-link">法律声明</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2023 Apple Store. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 购物车提示框 -->
+    <div id="cart-toast" class="cart-toast">
+        <i class="fa fa-check-circle mr-2"></i>
+        <span>已添加到购物车</span>
+    </div>
+
+    <script>
+        // 移动端菜单切换
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 购物车功能
+        let cartCount = 0;
+        const cartCountElement = document.getElementById('cart-count');
+        const cartToast = document.getElementById('cart-toast');
+
+        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                cartCount++;
+                cartCountElement.textContent = cartCount;
+
+                // 显示提示
+                cartToast.classList.remove('translate-y-20', 'opacity-0');
+                cartToast.classList.add('translate-y-0', 'opacity-100');
+
+                // 3秒后隐藏提示
+                setTimeout(() => {
+                    cartToast.classList.remove('translate-y-0', 'opacity-100');
+                    cartToast.classList.add('translate-y-20', 'opacity-0');
+                }, 3000);
+            });
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>

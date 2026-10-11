@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>配送信息 - Apple Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Css/shipping.css">
+</head>
+
+<body class="body-bg">
+    <!-- 导航栏 -->
+    <header id="navbar" class="navbar">
+        <div class="container nav-container">
+            <nav class="nav-main">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <i class="fa fa-apple mr-2"></i>Store
+                </a>
+
+                <!-- 主导航 - 桌面版 -->
+                <div class="main-nav desktop-only">
+                    <a href="iphone.html" class="nav-link">iPhone</a>
+                    <a href="ipad.html" class="nav-link">iPad</a>
+                    <a href="mac.html" class="nav-link">Mac</a>
+                    <a href="watch.html" class="nav-link">Watch</a>
+                    <a href="airpods.html" class="nav-link">AirPods</a>
+                    <a href="accessories.html" class="nav-link">配件</a>
+                </div>
+
+                <!-- 导航工具 -->
+                <div class="nav-tools">
+                    <a href="#" class="nav-icon hover-link">
+                        <i class="fa fa-search text-lg"></i>
+                    </a>
+                    <a href="cart.html" class="nav-icon hover-link relative">
+                        <i class="fa fa-shopping-bag text-lg"></i>
+                        <span id="cart-count" class="cart-count">0</span>
+                    </a>
+
+                    <!-- 移动端菜单按钮 -->
+                    <button id="mobile-menu-button" class="nav-icon hover-link mobile-only">
+                        <i class="fa fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- 移动端菜单 -->
+            <div id="mobile-menu" class="mobile-menu mobile-only hidden">
+                <div class="mobile-nav">
+                    <a href="iphone.html" class="mobile-nav-link">iPhone</a>
+                    <a href="ipad.html" class="mobile-nav-link">iPad</a>
+                    <a href="mac.html" class="mobile-nav-link">Mac</a>
+                    <a href="watch.html" class="mobile-nav-link">Watch</a>
+                    <a href="airpods.html" class="mobile-nav-link">AirPods</a>
+                    <a href="accessories.html" class="mobile-nav-link">配件</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container main-container">
+            <h1 class="page-title">配送信息</h1>
+
+            <!-- 步骤指示器 -->
+            <div class="steps-indicator">
+                <div class="step-item">
+                    <div class="step-icon active">
+                        <i class="fa fa-shopping-cart"></i>
+                    </div>
+                    <span class="step-text active">购物车</span>
+                </div>
+
+                <div class="step-line active"></div>
+
+                <div class="step-item">
+                    <div class="step-icon active">
+                        <i class="fa fa-map-marker"></i>
+                    </div>
+                    <span class="step-text active">配送信息</span>
+                </div>
+
+                <div class="step-line"></div>
+
+                <div class="step-item">
+                    <div class="step-icon">
+                        <i class="fa fa-credit-card"></i>
+                    </div>
+                    <span class="step-text">付款方式</span>
+                </div>
+
+                <div class="step-line"></div>
+
+                <div class="step-item">
+                    <div class="step-icon">
+                        <i class="fa fa-check"></i>
+                    </div>
+                    <span class="step-text">确认订单</span>
+                </div>
+            </div>
+
+            <div class="grid-layout">
+                <!-- 左侧：配送信息表单 -->
+                <div class="form-section">
+                    <!-- 配送地址 -->
+                    <div class="form-card">
+                        <h2 class="form-title">配送地址</h2>
+
+                        <form class="address-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name" class="form-label">名字</label>
+                                    <input type="text" id="first-name" name="first-name" class="form-input">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="last-name" class="form-label">姓氏</label>
+                                    <input type="text" id="last-name" name="last-name" class="form-input">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="address" class="form-label">地址</label>
+                                <input type="text" id="address" name="address" placeholder="街道地址" class="form-input">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="address2" class="form-label">地址2 (可选)</label>
+                                <input type="text" id="address2" name="address2" placeholder="公寓、套房、单元等"
+                                    class="form-input">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city" class="form-label">城市</label>
+                                    <input type="text" id="city" name="city" class="form-input">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="state" class="form-label">省份</label>
+                                    <select id="state" name="state" class="form-input">
+                                        <option value="">请选择省份/自治区/直辖市/特别行政区</option>
+                                        <option value="beijing">北京市</option>
+                                        <option value="tianjin">天津市</option>
+                                        <option value="shanghai">上海市</option>
+                                        <option value="chongqing">重庆市</option>
+                                        <option value="hebei">河北省</option>
+                                        <option value="shanxi">山西省</option>
+                                        <option value="liaoning">辽宁省</option>
+                                        <option value="jilin">吉林省</option>
+                                        <option value="heilongjiang">黑龙江省</option>
+                                        <option value="jiangsu">江苏省</option>
+                                        <option value="zhejiang">浙江省</option>
+                                        <option value="anhui">安徽省</option>
+                                        <option value="fujian">福建省</option>
+                                        <option value="jiangxi">江西省</option>
+                                        <option value="shandong">山东省</option>
+                                        <option value="henan">河南省</option>
+                                        <option value="hubei">湖北省</option>
+                                        <option value="hunan">湖南省</option>
+                                        <option value="guangdong">广东省</option>
+                                        <option value="guangxi">广西壮族自治区</option>
+                                        <option value="hainan">海南省</option>
+                                        <option value="sichuan">四川省</option>
+                                        <option value="guizhou">贵州省</option>
+                                        <option value="yunnan">云南省</option>
+                                        <option value="xizang">西藏自治区</option>
+                                        <option value="shaanxi">陕西省</option>
+                                        <option value="gansu">甘肃省</option>
+                                        <option value="qinghai">青海省</option>
+                                        <option value="ningxia">宁夏回族自治区</option>
+                                        <option value="xinjiang">新疆维吾尔自治区</option>
+                                        <option value="taiwan">台湾省</option>
+                                        <option value="hongkong">香港特别行政区</option>
+                                        <option value="macao">澳门特别行政区</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="zip" class="form-label">邮政编码</label>
+                                    <input type="text" id="zip" name="zip" class="form-input">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone" class="form-label">联系电话</label>
+                                <input type="tel" id="phone" name="phone" class="form-input">
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- 配送方式 -->
+                    <div class="form-card">
+                        <h2 class="form-title">配送方式</h2>
+
+                        <div class="shipping-methods">
+                            <div class="shipping-option">
+                                <input type="radio" id="shipping-standard" name="shipping-method" value="standard"
+                                    checked class="shipping-radio-input">
+                                <label for="shipping-standard" class="shipping-option-label">
+                                    <div class="radio-indicator"></div>
+                                    <div class="shipping-details">
+                                        <div class="shipping-header">
+                                            <span class="shipping-name">标准配送</span>
+                                            <span class="shipping-price">免费</span>
+                                        </div>
+                                        <p class="shipping-desc">预计3-5个工作日送达</p>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <div class="shipping-option">
+                                <input type="radio" id="shipping-express" name="shipping-method" value="express"
+                                    class="shipping-radio-input">
+                                <label for="shipping-express" class="shipping-option-label">
+                                    <div class="radio-indicator"></div>
+                                    <div class="shipping-details">
+                                        <div class="shipping-header">
+                                            <span class="shipping-name">加急配送</span>
+                                            <span class="shipping-price">¥25.00</span>
+                                        </div>
+                                        <p class="shipping-desc">预计1-2个工作日送达</p>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <div class="shipping-option">
+                                <input type="radio" id="shipping-sameday" name="shipping-method" value="sameday"
+                                    class="shipping-radio-input">
+                                <label for="shipping-sameday" class="shipping-option-label">
+                                    <div class="radio-indicator"></div>
+                                    <div class="shipping-details">
+                                        <div class="shipping-header">
+                                            <span class="shipping-name">当日达</span>
+                                            <span class="shipping-price">¥50.00</span>
+                                        </div>
+                                        <p class="shipping-desc">当日送达（仅限部分城市）</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右侧：订单摘要 -->
+                <div class="summary-section">
+                    <div class="summary-card">
+                        <h2 class="summary-title">订单摘要</h2>
+
+                        <div id="order-summary-items" class="summary-items">
+                            <!-- 订单商品将通过JavaScript动态加载 -->
+                        </div>
+
+                        <div class="summary-calculations">
+                            <div class="calculation-row">
+                                <span class="calc-label">小计</span>
+                                <span id="subtotal" class="calc-value">¥0.00</span>
+                            </div>
+                            <div class="calculation-row">
+                                <span class="calc-label">运费</span>
+                                <span id="shipping-cost" class="calc-value">免费</span>
+                            </div>
+                            <div class="calculation-row">
+                                <span class="calc-label">税费</span>
+                                <span id="tax" class="calc-value">¥0.00</span>
+                            </div>
+                        </div>
+
+                        <div class="summary-total">
+                            <span class="total-label">总计</span>
+                            <span id="order-total" class="total-value">¥0.00</span>
+                        </div>
+
+                        <button id="continue-to-payment" class="btn-primary">
+                            继续付款 <i class="fa fa-arrow-right ml-2"></i>
+                        </button>
+
+                        <div class="summary-links">
+                            <a href="cart.html" class="link-text">
+                                返回购物车
+                            </a>
+                        </div>
+
+                        <div class="summary-benefits">
+                            <div class="benefit-item">
+                                <i class="fa fa-truck text-apple-blue mr-3"></i>
+                                <span class="benefit-text">免费配送服务</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fa fa-undo text-apple-blue mr-3"></i>
+                                <span class="benefit-text">30天无理由退货</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="page-footer">
+        <div class="container footer-container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-heading">商店</h3>
+                    <ul class="footer-links">
+                        <li><a href="iphone.html" class="footer-link">iPhone</a></li>
+                        <li><a href="ipad.html" class="footer-link">iPad</a></li>
+                        <li><a href="mac.html" class="footer-link">Mac</a></li>
+                        <li><a href="watch.html" class="footer-link">Apple Watch</a></li>
+                        <li><a href="airpods.html" class="footer-link">AirPods</a></li>
+                        <li><a href="accessories.html" class="footer-link">配件</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-heading">服务与支持</h3>
+                    <ul class="footer-links">
+                        <li><a href="support.html" class="footer-link">技术支持</a></li>
+                        <li><a href="https://apple-style-digital-0y1k.bolt.host/support" class="footer-link">产品维修</a>
+                        </li>
+                        <li><a href="buying-guide.html" class="footer-link">购买建议</a></li>
+                        <li><a href="apple-care.html" class="footer-link">Apple Care+</a></li>
+                        <li><a href="finance.html" class="footer-link">分期付款</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-heading">关于我们</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html" class="footer-link">公司简介</a></li>
+                        <li><a href="news.html" class="footer-link">新闻中心</a></li>
+                        <li><a href="careers.html" class="footer-link">招贤纳士</a></li>
+                        <li><a href="contact.html" class="footer-link">联系我们</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-heading">法律信息</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html" class="footer-link">隐私政策</a></li>
+                        <li><a href="terms.html" class="footer-link">使用条款</a></li>
+                        <li><a href="cookies.html" class="footer-link">Cookie 政策</a></li>
+                        <li><a href="legal.html" class="footer-link">法律声明</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <p>&copy; 2023 Apple Store. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 初始化配送方式选择
+        function setupShippingMethod() {
+            const radioButtons = document.querySelectorAll('input[name="shipping-method"]');
+            const radioIndicators = document.querySelectorAll('.radio-indicator');
+            const shippingCostElement = document.getElementById('shipping-cost');
+            let shippingCost = 0;
+
+            // 更新选中状态
+            function updateSelected() {
+                radioButtons.forEach((radio, index) => {
+                    if (radio.checked) {
+                        radioIndicators[index].classList.add('radio-checked');
+
+                        // 更新运费
+                        switch (radio.value) {
+                            case 'standard':
+                                shippingCost = 0;
+                                shippingCostElement.textContent = '免费';
+                                break;
+                            case 'express':
+                                shippingCost = 25;
+                                shippingCostElement.textContent = '¥25.00';
+                                break;
+                            case 'sameday':
+                                shippingCost = 50;
+                                shippingCostElement.textContent = '¥50.00';
+                                break;
+                        }
+
+                        // 保存配送信息到localStorage
+                        const shippingInfo = {
+                            method: radio.value,
+                            shippingCost: shippingCost
+                        };
+                        localStorage.setItem('shippingInfo', JSON.stringify(shippingInfo));
+
+                        // 更新订单总额
+                        updateOrderTotal();
+                    } else {
+                        radioIndicators[index].classList.remove('radio-checked');
+                    }
+                });
+            }
+
+            // 初始更新
+            updateSelected();
+
+            // 添加事件监听
+            radioButtons.forEach(radio => {
+                radio.addEventListener('change', updateSelected);
+            });
+        }
+
+        // 更新订单总额
+        function updateOrderTotal() {
+            const subtotalElement = document.getElementById('subtotal');
+            const taxElement = document.getElementById('tax');
+            const shippingCostElement = document.getElementById('shipping-cost');
+            const totalElement = document.getElementById('order-total');
+
+            try {
+                const subtotalText = subtotalElement.textContent.replace('¥', '');
+                const subtotal = parseFloat(subtotalText) || 0;
+
+                const shippingText = shippingCostElement.textContent.replace('¥', '').replace('免费', '0');
+                const shipping = parseFloat(shippingText) || 0;
+
+                const tax = subtotal * 0.13; // 假设税率13%
+                const total = subtotal + shipping + tax;
+
+                taxElement.textContent = `¥${tax.toFixed(2)}`;
+                totalElement.textContent = `¥${total.toFixed(2)}`;
+            } catch (e) {
+                console.error('更新订单总额失败:', e);
+            }
+        }
+
+        // 加载订单摘要
+        function loadOrderSummary() {
+            try {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const summaryContainer = document.getElementById('order-summary-items');
+
+                if (cart.length === 0) {
+                    summaryContainer.innerHTML = '<p class="empty-cart">购物车为空</p>';
+                    return;
+                }
+
+                let total = 0;
+                let summaryHTML = '';
+
+                cart.forEach(item => {
+                    const price = parseFloat(item.price.replace('¥', ''));
+                    total += price * item.quantity;
+
+                    summaryHTML += `
+                        <div class="summary-item">
+                            <img src="${item.image}" alt="${item.name}" class="item-image">
+                            <div class="item-details">
+                                <h3 class="item-name">${item.name}</h3>
+                                <p class="item-attributes">${item.color} | ${item.storage}</p>
+                                <p class="item-quantity">数量: ${item.quantity}</p>
+                            </div>
+                            <p class="item-price">${item.price}</p>
+                        </div>
+                    `;
+                });
+
+                summaryContainer.innerHTML = summaryHTML;
+                document.getElementById('subtotal').textContent = `¥${total.toFixed(2)}`;
+
+                // 计算税费
+                const tax = total * 0.13;
+                document.getElementById('tax').textContent = `¥${tax.toFixed(2)}`;
+
+                // 更新总计
+                updateOrderTotal();
+
+            } catch (e) {
+                console.error('加载订单摘要失败:', e);
+            }
+        }
+
+        // 继续付款按钮点击事件
+        document.getElementById('continue-to-payment').addEventListener('click', function () {
+            // 验证表单
+            const firstName = document.getElementById('first-name').value;
+            const lastName = document.getElementById('last-name').value;
+            const address = document.getElementById('address').value;
+            const city = document.getElementById('city').value;
+            const state = document.getElementById('state').value;
+            const zip = document.getElementById('zip').value;
+            const phone = document.getElementById('phone').value;
+
+            if (!firstName || !lastName || !address || !city || !state || !zip || !phone) {
+                alert('请填写完整的配送信息');
+                return;
+            }
+
+            // 保存配送地址到localStorage
+            const shippingAddress = {
+                firstName: firstName,
+                lastName: lastName,
+                address: address,
+                address2: document.getElementById('address2').value,
+                city: city,
+                state: state,
+                zip: zip,
+                phone: phone
+            };
+            localStorage.setItem('shippingAddress', JSON.stringify(shippingAddress));
+
+            // 跳转到付款页面
+            window.location.href = 'payment.html';
+        });
+
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function () {
+            setupShippingMethod();
+            loadOrderSummary();
+
+            // 移动端菜单切换
+            document.getElementById('mobile-menu-button').addEventListener('click', function () {
+                const mobileMenu = document.getElementById('mobile-menu');
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>

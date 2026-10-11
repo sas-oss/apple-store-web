@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    /* 多行注释：HTML文档头部，包含元数据、样式和脚本引用 */
+    <meta charset="UTF-8">
+    /* 设置字符编码为UTF-8，支持中文显示 */
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    /* 设置视口，使页面在移动设备上正确显示 */
+    <title>Apple Store - 官方在线商店</title>
+    /* 页面标题，显示在浏览器标签页上 */
+    <script src="https://cdn.tailwindcss.com"></script>
+    /* 引入Tailwind CSS框架 */
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    /* 引入Font Awesome图标库 */
+    <link rel="stylesheet" href="Css\index.css">
+
+    /* 引入自定义CSS样式表 */
+    <!-- <link rel="stylesheet" href="styles.css"> -->  /* 被注释掉的样式表引用 */
+    <style type="text/tailwindcss">
+        /* 自定义Tailwind样式 */
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .carousel-item {
+                .carousel-overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    transition: opacity 0.5s ease-in-out;
+                    opacity: 0;
+                }
+            }
+            .carousel-item.active {
+                .your-selector {
+                    opacity: 1;
+                    z-index: 10;
+                }
+            }
+        }
+    </style>
+    <!-- 引入 tailwind 配置, 并自定义颜色和字体 -->
+    <script>
+        /* 配置Tailwind主题，扩展颜色和字体 */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            black: '#1D1D1F',
+                            gray: '#86868B',
+                            lightgray: '#F5F5F7',
+                            blue: '#0071E3',
+                            hover: '#F0F0F0',
+                            red: '#FF3B30'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['SF Pro Display', 'Helvetica', 'Arial', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header id="navbar" class="site-header">
+        <div class="nav-container">
+            <nav class="nav-content">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <i class="fa fa-apple logo-icon"></i>
+                    <span class="logo-text">Store</span>
+                </a>
+
+                <!-- 主导航 - 桌面版 -->
+                <div class="main-nav">
+                    <a href="iphone.html" class="nav-link">iPhone</a>
+                    <a href="ipad.html" class="nav-link">iPad</a>
+                    <a href="mac.html" class="nav-link">Mac</a>
+                    <a href="watch.html" class="nav-link">Watch</a>
+                    <a href="airpods.html" class="nav-link">AirPods</a>
+                    <a href="accessories.html" class="nav-link">配件</a>
+                </div>
+
+                <!-- 导航工具 -->
+                <div class="nav-tools">
+                    <a href="#" class="search-link">
+                        <i class="fa fa-search search-icon"></i>
+                    </a>
+                    <a href="cart.html" class="cart-link">
+                        <i class="fa fa-shopping-bag cart-icon"></i>
+                        <span id="cart-count" class="cart-count">0</span>
+                    </a>
+                    
+                    <!-- 移动端菜单按钮 -->
+                    <button id="mobile-menu-button" class="mobile-menu-btn">
+                        <i class="fa fa-bars menu-icon"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- 图片轮播 -->
+        <section class="carousel-container">
+            <div class="carousel-slides">
+                <!-- 轮播项 1: iPhone -->
+                <div class="carousel-slide">
+                    <div class="carousel-overlay"></div>
+                    <video class="carousel-video" autoplay muted loop playsinline>
+                        <source src=".vscode\img\v0d00fg10000cv3dr4vog65h1vqikqj0(1).mp4" type="video/mp4">
+                        <img src="https://picsum.photos/id/160/1200/600" alt="iPhone 15 Pro 展示"
+                            class="carousel-image">
+                    </video>
+                    <div class="carousel-content">
+                        <h1 class="carousel-title">iPhone 15 Pro</h1>
+                        <p class="carousel-description">钛金属设计，A17 Pro芯片，创新体验</p>
+                        <div class="carousel-buttons">
+                            <a href="iphone15Pro.html"
+                                class="carousel-btn-primary">了解更多</a>
+                            <a href="iphone.html"
+                                class="carousel-btn-secondary">查看系列</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 轮播项 2: MacBook -->
+                <div class="carousel-slide">
+                    <div class="carousel-overlay"></div>
+                    <video class="carousel-video" autoplay muted loop playsinline>
+                        <source src=".vscode/img/large_2x (1).mp4" type="video/mp4">
+                        <img src="https://picsum.photos/id/119/1200/600" alt="MacBook Air 展示"
+                            class="carousel-image">
+                    </video>
+                    <div class="carousel-content">
+                        <h1 class="carousel-title">MacBook Air</h1>
+                        <p class="carousel-description">轻薄设计，M2芯片，全天续航</p>
+                        <div class="carousel-buttons">
+                            <a href="mac.html"
+                                class="carousel-btn-primary">了解更多</a>
+                            <a href="mac.html"
+                                class="carousel-btn-secondary">查看系列</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 轮播项 3: Apple Watch -->
+                <div class="carousel-slide">
+                    <div class="carousel-overlay"></div>
+                    <img src="https://doc-fd.zol-img.com.cn/t_s2000x2000/g7/M00/09/0F/ChMkLGdY_juIZkH9AAGk3QU5NwkAAmnxwEEfYIAAaT1540.jpg"
+                        alt="Apple Watch Ultra 展示" class="carousel-image">
+                    <div class="carousel-content">
+                        <h1 class="carousel-title">Apple Watch Ultra</h1>
+                        <p class="carousel-description">更大表盘，更长续航，极限性能</p>
+                        <div class="carousel-buttons">
+                            <a href="watch.html"
+                                class="carousel-btn-primary">了解更多</a>
+                            <a href="watch.html"
+                                class="carousel-btn-secondary">查看系列</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 轮播项 4: iPad -->
+                <div class="carousel-slide">
+                    <div class="carousel-overlay"></div>
+                    <img src="https://p5.itc.cn/q_70/images03/20210421/80b23b41aa714d9a8c24cdda540e0082.png"
+                        alt="iPad Pro 展示" class="carousel-image">
+                    <div class="carousel-content">
+                        <h1 class="carousel-title">iPad Pro</h1>
+                        <p class="carousel-description">M2芯片，Liquid视网膜XDR显示屏</p>
+                        <div class="carousel-buttons">
+                            <a href="ipad.html"
+                                class="carousel-btn-primary">了解更多</a>
+                            <a href="ipad.html"
+                                class="carousel-btn-secondary">查看系列</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 轮播控制按钮 -->
+            <button class="carousel-prev">
+                <i class="fa fa-chevron-left"></i>
+            </button>
+            <button class="carousel-next">
+                <i class="fa fa-chevron-right"></i>
+            </button>
+
+            <!-- 轮播指示器 -->
+            <div class="carousel-dots">
+                <div class="carousel-dot active"></div>
+                <div class="carousel-dot"></div>
+                <div class="carousel-dot"></div>
+                <div class="carousel-dot"></div>
+            </div>
+        </section>
+
+        <!-- 热门产品 -->
+        <section class="products-section">
+            <div class="container">
+                <h2 class="section-title">热门产品</h2>
+
+                <div class="product-grid">
+                    <!-- iPhone 15 Pro -->
+                    <div class="product-card">
+                        <a href="iphone15Pro.html">
+                            <img src=".vscode\img\t04ce204189fad65888(1).png" alt="iPhone 15 Pro"
+                                class="product-image">
+                            <div class="product-info">
+                                <h3 class="product-name">iPhone 15 Pro</h3>
+                                <p class="product-desc">A17 Pro芯片，钛金属设计</p>
+                                <p class="product-price">¥7,999 起</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- iPad Pro -->
+                    <div class="product-card">
+                        <a href="product-ipadpro.html">
+                            <img src="https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2024%2F0509%2F295ffbe5j00sd7f8k000cd000dx008eg.jpg&thumbnail=660x2147483647&quality=80&type=jpg"
+                                alt="iPad Pro" class="product-image">
+                            <div class="product-info">
+                                <h3 class="product-name">iPad Pro 2024</h3>
+                                <p class="product-desc">M2芯片，Liquid视网膜XDR显示屏</p>
+                                <p class="product-price">¥7,799 起</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- MacBook Air -->
+                    <div class="product-card">
+                        <a href="product-macbookair.html">
+                            <img src="https://img3.jiemian.com/101/original/20250306/174122180252390200_a640x364.jpg"
+                                alt="MacBook Air" class="product-image">
+                            <div class="product-info">
+                                <h3 class="product-name">MacBook Air</h3>
+                                <p class="product-desc">M2芯片，轻薄设计</p>
+                                <p class="product-price">¥9,499 起</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Apple Watch Ultra -->
+                    <div class="product-card">
+                        <a href="product-watchultra.html">
+                            <img src=".vscode\img\ultra-case-unselect-gallery-1-202409_GEO_CN.jpg"
+                                alt="Apple Watch Ultra" class="product-image">
+                            <div class="product-info">
+                                <h3 class="product-name">Apple Watch Ultra 2</h3>
+                                <p class="product-desc">更大表盘，更长续航</p>
+                                <p class="product-price">¥6,299 起</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="view-all-container">
+                    <a href="product.html" class="view-all-link">
+                        查看全部产品 <i class="fa fa-chevron-right view-all-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 购买指南 -->
+        <section class="guide-section">
+            <div class="guide-container">
+                <h2 class="section-title">需要购买建议？</h2>
+                <p class="guide-description">我们的专家可以帮助您找到最适合的产品</p>
+
+                <div class="guide-grid">
+                    <div class="guide-card">
+                        <i class="fa fa-file-text-o guide-icon"></i>
+                        <h3 class="guide-title">购买指南</h3>
+                        <p class="guide-text">详细了解各款产品的特点和差异</p>
+                        <a href="buying-guide.html" class="guide-link">查看指南</a>
+                    </div>
+
+                    <div class="guide-card">
+                        <i class="fa fa-comments-o guide-icon"></i>
+                        <h3 class="guide-title">在线咨询</h3>
+                        <p class="guide-text">与我们的产品专家实时交流</p>
+                        <a href="contact.html" class="guide-link">开始咨询</a>
+                    </div>
+
+                    <div class="guide-card">
+                        <i class="fa fa-calendar guide-icon"></i>
+                        <h3 class="guide-title">预约到店</h3>
+                        <p class="guide-text">预约前往Apple Store零售店体验</p>
+                        <a href="store-appointment.html" class="guide-link">立即预约</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+   <footer id="footer" class="site-footer">
+    <div class="footer-container">
+        <div class="footer-grid">
+            <!-- 商店 -->
+            <div class="footer-column">
+                <h3 class="footer-title">商店</h3>
+                <ul class="footer-links">
+                    <li><a href="iphone.html" class="footer-link">iPhone</a></li>
+                    <li><a href="ipad.html" class="footer-link">iPad</a></li>
+                    <li><a href="mac.html" class="footer-link">Mac</a></li>
+                    <li><a href="watch.html" class="footer-link">Watch</a></li>
+                    <li><a href="airpods.html" class="footer-link">AirPods</a></li>
+                </ul>
+            </div>
+            
+            <!-- 服务 -->
+            <div class="footer-column">
+                <h3 class="footer-title">服务</h3>
+                <ul class="footer-links">
+                    <li><a href="#" class="footer-link">Apple Care+</a></li>
+                    <li><a href="#" class="footer-link">iCloud</a></li>
+                    <li><a href="#" class="footer-link">Apple Music</a></li>
+                    <li><a href="#" class="footer-link">Apple Arcade</a></li>
+                </ul>
+            </div>
+            
+            <!-- 支持 -->
+            <div class="footer-column">
+                <h3 class="footer-title">支持</h3>
+                <ul class="footer-links">
+                    <li><a href="support.html" class="footer-link">联系我们</a></li>
+                    <li><a href="#" class="footer-link">维修服务</a></li>
+                    <li><a href="#" class="footer-link">用户手册</a></li>
+                    <li><a href="#" class="footer-link">常见问题</a></li>
+                </ul>
+            </div>
+            
+            <!-- 关于 -->
+            <div class="footer-column">
+                <h3 class="footer-title">关于</h3>
+                <ul class="footer-links">
+                    <li><a href="#" class="footer-link">公司简介</a></li>
+                    <li><a href="#" class="footer-link">新闻中心</a></li>
+                    <li><a href="#" class="footer-link">招贤纳士</a></li>
+                    <li><a href="#" class="footer-link">环保责任</a></li>
+                </ul>
+            </div>
+            
+            <!-- 联系我们 -->
+            <div class="footer-column">
+                <h3 class="footer-title">联系我们</h3>
+                <ul class="contact-info">
+                    <li class="contact-item">
+                        <i class="contact-icon fa fa-phone"></i>
+                        <span class="contact-text">400-666-8800</span>
+                    </li>
+                    <li class="contact-item">
+                        <i class="contact-icon fa fa-map-marker"></i>
+                        <span class="contact-text">北京市朝阳区建国路88号</span>
+                    </li>
+                    <li class="contact-item">
+                        <i class="contact-icon fa fa-clock-o"></i>
+                        <span class="contact-text">周一至周日 9:00-21:00</span>
+                    </li>
+                </ul>
+                
+                <!-- 社交媒体图标 -->
+                <div class="social-media">
+                    <a href="#" class="social-link">
+                        <i class="fa fa-weibo"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fa fa-weixin"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 底部版权信息 -->
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p class="copyright">
+                2023 Apple Store. 保留所有权利.
+            </p>
+            <div class="footer-legal">
+                <a href="#" class="legal-link">隐私政策</a>
+                <a href="#" class="legal-link">使用条款</a>
+                <a href="#" class="legal-link">Cookie 政策</a>
+                <a href="#" class="legal-link">网站地图</a>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+
+    <!-- 引入通用脚本 -->
+    <script src="script/script.js"></script>
+        <script>
+        // 导航栏滚动效果
+        // 该函数通过监听窗口滚动事件，为导航栏添加或移除'scrolled'类，以实现滚动效果
+        function setupNavbarScroll() {
+            // 获取导航栏元素
+            const navbar = document.getElementById('navbar');
+            // 如果导航栏元素不存在，则不执行任何操作
+            if (!navbar) return;
+    
+            // 监听窗口滚动事件
+            window.addEventListener('scroll', () => {
+                // 当滚动距离超过50像素时，添加'scrolled'类，实现滚动效果
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    // 否则，移除'scrolled'类
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        }
+    
+        // 移动端菜单切换
+        // 该函数通过监听移动端菜单按钮的点击事件，切换菜单的显示和隐藏状态
+        function setupMobileMenu() {
+            // 获取菜单按钮和移动端菜单元素
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+    
+            // 如果菜单按钮或移动端菜单元素不存在，则不执行任何操作
+            if (!menuButton || !mobileMenu) return;
+    
+            // 监听菜单按钮的点击事件
+            menuButton.addEventListener('click', () => {
+                // 切换移动端菜单的'hidden'类，以显示或隐藏菜单
+                mobileMenu.classList.toggle('hidden');
+                // 获取菜单按钮内的图标元素
+                const icon = menuButton.querySelector('i');
+                // 如果菜单处于隐藏状态，将图标设置为'fa-bars'，否则设置为'fa-times'，以切换图标显示，实现动画效果，效果更好
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

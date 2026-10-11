@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPad 配件 - Apple Store</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="Css/ipad-accessories.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <nav class="navbar-content">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <i class="fa fa-apple mr-2"></i>Store
+                </a>
+
+                <!-- 主导航 - 桌面版 -->
+                <div class="main-nav">
+                    <a href="iphone.html" class="nav-item">iPhone</a>
+                    <a href="ipad.html" class="nav-item active">iPad</a>
+                    <a href="mac.html" class="nav-item">Mac</a>
+                    <a href="watch.html" class="nav-item">Watch</a>
+                    <a href="airpods.html" class="nav-item">AirPods</a>
+                    <a href="accessories.html" class="nav-item">配件</a>
+                </div>
+
+                <!-- 导航工具 -->
+                <div class="nav-tools">
+                    <a href="#" class="tool-icon">
+                        <i class="fa fa-search"></i>
+                    </a>
+                    <a href="cart.html" class="tool-icon cart-icon">
+                        <i class="fa fa-shopping-bag"></i>
+                        <span id="cart-count" class="cart-count">0</span>
+                    </a>
+
+                    <!-- 移动端菜单按钮 -->
+                    <button id="mobile-menu-button" class="tool-icon mobile-menu-btn">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- 移动端菜单 -->
+            <div id="mobile-menu" class="mobile-menu">
+                <div class="mobile-menu-items">
+                    <a href="iphone.html" class="mobile-menu-item">iPhone</a>
+                    <a href="ipad.html" class="mobile-menu-item active">iPad</a>
+                    <a href="mac.html" class="mobile-menu-item">Mac</a>
+                    <a href="watch.html" class="mobile-menu-item">Watch</a>
+                    <a href="airpods.html" class="mobile-menu-item">AirPods</a>
+                    <a href="accessories.html" class="mobile-menu-item">配件</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- 英雄区域 -->
+        <section class="hero-banner"
+            style="background-image: url('https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-alp-cases-202405_GEO_CN?wid=2880&hei=960&fmt=png-alpha&.v=Q0I0L0RWVXNxejFoWmJjUGl5UTQxbUVNdG9iQiszR2RPNWplOVdLUjUzQytVNDA5RVVlL2xRd2sxQ2huWTBLdm53M0FRZHBXNTh1U1lFVEtSR2YzTmt4Y2p6N2J3T1FKMHVCODZaNXRrbGs');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">iPad 配件</h1>
+                    <p class="hero-desc">为你的 iPad 解锁更多可能，从创意工具到保护装备，一应俱全。</p>
+                    <div class="hero-buttons">
+                        <a href="#all-accessories" class="btn primary-btn">浏览全部配件</a>
+                        <a href="ipad.html" class="btn secondary-btn">查看 iPad 系列</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 配件分类 -->
+        <section class="category-section">
+            <div class="container">
+                <h2 class="section-title">配件分类</h2>
+
+                <div class="category-grid">
+                    <a href="#pencils" class="category-item">
+                        <i class="fa fa-pencil"></i>
+                        <span>Apple Pencil</span>
+                    </a>
+
+                    <a href="#keyboards" class="category-item">
+                        <i class="fa fa-keyboard-o"></i>
+                        <span>键盘</span>
+                    </a>
+
+                    <a href="#cases" class="category-item">
+                        <i class="fa fa-shield"></i>
+                        <span>保护壳</span>
+                    </a>
+
+                    <a href="#stands" class="category-item">
+                        <i class="fa fa-desktop"></i>
+                        <span>支架</span>
+                    </a>
+
+                    <a href="#adapters" class="category-item">
+                        <i class="fa fa-plug"></i>
+                        <span>转接器</span>
+                    </a>
+
+                    <a href="#other" class="category-item">
+                        <i class="fa fa-ellipsis-h"></i>
+                        <span>其他配件</span>
+                    </a>
+                </div>
+
+                <!-- 过滤选项 -->
+                <div class="filter-container">
+                    <div class="filter-chips">
+                        <div class="filter-chip active" data-filter="all">全部配件</div>
+                        <div class="filter-chip" data-filter="pencil">Apple Pencil</div>
+                        <div class="filter-chip" data-filter="keyboard">键盘</div>
+                        <div class="filter-chip" data-filter="case">保护壳</div>
+                        <div class="filter-chip" data-filter="stand">支架</div>
+                        <div class="filter-chip" data-filter="adapter">转接器</div>
+                        <div class="filter-chip" data-filter="other">其他配件</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 所有配件 -->
+        <section id="all-accessories" class="products-section">
+            <div class="container">
+                <h2 class="section-title">全部配件</h2>
+
+                <div class="product-grid">
+                    <!-- Apple Pencil 分类 -->
+                    <div id="pencils" class="category-heading">
+                        <h3 class="category-title">Apple Pencil</h3>
+                    </div>
+
+                    <!-- Apple Pencil (第二代) -->
+                    <div class="product-card" data-category="pencil">
+                        <div class="product-image-container">
+                            <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MU8F2?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1697736999544"
+                                alt="Apple Pencil (第一代)" class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Apple Pencil (第二代)</h3>
+                            <p class="product-desc">精准触控，低延迟，磁力吸附与无线充电</p>
+                            <div class="product-actions">
+                                <p class="product-price">¥969</p>
+                                <button class="add-to-cart-btn" data-name="Apple Pencil (第二代)" data-price="969">
+                                    加入购物车
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Apple Pencil (第一代) -->
+                    <div class="product-card" data-category="pencil">
+                        <div class="product-image-container">
+                            <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MK0C2?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1697736999544"
+                                alt="Apple Pencil (第一代)" class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Apple Pencil (第一代)</h3>
+                            <p class="product-desc">支持压感和倾斜感应，适合绘画和笔记</p>
+                            <div class="product-actions">
+                                <p class="product-price">¥722</p>
+                                <button class="add-to-cart-btn" data-name="Apple Pencil (第一代)" data-price="722">
+                                    加入购物车
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Apple Pencil 笔尖套装 -->
+                    <div class="product-card" data-category="pencil">
+                        <div class="product-image-container">
+                            <img src=".vscode\img\ipad-apple-pencil-witb-202210.png" alt="Apple Pencil 笔尖套装"
+                                class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Apple Pencil 笔尖套装</h3>
+                            <p class="product-desc">4个替换笔尖，包括2个标准笔尖和2个柔软笔尖</p>
+                            <div class="product-actions">
+                                <p class="product-price">¥149</p>
+                                <button class="add-to-cart-btn" data-name="Apple Pencil 笔尖套装" data-price="149">
+                                    加入购物车
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 键盘分类 -->
+                    <div id="keyboards" class="category-heading">
+                        <h3 class="category-title">键盘</h3>
+                    </div>
+
+                    <!-- Magic Keyboard (适用于iPad Pro) -->
+                    <div class="product-card" data-category="keyboard">
+                        <div class="product-image-container">
+                            <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MWR03CH_AV3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=WkFkampxOFVsenZNaUdFM1V1OVRZeituRlRsMUl6VEJ5bjlrVFgzZmNSTzVPaTQ2UnBONWMvUmNJRzREV0drRFFWSnFkM0J6dDNqWmZiRU5sYUwyRlE"
+                                alt="Magic Keyboard (适用于iPad Pro)" class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Magic Keyboard (适用于iPad Pro)</h3>
+                            <p class="product-desc">悬浮式设计，背光键盘，触控板支持，USB-C充电</p>
+                            <div class="product-actions">
+                                <p class="product-price">¥2399</p>
+                                <button class="add-to-cart-btn" data-name="Magic Keyboard (适用于iPad Pro)"
+                                    data-price="2399">
+                                    加入购物车
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Smart Keyboard Folio (适用于iPad Air) -->
+                    <div class="product-card" data-category="keyboard">
+                        <div class="product-image-container">
+                            <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MX3L2?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1697736999544"
+                                alt="Smart Keyboard Folio (适用于iPad Air)" class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Smart Keyboard Folio (适用于iPad Air)</h3>
+                            <p class="product-desc">轻薄设计，全尺寸键盘，双面保护，无需充电</p>
+                            <div class="product-actions">
+                                <p class="product-price">¥1099</p>
+                                <button class="add-to-cart-btn" data-name="Smart Keyboard Folio (适用于iPad Air)"
+                                    data-price="1099">
+                                    加入购物车
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 保护壳分类 -->
+                    <div id="cases" class="category-heading">
+                        <h3 class="category-title">保护壳</h3>
+                    </div>
+
+                    <!-- iPad Pro 透明保护壳 -->
+                    <div class="product-card" data-category="case">
+                        <div class="product-image-container">
+                            <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MDEQ4?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=TlBSOW1TTEVrNmUvVGZleGRFTU9SUWtuVHYzMERCZURia3c5SzJFOTlPZ2tRNE5NbndKUitqWmtNaTdkSWdqZ0ZodGJrdmQyLzJiWklQbDhrRVBRenc"
+                                alt="iPad Pro 折叠保护壳" class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">iPad Pro 折叠保护壳</h3>
+                            <p class="product-desc">清澈明亮，纤薄设计，抗黄变，全面保护</p>
+                            <div class="product-actions">
+                                <p class="product-price">¥399</p>
+                                <button class="add-to-cart-btn" data-name="iPad Pro 透明保护壳" data-price="399">
+                                    加入购物车
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- iPad Air 皮革保护壳 -->
+                    <div class="product-card" data-category="case">
+                        <div class="product-image-container">
+                            <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MLD42?wid=890&hei=890&fmt=jpeg&qlt=95&.v=VlJKN1JRKzNSalIyeU83UlpIZVYrSXExblZJSGFXSFVPMUE2c2RxMy8rTHVyc0U1MFRBMUZ3OGsyblczOEw4aW9qN3J0NFFLUWFFbFdWdUFWS2lUd1E"
+                                alt="iPad mini4硅胶保护壳" class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">iPad mini4硅胶保护壳</h3>
+                            <p class="product-desc">优质皮革材质，自动唤醒/休眠，多种颜色可选</p>
+                            <div class="product-actions">
+                                <p class="product-price">¥599</p>
+                                <button class="add-to-cart-btn" data-name="iPad Air 皮革保护壳" data-price="599">
+                                    加入购物车
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 支架分类 -->
+                    <div id="stands" class="category-heading">
+                        <h3 class="category-title">支架</h3>
+                    </div>
+
+                    <!-- iPad 多功能支架 -->
+                    <div class="product-card" data-category="stand">
+                        <div class="product-image-container">
+                            <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/HRX82?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1697736999544"
+                                alt="iPad 多功能支架" class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">iphone 多功能支架</h3>
+                            <p class="product-desc">多角度调节，稳固支撑，折叠设计，方便携带</p>
+                            <div class="product-actions">
+                                <p class="product-price">¥299</p>
+                                <button class="add-to-cart-btn" data-name="iPad 多功能支架" data-price="299">
+                                    加入购物车
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 转接器分类 -->
+                    <div id="adapters" class="category-heading">
+                        <h3 class="category-title">转接器</h3>
+                    </div>
+
+                    <!-- USB-C 至 USB 转接器 -->
+                    <div class="product-card" data-category="adapter">
+                        <div class="product-image-container">
+                            <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MJ1M2?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1697736999544"
+                                alt="USB-C 至 USB 转接器" class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">USB-C 至 USB 转接器</h3>
+                            <p class="product-desc">连接USB配件，支持高速数据传输，即插即用</p>
+                            <div class="product-actions">
+                                <p class="product-price">¥149</p>
+                                <button class="add-to-cart-btn" data-name="USB-C 至 USB 转接器" data-price="149">
+                                    加入购物车
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- USB-C 至 HDMI 转接器 -->
+                    <div class="product-card" data-category="adapter">
+                        <div class="product-image-container">
+                            <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/HLL52?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1697736999544"
+                                alt="USB-C 至 HDMI 转接器" class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Belkin Ultra HD 高速 8K/4K HDMI 连接线 (2 米)</h3>
+                            <p class="product-desc">连接外部显示器，支持4K输出，高清画质</p>
+                            <div class="product-actions">
+                                <p class="product-price">¥329</p>
+                                <button class="add-to-cart-btn" data-name="Belkin Ultra HD 高速 8K/4K HDMI 连接线 (2 米)"
+                                    data-price="329">
+                                    加入购物车
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 其他配件分类 -->
+                    <div id="other" class="category-heading">
+                        <h3 class="category-title">其他配件</h3>
+                    </div>
+
+                    <!-- iPad 相机连接套件 -->
+                    <div class="product-card" data-category="other">
+                        <div class="product-image-container">
+                            <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MD821?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1697736999544"
+                                alt="iPad 相机连接套件" class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">iPad 相机连接套件</h3>
+                            <p class="product-desc">直接导入照片和视频，支持多种存储卡</p>
+                            <div class="product-actions">
+                                <p class="product-price">¥229</p>
+                                <button class="add-to-cart-btn" data-name="iPad 相机连接套件" data-price="229">
+                                    加入购物车
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 配件推荐 -->
+        <section class="recommendation-section">
+            <div class="container">
+                <h2 class="section-title">推荐搭配</h2>
+
+                <div class="recommendation-grid">
+                    <div class="recommendation-card">
+                        <div class="recommendation-content">
+                            <h3 class="recommendation-title">创意工作套装</h3>
+                            <p class="recommendation-desc">为设计师和创意工作者打造的完美组合</p>
+                            <ul class="recommendation-list">
+                                <li class="recommendation-item">
+                                    <i class="fa fa-check"></i>
+                                    <span>iPad Pro 12.9英寸</span>
+                                </li>
+                                <li class="recommendation-item">
+                                    <i class="fa fa-check"></i>
+                                    <span>Apple Pencil (第二代)</span>
+                                </li>
+                                <li class="recommendation-item">
+                                    <i class="fa fa-check"></i>
+                                    <span>Magic Keyboard</span>
+                                </li>
+                                <li class="recommendation-item">
+                                    <i class="fa fa-check"></i>
+                                    <span>iPad Pro 透明保护壳</span>
+                                </li>
+                            </ul>
+                            <a href="#" class="btn primary-btn">查看套装</a>
+                        </div>
+                    </div>
+
+                    <div class="recommendation-card">
+                        <div class="recommendation-content">
+                            <h3 class="recommendation-title">移动办公套装</h3>
+                            <p class="recommendation-desc">提升生产力的便携办公解决方案</p>
+                            <ul class="recommendation-list">
+                                <li class="recommendation-item">
+                                    <i class="fa fa-check"></i>
+                                    <span>iPad Air</span>
+                                </li>
+                                <li class="recommendation-item">
+                                    <i class="fa fa-check"></i>
+                                    <span>Apple Pencil (第二代)</span>
+                                </li>
+                                <li class="recommendation-item">
+                                    <i class="fa fa-check"></i>
+                                    <span>Smart Keyboard Folio</span>
+                                </li>
+                                <li class="recommendation-item">
+                                    <i class="fa fa-check"></i>
+                                    <span>USB-C 多功能转接器</span>
+                                </li>
+                            </ul>
+                            <a href="#" class="btn primary-btn">查看套装</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-heading">商店</h3>
+                    <ul class="footer-links">
+                        <li><a href="iphone.html" class="footer-link">iPhone</a></li>
+                        <li><a href="ipad.html" class="footer-link">iPad</a></li>
+                        <li><a href="mac.html" class="footer-link">Mac</a></li>
+                        <li><a href="watch.html" class="footer-link">Apple Watch</a></li>
+                        <li><a href="airpods.html" class="footer-link">AirPods</a></li>
+                        <li><a href="accessories.html" class="footer-link">配件</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-heading">服务与支持</h3>
+                    <ul class="footer-links">
+                        <li><a href="support.html" class="footer-link">技术支持</a></li>
+                        <li><a href="repair.html" class="footer-link">产品维修</a></li>
+                        <li><a href="buying-guide.html" class="footer-link">购买建议</a></li>
+                        <li><a href="apple-care.html" class="footer-link">Apple Care+</a></li>
+                        <li><a href="finance.html" class="footer-link">分期付款</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-heading">关于我们</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html" class="footer-link">公司简介</a></li>
+                        <li><a href="news.html" class="footer-link">新闻中心</a></li>
+                        <li><a href="careers.html" class="footer-link">招贤纳士</a></li>
+                        <li><a href="contact.html" class="footer-link">联系我们</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-heading">法律信息</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html" class="footer-link">隐私政策</a></li>
+                        <li><a href="terms.html" class="footer-link">使用条款</a></li>
+                        <li><a href="cookies.html" class="footer-link">Cookie 政策</a></li>
+                        <li><a href="legal.html" class="footer-link">法律声明</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2023 Apple Store. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 购物车提示框 -->
+    <div id="cart-toast" class="cart-toast">
+        <i class="fa fa-check"></i>
+        <span id="toast-message">已添加到购物车</span>
+    </div>
+
+    <script src="script/ipad-accessories.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple 支持 - 官方帮助中心</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- 引入自定义CSS -->
+    <link rel="stylesheet" href="Css/support.css">
+</head>
+
+<body>
+    <!-- 顶部信息栏 -->
+    <div class="top-bar">
+        <p>Apple 支持：400-666-8800 | 在线服务时间：每日 9:00-21:00</p>
+    </div>
+
+    <!-- 主导航栏 -->
+    <header id="main-header" class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <i class="fa fa-apple mr-2"></i>
+                    <span class="logo-text">Apple</span>
+                </a>
+
+                <!-- 桌面端主导航链接 -->
+                <nav class="main-nav">
+                    <a href="iphone.html" class="main-nav-link">iPhone</a>
+                    <a href="ipad.html" class="main-nav-link">iPad</a>
+                    <a href="mac.html" class="main-nav-link">Mac</a>
+                    <a href="watch.html" class="main-nav-link">Watch</a>
+                    <a href="airpods.html" class="main-nav-link">AirPods</a>
+                    <a href="accessories.html" class="main-nav-link">配件</a>
+                    <a href="https://apple-style-digital-0y1k.bolt.host/support"
+                        class="main-nav-link main-nav-link-active">支持</a>
+                </nav>
+
+                <!-- 功能图标区 -->
+                <div class="header-icons">
+                    <a href="#" class="icon-link">
+                        <i class="fa fa-search"></i>
+                    </a>
+                    <a href="#" class="icon-link cart-link">
+                        <i class="fa fa-shopping-bag"></i>
+                        <span class="cart-count">2</span>
+                    </a>
+                    <button id="mobile-menu-btn" class="mobile-menu-toggle">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 支持页面专属导航栏 -->
+    <nav id="support-nav" class="support-nav">
+        <div class="container">
+            <div class="support-nav-content">
+                <a href="#" class="support-nav-link support-nav-link-active">支持首页</a>
+                <a href="contact.html" class="support-nav-link">联系我们</a>
+                <a href="https://apple-style-digital-0y1k.bolt.host/support" class="support-nav-link">维修服务</a>
+                <a href="https://apple-style-digital-0y1k.bolt.host/support" class="support-nav-link">常见问题</a>
+                <a href="#" class="support-nav-link">下载中心</a>
+                <a href="https://apple-style-digital-0y1k.bolt.host/support" class="support-nav-link">保修政策</a>
+                <a href="#" class="support-nav-link">使用教程</a>
+                <a href="#" class="support-nav-link">预约服务</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 移动端菜单 (默认隐藏) -->
+    <div id="mobile-menu" class="mobile-menu-overlay hidden">
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <span class="menu-title">菜单</span>
+                <button id="close-mobile-menu" class="close-menu">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+
+            <!-- 移动端主导航 -->
+            <div class="mobile-nav">
+                <div class="mobile-nav-item">
+                    <a href="iphone.html" class="mobile-nav-link">iPhone</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="ipad.html" class="mobile-nav-link">iPad</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="mac.html" class="mobile-nav-link">Mac</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="watch.html" class="mobile-nav-link">Watch</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="airpods.html" class="mobile-nav-link">AirPods</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="accessories.html" class="mobile-nav-link">配件</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="support.html" class="mobile-nav-link mobile-nav-link-active">支持</a>
+                </div>
+            </div>
+
+            <!-- 移动端支持导航 -->
+            <div class="mobile-support-nav">
+                <h3 class="support-title">支持服务</h3>
+                <div class="mobile-nav-item">
+                    <a href="support.html" class="mobile-nav-link mobile-nav-link-active">支持首页</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="contact.html" class="mobile-nav-link">联系我们</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="https://apple-style-digital-0y1k.bolt.host/support" class="mobile-nav-link">维修服务</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="https://apple-style-digital-0y1k.bolt.host/support" class="mobile-nav-link">常见问题</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="#" class="mobile-nav-link">下载中心</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主内容区域 -->
+    <main class="main-content">
+        <div class="container">
+            <div class="support-header">
+                <h1 class="page-title">获取 Apple 支持</h1>
+                <p class="page-subtitle">我们的专家随时准备帮助您解决所有 Apple 产品的问题</p>
+
+                <!-- 搜索框 -->
+                <div class="search-container">
+                    <input type="text" placeholder="搜索支持内容..." class="search-input">
+                    <button class="search-btn">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 支持服务卡片 -->
+            <div class="service-cards">
+                <!-- 服务卡片1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa fa-headphones"></i>
+                    </div>
+                    <h3 class="service-title">在线支持</h3>
+                    <p class="service-desc">与我们的技术专家进行实时聊天，解决您的问题</p>
+                    <a href="#" class="service-link">开始聊天 <i class="fa fa-arrow-right ml-1"></i></a>
+                </div>
+
+                <!-- 服务卡片2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa fa-calendar"></i>
+                    </div>
+                    <h3 class="service-title">预约 Genius Bar</h3>
+                    <p class="service-desc">在 Apple Store 零售店预约面对面支持服务</p>
+                    <a href="#" class="service-link">预约时间 <i class="fa fa-arrow-right ml-1"></i></a>
+                </div>
+
+                <!-- 服务卡片3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa fa-truck"></i>
+                    </div>
+                    <h3 class="service-title">寄送维修</h3>
+                    <p class="service-desc">将您的设备寄送给我们进行维修或更换</p>
+                    <a href="#" class="service-link">安排寄送 <i class="fa fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+
+            <!-- 常见问题部分 -->
+            <div class="faq-section">
+                <h2 class="section-title">常见问题</h2>
+
+                <div class="faq-categories">
+                    <div class="faq-category">
+                        <h3 class="category-title">账户与密码</h3>
+                        <ul class="faq-list">
+                            <li><a href="#" class="faq-link">如何重置 Apple ID 密码？</a></li>
+                            <li><a href="#" class="faq-link">如何更改 Apple ID 关联的电子邮件地址？</a></li>
+                            <li><a href="#" class="faq-link">忘记 Apple ID 怎么办？</a></li>
+                            <li><a href="#" class="faq-link">如何启用双重认证？</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="faq-category">
+                        <h3 class="category-title">设备使用</h3>
+                        <ul class="faq-list">
+                            <li><a href="#" class="faq-link">如何备份我的 iPhone 数据？</a></li>
+                            <li><a href="#" class="faq-link">Mac 无法开机怎么办？</a></li>
+                            <li><a href="#" class="faq-link">Apple Watch 如何配对新手机？</a></li>
+                            <li><a href="#" class="faq-link">AirPods 连接问题排查</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="faq-category">
+                        <h3 class="category-title">维修与保修</h3>
+                        <ul class="faq-list">
+                            <li><a href="#" class="faq-link">我的设备是否在保修期内？</a></li>
+                            <li><a href="#" class="faq-link">如何查询维修状态？</a></li>
+                            <li><a href="#" class="faq-link">AppleCare+ 服务包含哪些内容？</a></li>
+                            <li><a href="#" class="faq-link">更换电池的流程是什么？</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="#" class="view-all-faq">查看所有常见问题 <i class="fa fa-chevron-right ml-1"></i></a>
+            </div>
+
+            <!-- 联系我们部分 -->
+            <div class="contact-section">
+                <h2 class="section-title">联系我们</h2>
+
+                <div class="contact-options">
+                    <div class="contact-option">
+                        <div class="contact-icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <h3 class="contact-title">电话支持</h3>
+                        <p class="contact-desc">400-666-8800</p>
+                        <p class="contact-info">每日 9:00-21:00（包括公众假期）</p>
+                        <a href="#" class="contact-link">拨打电话</a>
+                    </div>
+
+                    <div class="contact-option">
+                        <div class="contact-icon">
+                            <i class="fa fa-comment"></i>
+                        </div>
+                        <h3 class="contact-title">在线聊天</h3>
+                        <p class="contact-desc">与 Apple 专家实时交流</p>
+                        <p class="contact-info">每日 9:00-21:00</p>
+                        <a href="#" class="contact-link">开始聊天</a>
+                    </div>
+
+                    <div class="contact-option">
+                        <div class="contact-icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <h3 class="contact-title">前往 Apple Store 零售店</h3>
+                        <p class="contact-desc">预约面对面的专家服务</p>
+                        <a href="https://map.baidu.com/search/%E5%8C%97%E6%B5%B7%E5%B8%82/@12148042,2434232.75,13z?querytype=s&da_src=shareurl&wd=%E5%8C%97%E6%B5%B7&c=142&src=0&pn=0&sug=0&l=12&b=(12227436.55648117,2875715.9748823727;12273676.051424334,2902645.9600657513)&from=webmap&biz_forward=%7B%22scaler%22:2,%22styles%22:%22pl%22%7D&device_ratio=2"
+                            class="contact-link">查找零售店</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4 class="footer-column-title">产品</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">iPhone</a></li>
+                        <li><a href="#" class="footer-link">iPad</a></li>
+                        <li><a href="#" class="footer-link">Mac</a></li>
+                        <li><a href="#" class="footer-link">Watch</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-column-title">支持</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">联系我们</a></li>
+                        <li><a href="#" class="footer-link">维修服务</a></li>
+                        <li><a href="#" class="footer-link">保修信息</a></li>
+                        <li><a href="#" class="footer-link">资源中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-column-title">关于 Apple</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">公司简介</a></li>
+                        <li><a href="#" class="footer-link">新闻中心</a></li>
+                        <li><a href="#" class="footer-link">工作机会</a></li>
+                        <li><a href="#" class="footer-link">投资者关系</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-column-title">关注我们</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fa fa-weibo"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fa fa-wechat"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fa fa-youtube-play"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 Apple Inc. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单控制
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMobileMenuBtn = document.getElementById('close-mobile-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuContainer = mobileMenu.querySelector('.mobile-menu');
+
+        // 打开移动菜单
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            // 添加动画效果
+            setTimeout(() => {
+                mobileMenuContainer.classList.add('menu-visible');
+            }, 10);
+            document.body.style.overflow = 'hidden'; // 防止背景滚动
+        });
+
+        // 关闭移动菜单
+        function closeMobileMenu() {
+            mobileMenuContainer.classList.remove('menu-visible');
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+                document.body.style.overflow = ''; // 恢复滚动
+            }, 300);
+        }
+
+        closeMobileMenuBtn.addEventListener('click', closeMobileMenu);
+
+        // 点击菜单外部关闭
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                closeMobileMenu();
+            }
+        });
+    </script>
+</body>
+
+</html>

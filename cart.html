@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车 - Apple Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Css/cart.css">
+</head>
+
+<body class="page-bg">
+    <!-- 导航栏 -->
+    <nav class="navbar transition-all">
+        <div class="container">
+            <div class="navbar-content">
+                <a href="index.html" class="logo">
+                    <i class="fa fa-apple mr-2"></i>Store
+                </a>
+                <div class="navbar-links">
+                    <a href="cart.html" class="cart-link relative">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span id="cart-count" class="cart-badge">0</span>
+                    </a>
+                    <button id="mobile-menu-button" class="mobile-menu-btn">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="mobile-menu hidden">
+            <div class="mobile-menu-content">
+                <a href="index.html" class="mobile-menu-item">首页</a>
+                <a href="#" class="mobile-menu-item">iPhone</a>
+                <a href="#" class="mobile-menu-item">iPad</a>
+                <a href="#" class="mobile-menu-item">Mac</a>
+                <a href="#" class="mobile-menu-item">支持</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="container main-content">
+        <h1 class="page-title">购物车</h1>
+
+        <div class="cart-layout">
+            <!-- 购物车项目 -->
+            <div class="cart-items-container">
+                <div class="card">
+                    <div id="cart-items" class="cart-items">
+                        <!-- 购物车项目将通过JavaScript加载 -->
+                        <div class="loading-spinner">
+                            <div class="spinner"></div>
+                        </div>
+                    </div>
+
+                    <div class="cart-actions">
+                        <a href="index.html" class="btn-secondary">
+                            <i id="gw" class="fa fa-arrow-left mr-2  gw"></i> 继续购物
+                        </a>
+                        <button id="clear-cart" class="btn-text text-red">
+                            <i class="fa fa-trash mr-1"></i> 清空购物车
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 订单摘要 -->
+            <div class="order-summary-container">
+                <div class="card sticky-card">
+                    <h2 class="summary-title">订单摘要</h2>
+
+                    <div class="summary-details">
+                        <div class="summary-item">
+                            <span>商品总计</span>
+                            <span id="subtotal">¥0.00</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>运费</span>
+                            <span id="shipping-fee">¥0.00</span>
+                        </div>
+                        <div class="summary-total">
+                            <span>总计</span>
+                            <span id="order-total">¥0.00</span>
+                        </div>
+                    </div>
+
+                    <button id="checkout-btn" class="btn-primary w-full checkout-btn" disabled>
+                        前往结账
+                    </button>
+
+                    <p class="summary-info">
+                        购物满¥99免运费<br>
+                        支持7天无理由退货
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4 class="footer-column-title">产品</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">iPhone</a></li>
+                        <li><a href="#" class="footer-link">iPad</a></li>
+                        <li><a href="#" class="footer-link">Mac</a></li>
+                        <li><a href="#" class="footer-link">Watch</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-column-title">支持</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">联系我们</a></li>
+                        <li><a href="#" class="footer-link">维修服务</a></li>
+                        <li><a href="#" class="footer-link">保修政策</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-column-title">商店</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">查找门店</a></li>
+                        <li><a href="#" class="footer-link">在线商店</a></li>
+                        <li><a href="#" class="footer-link">教育优惠</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-column-title">关于</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="element">公司简介</a></li>
+                        <li><a href="#" class="element">新闻中心</a></li>
+                        <li><a href="#" class="element">加入我们</a></li>
+                    </ul>
+                </div>
+                <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-500 text-sm">
+                    © 2023 Apple Store. 保留所有权利。
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 商品图片映射对象
+        const productImages = {
+            "iPhone 15 Pro": "images/iphone15pro.jpg",
+            "iPad Pro 2024": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-pro-finish-select-202405-13inch-silver?wid=5120&hei=2880&fmt=webp&qlt=90&.v=YXpaUEtKWGhlNnNrVGZkTEo4T0xsNDByMHhIZkdBbFEwRFROUE9ubkFjT0JLNkVlVkZpVE5VcEU5RHJDbXpCOXF2TWlpSzUzejRCZGt2SjJUNGl1VEE4bm1RcmlWRWp2eDN1WHNkSjNmUllZL0pKZXh4SzVKTkVSLzVNYi85bWE&traceId=1",
+            "MacBook Air": "images/macbookair.jpg",
+            "Apple Watch Ultra 2": "images/watchultra.jpg",
+            "iPhone 15": "images/iphone15.jpg",
+            "iPad Air": "images/ipadair.jpg",
+            "MacBook Pro": "images/macbookpro.jpg",
+            "Apple Watch Series 9": "images/watchseries9.jpg"
+        };
+
+        // 默认图片路径
+        const defaultImage = "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-pro-finish-select-202405-13inch-silver?wid=5120&hei=2880&fmt=webp&qlt=90&.v=YXpaUEtKWGhlNnNrVGZkTEo4T0xsNDByMHhIZkdBbFEwRFROUE9ubkFjT0JLNkVlVkZpVE5VcEU5RHJDbXpCOXF2TWlpSzUzejRCZGt2SjJUNGl1VEE4bm1RcmlWRWp2eDN1WHNkSjNmUllZL0pKZXh4SzVKTkVSLzVNYi85bWE&traceId=1";
+
+        // 获取商品图片路径的函数
+        function getProductImage(productName) {
+            return productImages[productName] || defaultImage;
+        }
+
+        function showToast(message) {
+            if (!message || typeof message !== 'string') {
+                message = '操作完成';
+            }
+
+            let toast = document.getElementById('toast');
+            if (!toast) {
+                toast = document.createElement('div');
+                toast.id = 'toast';
+                toast.className = 'toast';
+                document.body.appendChild(toast);
+            }
+
+            toast.innerHTML = `<i class="fa fa-info-circle mr-2"></i><span>${message}</span>`;
+            toast.classList.remove('toast-hidden');
+            toast.classList.add('toast-visible');
+
+            setTimeout(() => {
+                toast.classList.add('toast-hidden');
+                toast.classList.remove('toast-visible');
+            }, 3000);
+        }
+
+        // 更新购物车计数
+        function updateCartCount() {
+            const cartCountElement = document.getElementById('cart-count');
+            if (!cartCountElement) return;
+
+            try {
+                const cartJson = localStorage.getItem('cart');
+                const cart = cartJson ? JSON.parse(cartJson) : [];
+                const totalCount = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+                cartCountElement.textContent = totalCount;
+            } catch (e) {
+                console.error('更新购物车计数失败:', e);
+                cartCountElement.textContent = '0';
+            }
+        }
+
+        // 更新购物车项目
+        function updateCartItems() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            const subtotalElement = document.getElementById('subtotal');
+            const shippingFeeElement = document.getElementById('shipping-fee');
+            const orderTotalElement = document.getElementById('order-total');
+            const checkoutBtn = document.getElementById('checkout-btn');
+
+            if (!cartItemsContainer || !subtotalElement || !shippingFeeElement || !orderTotalElement || !checkoutBtn) {
+                console.error('购物车元素不存在');
+                return;
+            }
+
+            try {
+                // 获取购物车数据
+                const cartJson = localStorage.getItem('cart');
+                const cart = cartJson ? JSON.parse(cartJson) : [];
+
+                // 处理空购物车
+                if (!cart || cart.length === 0) {
+                    cartItemsContainer.innerHTML = `
+                        <div class="empty-cart">
+                            <i class="fa fa-shopping-cart text-5xl text-gray mb-4"></i>
+                            <p class="text-xl text-gray mb-6">您的购物车是空的</p>
+                            <a href="index.html" class="btn-primary">
+                                开始购物
+                            </a>
+                        </div>
+                    `;
+                    subtotalElement.textContent = '¥0.00';
+                    shippingFeeElement.textContent = '¥0.00';
+                    orderTotalElement.textContent = '¥0.00';
+                    checkoutBtn.disabled = true;
+                    checkoutBtn.classList.add('btn-disabled');
+                    return;
+                }
+
+                // 启用结账按钮
+                checkoutBtn.disabled = false;
+                checkoutBtn.classList.remove('btn-disabled');
+
+                // 计算总计并生成购物车项目HTML
+                let subtotal = 0;
+                let cartItemsHTML = '';
+
+                cart.forEach((item, index) => {
+                    // 确保商品数据完整
+                    const id = item.id || `item-${index}`;
+                    const name = item.name || '未知商品';
+                    const price = parseFloat(item.price?.replace('¥', '') || 0);
+                    const quantity = item.quantity || 1;
+                    // 使用图片映射函数获取商品图片
+                    const image = getProductImage(name);
+
+                    const itemTotal = price * quantity;
+                    subtotal += itemTotal;
+
+                    cartItemsHTML += `
+                        <div class="cart-item" data-id="${id}">
+                            <img src="${image}" alt="${name}" class="cart-item-img" onerror="this.onerror=null; this.src='${defaultImage}';">
+                            <div class="cart-item-info">
+                                <div class="cart-item-row">
+                                    <div>
+                                        <h3 class="cart-item-name">${name}</h3>
+                                        <p class="text-blue">¥${price.toFixed(2)}</p>
+                                        <div class="quantity-control">
+                                            <button class="quantity-btn decrease-btn" data-index="${index}">
+                                                <i class="fa fa-minus"></i>
+                                            </button>
+                                            <input type="number" min="1" value="${quantity}" class="quantity-input" data-index="${index}">
+                                            <button class="quantity-btn increase-btn" data-index="${index}">
+                                                <i class="fa fa-plus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="cart-item-total">
+                                        <p class="font-medium">¥${itemTotal.toFixed(2)}</p>
+                                        <button class="btn-text remove-item" data-index="${index}">
+                                            移除
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                // 计算运费 (购物满99元免运费)
+                const shippingFee = subtotal >= 99 ? 0 : 15;
+                const orderTotal = subtotal + shippingFee;
+
+                // 更新页面
+                cartItemsContainer.innerHTML = cartItemsHTML;
+                subtotalElement.textContent = `¥${subtotal.toFixed(2)}`;
+                shippingFeeElement.textContent = `¥${shippingFee.toFixed(2)}`;
+                orderTotalElement.textContent = `¥${orderTotal.toFixed(2)}`;
+
+                // 添加事件监听器
+                setupCartEventListeners();
+
+            } catch (e) {
+                console.error('加载购物车失败:', e);
+                cartItemsContainer.innerHTML = `
+                    <div class="error-message">
+                        <p class="text-gray">加载购物车时出错</p>
+                        <button onclick="updateCartItems()" class="text-blue hover-underline mt-4">
+                            重试
+                        </button>
+                    </div>
+                `;
+            }
+        }
+
+        // 设置购物车事件监听器
+        function setupCartEventListeners() {
+            // 减少数量按钮
+            document.querySelectorAll('.decrease-btn').forEach(button => {
+                button.addEventListener('click', function () {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    updateQuantity(index, -1);
+                });
+            });
+
+            // 增加数量按钮
+            document.querySelectorAll('.increase-btn').forEach(button => {
+                button.addEventListener('click', function () {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    updateQuantity(index, 1);
+                });
+            });
+
+            // 数量输入框
+            document.querySelectorAll('.quantity-input').forEach(input => {
+                input.addEventListener('change', function () {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    const newQuantity = parseInt(this.value) || 1;
+                    setQuantity(index, newQuantity);
+                });
+            });
+
+            // 移除商品按钮
+            document.querySelectorAll('.remove-item').forEach(button => {
+                button.addEventListener('click', function () {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    removeItem(index);
+                });
+            });
+        }
+
+        // 更新商品数量
+        function updateQuantity(index, change) {
+            try {
+                const cartJson = localStorage.getItem('cart');
+                const cart = cartJson ? JSON.parse(cartJson) : [];
+
+                if (index >= 0 && index < cart.length) {
+                    const newQuantity = Math.max(1, (cart[index].quantity || 1) + change);
+                    cart[index].quantity = newQuantity;
+
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    updateCartItems();
+                    updateCartCount();
+                    showToast('购物车已更新');
+                }
+            } catch (e) {
+                console.error('更新数量失败:', e);
+                showToast('更新失败，请重试');
+            }
+        }
+
+        // 设置商品数量
+        function setQuantity(index, newQuantity) {
+            try {
+                const cartJson = localStorage.getItem('cart');
+                const cart = cartJson ? JSON.parse(cartJson) : [];
+
+                if (index >= 0 && index < cart.length) {
+                    cart[index].quantity = Math.max(1, newQuantity);
+
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    updateCartItems();
+                    updateCartCount();
+                }
+            } catch (e) {
+                console.error('设置数量失败:', e);
+                showToast('更新失败，请重试');
+            }
+        }
+
+        // 移除商品
+        function removeItem(index) {
+            try {
+                const cartJson = localStorage.getItem('cart');
+                const cart = cartJson ? JSON.parse(cartJson) : [];
+
+                if (index >= 0 && index < cart.length) {
+                    const removedItem = cart.splice(index, 1);
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    updateCartItems();
+                    updateCartCount();
+                    showToast(`已移除 ${removedItem[0].name}`);
+                }
+            } catch (e) {
+                console.error('移除商品失败:', e);
+                showToast('移除失败，请重试');
+            }
+        }
+
+        // 清空购物车
+        function setupClearCartButton() {
+            const clearCartBtn = document.getElementById('clear-cart');
+            if (!clearCartBtn) return;
+
+            clearCartBtn.addEventListener('click', function () {
+                if (confirm('确定要清空购物车吗？')) {
+                    try {
+                        localStorage.removeItem('cart');
+                        updateCartItems();
+                        updateCartCount();
+                        showToast('购物车已清空');
+                    } catch (e) {
+                        console.error('清空购物车失败:', e);
+                        showToast('清空失败，请重试');
+                    }
+                }
+            });
+        }
+
+        // 结账按钮
+        function setupCheckoutButton() {
+            const checkoutBtn = document.getElementById('checkout-btn');
+            if (!checkoutBtn) return;
+
+            checkoutBtn.addEventListener('click', function () {
+                try {
+                    const cartJson = localStorage.getItem('cart');
+                    const cart = cartJson ? JSON.parse(cartJson) : [];
+
+                    if (!cart || cart.length === 0) {
+                        showToast('您的购物车是空的');
+                        return;
+                    }
+
+                    window.location.href = 'checkout.html';
+                } catch (e) {
+                    console.error('前往结账失败:', e);
+                    showToast('操作失败，请重试');
+                }
+            });
+        }
+
+        // 移动端菜单切换
+        function setupMobileMenu() {
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (menuButton && mobileMenu) {
+                menuButton.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        }
+
+        // 页面初始化
+        document.addEventListener('DOMContentLoaded', function () {
+            setupMobileMenu();
+            updateCartCount();
+            updateCartItems();
+            setupClearCartButton();
+            setupCheckoutButton();
+
+            // 确保导航栏初始状态正确
+            window.dispatchEvent(new Event('scroll'));
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>订单确认 - Apple Store</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        /* 统一的基础样式 */
+        .container {
+            width: 100%;
+            padding-right: 1rem;
+            padding-left: 1rem;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        @media (min-width: 640px) {
+            .container { max-width: 640px; }
+        }
+        @media (min-width: 768px) {
+            .container { max-width: 768px; }
+        }
+        @media (min-width: 1024px) {
+            .container { max-width: 1024px; }
+        }
+        
+        /* 颜色系统 */
+        .apple-blue { color: #0071E3; }
+        .apple-black { color: #1D1D1F; }
+        .apple-gray { color: #86868B; }
+        .apple-lightgray { background-color: #F5F5F7; }
+        .apple-red { color: #FF3B30; }
+        .bg-apple-blue { background-color: #0071E3; }
+        .bg-apple-blue-dark { background-color: #0062CC; }
+        .bg-apple-black { background-color: #1D1D1F; }
+        .bg-white { background-color: #FFFFFF; }
+        
+        /* 布局工具类 */
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .md:flex-row { flex-direction: row; }
+        .justify-between { justify-content: space-between; }
+        .items-center { align-items: center; }
+        .items-start { align-items: flex-start; }
+        .space-x-6 > * + * { margin-left: 1.5rem; }
+        .space-y-4 > * + * { margin-top: 1rem; }
+        .space-y-6 > * + * { margin-top: 1.5rem; }
+        
+        /* 边距和内边距 */
+        .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+        .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+        .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+        .px-4 { padding-right: 1rem; padding-left: 1rem; }
+        .px-6 { padding-right: 1.5rem; padding-left: 1.5rem; }
+        .mt-4 { margin-top: 1rem; }
+        .mt-8 { margin-top: 2rem; }
+        .mt-16 { margin-top: 4rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        
+        /* 宽度 */
+        .w-full { width: 100%; }
+        @media (min-width: 768px) {
+            .md:w-1-2 { width: 50%; }
+            .md:w-2-3 { width: 66.666%; }
+            .md:w-1-3 { width: 33.333%; }
+        }
+        
+        /* 文本样式 */
+        .text-center { text-align: center; }
+        .text-right { text-align: right; }
+        .font-bold { font-weight: 700; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .text-base { font-size: 1rem; line-height: 1.5rem; }
+        .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+        .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+        .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+        
+        /* 边框和圆角 */
+        .rounded-md { border-radius: 0.375rem; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .border { border-width: 1px; }
+        .border-t { border-top-width: 1px; }
+        .border-gray-200 { border-color: #e5e7eb; }
+        
+        /* 阴影 */
+        .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+        
+        /* 显示控制 */
+        .hidden { display: none; }
+        @media (min-width: 768px) {
+            .md:hidden { display: none; }
+        }
+        
+        /* 定位 */
+        .absolute { position: absolute; }
+        .relative { position: relative; }
+        .fixed { position: fixed; }
+        .bottom-6 { bottom: 1.5rem; }
+        .right-6 { right: 1.5rem; }
+        .z-10 { z-index: 10; }
+        .z-50 { z-index: 50; }
+        
+        /* 过渡 */
+        .transition-all { transition: all 0.3s ease; }
+        
+        /* 按钮样式 */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .btn-primary {
+            background-color: #0071E3;
+            color: white;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #0062CC;
+        }
+        .btn-secondary {
+            background-color: transparent;
+            color: #0071E3;
+            border: 1px solid #0071E3;
+        }
+        
+        /* 订单项目样式 */
+        .order-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        /* 动画 */
+        .animate-spin {
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="apple-lightgray">
+    <!-- 导航栏 -->
+    <nav id="navbar" class="py-4 transition-all w-full top-0 z-10">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold apple-black">Apple
+                     <i class="fa fa-apple mr-2"></i>Store
+                </a>
+                <div class="flex items-center space-x-6">
+                    <a href="cart.html" class="relative apple-black hover:apple-blue transition-all">
+                        <i class="fa fa-shopping-cart text-xl"></i>
+                        <span id="cart-count" class="absolute -top-2 -right-2 bg-apple-blue text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">0</span>
+                    </a>
+                    <button id="mobile-menu-button" class="md:hidden apple-black hover:apple-blue transition-all">
+                        <i class="fa fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 bg-white shadow-lg">
+            <div class="container mx-auto px-4 py-2">
+                <a href="index.html" class="block py-2 hover:bg-gray-100 px-2 rounded">首页</a>
+                <a href="#" class="block py-2 hover:bg-gray-100 px-2 rounded">iPhone</a>
+                <a href="#" class="block py-2 hover:bg-gray-100 px-2 rounded">iPad</a>
+                <a href="#" class="block py-2 hover:bg-gray-100 px-2 rounded">Mac</a>
+                <a href="#" class="block py-2 hover:bg-gray-100 px-2 rounded">支持</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="container mx-auto px-4 py-16">
+        <!-- 订单成功提示 -->
+        <div class="text-center mb-16">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-green-100 text-green-500 rounded-full mb-4">
+                <i class="fa fa-check text-2xl"></i>
+            </div>
+            <h1 class="text-3xl font-bold mb-4 apple-black">订单提交成功！</h1>
+            <p class="text-xl apple-gray">感谢您的购买，我们已收到您的订单</p>
+        </div>
+        
+        <!-- 订单详情和摘要 -->
+        <div class="flex flex-col md:flex-row space-x-0 md:space-x-8">
+            <!-- 订单详情 -->
+            <div class="w-full md:w-2/3 mb-8 md:mb-0">
+                <!-- 订单基本信息 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+                    <h2 class="text-2xl font-bold mb-6">订单详情</h2>
+                    
+                    <div id="order-details" class="space-y-6">
+                        <!-- 订单详情将通过JavaScript加载 -->
+                        <div class="flex justify-center py-12">
+                            <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-apple-blue"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 配送信息 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-6">配送信息</h2>
+                    <div id="shipping-details" class="space-y-4">
+                        <!-- 配送信息将通过JavaScript加载 -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 订单摘要 -->
+            <div class="w-full md:w-1/3">
+                <div class="bg-white p-6 rounded-lg shadow-lg sticky top-24">
+                    <h2 class="text-2xl font-bold mb-6">订单摘要</h2>
+                    
+                    <div id="order-summary-items" class="space-y-4 mb-6 border-b border-gray-200 pb-4">
+                        <!-- 订单项目将通过JavaScript加载 -->
+                    </div>
+                    
+                    <div class="space-y-2 mb-6">
+                        <div class="flex justify-between">
+                            <span>小计</span>
+                            <span id="subtotal">¥0.00</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>运费</span>
+                            <span id="shipping-fee">¥0.00</span>
+                        </div>
+                        <div class="flex justify-between font-bold text-xl mt-4 pt-4 border-t border-gray-200">
+                            <span>总计</span>
+                            <span id="order-total">¥0.00</span>
+                        </div>
+                    </div>
+                    
+                    <a href="index.html" class="btn btn-primary w-full py-3">
+                        继续购物
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-apple-black text-white py-12 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">产品</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white transition-all">iPhone</a></li>
+                        <li><a href="#" class="hover:text-white transition-all">iPad</a></li>
+                        <li><a href="#" class="hover:text-white transition-all">Mac</a></li>
+                        <li><a href="#" class="hover:text-white transition-all">Watch</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">支持</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white transition-all">联系我们</a></li>
+                        <li><a href="#" class="hover:text-white transition-all">维修服务</a></li>
+                        <li><a href="#" class="hover:text-white transition-all">保修政策</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">商店</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white transition-all">查找门店</a></li>
+                        <li><a href="#" class="hover:text-white transition-all">在线商店</a></li>
+                        <li><a href="#" class="hover:text-white transition-all">教育优惠</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">关于</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white transition-all">公司简介</a></li>
+                        <li><a href="#" class="hover:text-white transition-all">新闻中心</a></li>
+                        <li><a href="#" class="hover:text-white transition-all">加入我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
+                © 2023 Apple Store. 保留所有权利。
+            </div>
+        </div>
+    </footer>
+
+    <!-- 提示框 -->
+    <div id="toast" class="fixed bottom-6 right-6 bg-apple-black text-white px-6 py-3 rounded-full shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 flex items-center z-50 hidden"></div>
+
+    <script>
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (!navbar) return;
+            
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white', 'shadow-lg', 'py-2');
+                navbar.classList.remove('py-4');
+            } else {
+                navbar.classList.remove('bg-white', 'shadow-lg', 'py-2');
+                navbar.classList.add('py-4');
+            }
+        });
+
+        // 显示提示消息
+        function showToast(message) {
+            if (!message || typeof message !== 'string') {
+                message = '操作完成';
+            }
+            
+            let toast = document.getElementById('toast');
+            if (!toast) {
+                toast = document.createElement('div');
+                toast.id = 'toast';
+                toast.className = 'fixed bottom-6 right-6 bg-apple-black text-white px-6 py-3 rounded-full shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 flex items-center z-50';
+                document.body.appendChild(toast);
+            }
+            
+            toast.innerHTML = `<i class="fa fa-info-circle mr-2"></i><span>${message}</span>`;
+            toast.classList.remove('translate-y-20', 'opacity-0', 'hidden');
+            toast.classList.add('translate-y-0', 'opacity-100');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+                toast.classList.remove('translate-y-0', 'opacity-100');
+            }, 3000);
+        }
+
+        // 更新购物车计数
+        function updateCartCount() {
+            const cartCountElement = document.getElementById('cart-count');
+            if (!cartCountElement) return;
+
+            try {
+                const cartJson = localStorage.getItem('cart');
+                const cart = cartJson ? JSON.parse(cartJson) : [];
+                const totalCount = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+                cartCountElement.textContent = totalCount;
+            } catch (e) {
+                console.error('更新购物车计数失败:', e);
+                cartCountElement.textContent = '0';
+            }
+        }
+
+        // 从URL获取订单ID
+        function getOrderIdFromUrl() {
+            try {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get('orderId');
+            } catch (e) {
+                console.error('获取订单ID失败:', e);
+                return null;
+            }
+        }
+
+        // 渲染订单详情
+        function renderOrderDetails(order) {
+            // 检查订单数据是否存在
+            if (!order) {
+                document.getElementById('order-details').innerHTML = `
+                    <div class="text-center py-8">
+                        <p class="apple-gray">无法找到订单信息</p>
+                        <button onclick="loadOrderDetails()" class="mt-4 text-apple-blue hover:underline">
+                            重试
+                        </button>
+                    </div>
+                `;
+                return;
+            }
+
+            // 格式化日期
+            let formattedDate = '未知日期';
+            try {
+                const date = new Date(order.date);
+                formattedDate = date.toLocaleString('zh-CN', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+            } catch (e) {
+                console.error('格式化日期失败:', e);
+            }
+
+            // 处理可能缺失的配送方式信息
+            const shippingMethod = order.shippingMethod || '标准配送';
+            
+            // 渲染订单详情
+            document.getElementById('order-details').innerHTML = `
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <p class="text-sm apple-gray">订单编号</p>
+                        <p class="font-medium">${order.id || '未知'}</p>
+                    </div>
+                    <div>
+                        <p class="text-sm apple-gray">订单日期</p>
+                        <p class="font-medium">${formattedDate}</p>
+                    </div>
+                    <div>
+                        <p class="text-sm apple-gray">支付状态</p>
+                        <p class="font-medium text-green-600">已支付</p>
+                    </div>
+                    <div>
+                        <p class="text-sm apple-gray">配送方式</p>
+                        <p class="font-medium">${shippingMethod}</p>
+                    </div>
+                </div>
+            `;
+
+            // 渲染配送信息
+            const shippingDetailsContainer = document.getElementById('shipping-details');
+            if (shippingDetailsContainer && order.shipping) {
+                const shipping = order.shipping;
+                shippingDetailsContainer.innerHTML = `
+                    <p class="font-medium">${shipping.fullname || '未提供'}</p>
+                    <p>${shipping.phone || '未提供'}</p>
+                    <p>${shipping.address || '未提供'}</p>
+                    <p>${shipping.city || '未提供'} ${shipping.zipcode || ''}</p>
+                `;
+            }
+
+            // 渲染订单项目
+            const orderItemsContainer = document.getElementById('order-summary-items');
+            if (orderItemsContainer && order.items && order.items.length > 0) {
+                let itemsHTML = '';
+                order.items.forEach(item => {
+                    const name = item.name || '未知商品';
+                    const quantity = item.quantity || 1;
+                    const price = parseFloat(item.price?.replace('¥', '') || 0);
+                    const itemTotal = price * quantity;
+                    
+                    itemsHTML += `
+                        <div class="flex justify-between">
+                            <div>
+                                <p class="font-medium">${name}</p>
+                                <p class="text-sm apple-gray">数量: ${quantity}</p>
+                            </div>
+                            <p class="font-medium">¥${itemTotal.toFixed(2)}</p>
+                        </div>
+                    `;
+                });
+                orderItemsContainer.innerHTML = itemsHTML;
+            } else {
+                orderItemsContainer.innerHTML = '<p class="text-center py-4 apple-gray">无订单项目</p>';
+            }
+
+            // 更新金额信息
+            const subtotal = order.items ? order.items.reduce((sum, item) => {
+                const price = parseFloat(item.price?.replace('¥', '') || 0);
+                return sum + (price * (item.quantity || 1));
+            }, 0) : 0;
+            
+            const shippingFee = order.shippingFee || 0;
+            const total = order.total || subtotal + shippingFee;
+            
+            document.getElementById('subtotal').textContent = `¥${subtotal.toFixed(2)}`;
+            document.getElementById('shipping-fee').textContent = `¥${shippingFee.toFixed(2)}`;
+            document.getElementById('order-total').textContent = `¥${total.toFixed(2)}`;
+        }
+
+        // 加载订单详情
+        function loadOrderDetails() {
+            const orderId = getOrderIdFromUrl();
+            const orderDetailsContainer = document.getElementById('order-details');
+            
+            if (!orderId) {
+                if (orderDetailsContainer) {
+                    orderDetailsContainer.innerHTML = `
+                        <div class="text-center py-8">
+                            <p class="apple-gray">订单ID不存在</p>
+                        </div>
+                    `;
+                }
+                return;
+            }
+            
+            try {
+                // 显示加载状态
+                if (orderDetailsContainer) {
+                    orderDetailsContainer.innerHTML = `
+                        <div class="flex justify-center py-12">
+                            <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-apple-blue"></div>
+                        </div>
+                    `;
+                }
+                
+                // 从本地存储获取订单
+                const ordersJson = localStorage.getItem('orders');
+                const orders = ordersJson ? JSON.parse(ordersJson) : [];
+                const order = orders.find(o => o.id === orderId);
+                
+                // 渲染订单详情
+                renderOrderDetails(order);
+                
+                if (!order) {
+                    showToast('未找到该订单');
+                }
+                
+            } catch (e) {
+                console.error('加载订单详情失败:', e);
+                if (orderDetailsContainer) {
+                    orderDetailsContainer.innerHTML = `
+                        <div class="text-center py-8">
+                            <p class="apple-gray">加载订单详情时出错</p>
+                            <button onclick="loadOrderDetails()" class="mt-4 text-apple-blue hover:underline">
+                                重试
+                            </button>
+                        </div>
+                    `;
+                }
+                showToast('加载订单详情失败');
+            }
+        }
+
+        // 移动端菜单切换
+        function setupMobileMenu() {
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (menuButton && mobileMenu) {
+                menuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        }
+
+        // 页面初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            setupMobileMenu();
+            updateCartCount();
+            loadOrderDetails();
+            
+            // 确保导航栏初始状态正确
+            window.dispatchEvent(new Event('scroll'));
+        });
+    </script>
+</body>
+</html>
+    

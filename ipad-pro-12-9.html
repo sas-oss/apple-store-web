@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPad Pro 12.9英寸 - Apple 官方在线商店</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Css/ipad-pro-12-9.css">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <header id="navbar" class="nav-bar">
+        <div class="container">
+            <nav class="nav-container">
+               <a href="index.html" class="logo">
+                    <i class="fa fa-apple"></i>Store
+                </a>
+
+                <div class="nav-links">
+                    <a href="iphone.html" class="nav-link">iPhone</a>
+                    <a href="ipad.htm" class="nav-link">iPad</a>
+                    <a href="mac.html" class="nav-link">Mac</a>
+                    <a href="watch.html" class="nav-link">Watch</a>
+                    <a href="accessories.html" class="nav-link">配件</a>
+                </div>
+
+                <div class="user-actions">
+                    <a href="#" class="action-icon">
+                        <i class="fa fa-search"></i>
+                    </a>
+                    <a href="cart.html" class="action-icon cart-icon">
+                        <i class="fa fa-shopping-bag"></i>
+                        <span id="cart-count" class="cart-count">0</span>
+                    </a>
+                    <button id="mobile-menu-btn" class="mobile-menu-btn">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- 移动端菜单 -->
+            <div id="mobile-menu" class="mobile-menu hidden">
+                <div class="mobile-menu-links">
+                    <a href="iphone.html" class="mobile-link">iPhone</a>
+                    <a href="ipad.htm" class="mobile-link">iPad</a>
+                    <a href="mac.html" class="mobile-link">Mac</a>
+                    <a href="watch.html" class="mobile-link">Watch</a>
+                    <a href="accessories.html" class="mobile-link">配件</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- 产品标题区域 -->
+        <section class="product-header">
+            <div class="container">
+                <h1 class="page-title">iPad Pro 12.9英寸</h1>
+                <p class="page-subtitle">超视网膜 XDR 显示屏，M4 芯片，专业级性能，释放创造力。</p>
+                <div class="header-links">
+                    <a href="#specs" class="link">技术规格</a>
+                    <a href="#features" class="link">主要特性</a>
+                    <a href="#buy" class="link">购买方式</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 产品展示与配置选择区域 -->
+        <section id="buy" class="product-section">
+            <div class="container">
+                <div class="product-grid">
+                    <!-- 产品图片区域 -->
+                    <div class="product-images">
+                        <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-pro-finish-select-202405-13inch-silver?wid=5120&hei=2880&fmt=webp&qlt=90&.v=YXpaUEtKWGhlNnNrVGZkTEo4T0xsNDByMHhIZkdBbFEwRFROUE9ubkFjT0JLNkVlVkZpVE5VcEU5RHJDbXpCOXF2TWlpSzUzejRCZGt2SjJUNGl1VEE4bm1RcmlWRWp2eDN1WHNkSjNmUllZL0pKZXh4SzVKTkVSLzVNYi85bWE&traceId=1"
+                            alt="iPad Pro M4 2024 12.9英寸 银色" class="main-image">
+
+                        <!-- 缩略图 -->
+                        <!-- <div class="thumbnails">
+                        <img src="https://picsum.photos/id/160/200/200" alt="iPad Pro 正面" class="thumbnail">
+                        <img src="https://picsum.photos/id/119/200/200" alt="iPad Pro 侧面" class="thumbnail">
+                        <img src="https://picsum.photos/id/180/200/200" alt="iPad Pro 背面" class="thumbnail">
+                        <img src="https://picsum.photos/id/20/200/200" alt="iPad Pro 与配件" class="thumbnail">
+                    </div> -->
+                    </div>
+
+                    <!-- 配置选择区域 -->
+                    <div class="product-config">
+                        <h1 class="config-title">选择您的 iPad Pro 2024 12.9英寸</h1>
+
+                        <!-- 芯片选择区域 -->
+                        <div class="chip-options section">
+                            <h3 class="section-title">选择芯片</h3>
+                            <div class="options">
+                                <div class="option selected" data-chip="M4">
+                                    M4 芯片
+                                </div>
+                                <div class="option" data-chip="M4 Pro">
+                                    M4 Pro 芯片
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 内存选择区域 -->
+                        <div class="storage-options section">
+                            <h3 class="section-title">选择存储容量</h3>
+                            <div class="options">
+                                <div class="storage-option option selected" data-storage="128GB">
+                                    128GB
+                                </div>
+                                <div class="storage-option option" data-storage="256GB">
+                                    256GB
+                                </div>
+                                <div class="storage-option option" data-storage="512GB">
+                                    512GB
+                                </div>
+                                <div class="storage-option option disabled" data-storage="1TB">
+                                    1TB
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 颜色选择区域 -->
+                        <div class="color-options section">
+                            <h3 class="section-title">选择颜色</h3>
+                            <div class="options">
+                                <div class="color-option selected" data-color="银色">
+                                    <div class="color-swatch silver"></div>
+                                    <span class="color-name">银色</span>
+                                </div>
+                                <div class="color-option" data-color="深空黑">
+                                    <div class="color-swatch space-black"></div>
+                                    <span class="color-name">深空黑</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 价格显示区域 -->
+                        <div class="price-display section">
+                            <h2 id="current-price" class="price">¥7,999</h2>
+                            <p class="price-note">支持 24 期免息分期，每月低至 ¥333</p>
+                        </div>
+
+                        <!-- 购买按钮 -->
+                        <div class="action-buttons section">
+                            <button class="add-to-cart-btn primary-btn" data-name="iPad Pro 12.9英寸" data-chip="M4"
+                                data-color="银色" data-storage="128GB" data-price="7999">
+                                <i class="fa fa-shopping-bag mr-2"></i> 加入购物袋
+                            </button>
+                            <button class="buy-now-btn secondary-btn">
+                                立即购买
+                            </button>
+                        </div>
+
+                        <!-- 已选配置摘要 -->
+                        <div class="config-summary section">
+                            <h3 class="summary-title">已选配置</h3>
+                            <p class="summary-item"><span class="summary-label">芯片：</span><span id="summary-chip">M4
+                                    芯片</span></p>
+                            <p class="summary-item"><span class="summary-label">颜色：</span><span
+                                    id="summary-color">银色</span></p>
+                            <p class="summary-item"><span class="summary-label">存储：</span><span
+                                    id="summary-storage">128GB</span></p>
+                            <p class="summary-total"><span class="summary-label">总价：</span><span
+                                    id="summary-price">¥7,999</span></p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- 产品特性区域 -->
+        <section id="features" class="features-section">
+            <div class="container">
+                <h2 class="section-title">iPad Pro 2024 特性</h2>
+
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fa fa-microchip"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">M4 与 M4 Pro 芯片</h3>
+                            <p class="feature-desc">突破性性能，M4 Pro 带来更强的图形处理能力和多任务处理能力，满足专业需求。</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fa fa-television"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Liquid 视网膜 XDR 显示屏</h3>
+                            <p class="feature-desc">12.9 英寸 mini-LED 显示屏，ProMotion 自适应刷新率，P3 广色域，呈现惊人细节。</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fa fa-camera"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">专业级摄像头系统</h3>
+                            <p class="feature-desc">1200 万像素广角摄像头，支持 Center Stage 功能，让视频会议更加出色。</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fa fa-battery-full"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">全天续航</h3>
+                            <p class="feature-desc">最长可达 10 小时电池续航，满足一天的工作、学习和创作需求。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技术规格区域 -->
+        <section id="specs" class="specs-section">
+            <div class="container">
+                <h2 class="section-title">技术规格</h2>
+
+                <div class="specs-table-wrapper">
+                    <table class="specs-table">
+                        <thead>
+                            <tr class="table-header">
+                                <th class="table-header-cell">项目</th>
+                                <th class="table-header-cell">详细信息</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-row">
+                                <td class="table-cell">尺寸与重量</td>
+                                <td class="table-cell">280.6 x 214.9 x 6.4 毫米，约 682 克</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td class="table-cell">显示屏</td>
+                                <td class="table-cell">12.9 英寸 Liquid 视网膜 XDR 显示屏，2732 x 2048 分辨率，264 ppi</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td class="table-cell">芯片</td>
+                                <td class="table-cell">M4 10核CPU，10核 GPU，16 核神经网络引擎 或 M4 Pro 芯片 512GB-1TB，10核 CPU，16 核
+                                    GPU，24核神经网络引擎</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td class="table-cell">摄像头</td>
+                                <td class="table-cell">1200 万像素广角摄像头，1000 万像素超广角摄像头，激光雷达扫描仪</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td class="table-cell">电池续航</td>
+                                <td class="table-cell">最长可达 10 小时视频播放</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td class="table-cell">连接性</td>
+                                <td class="table-cell">Wi-Fi 6E，蓝牙 5.3，USB-C 端口，支持 Thunderbolt / USB 4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-title">商店</h3>
+                    <ul class="footer-links">
+                        <li><a href="iphone.html" class="footer-link">iPhone</a></li>
+                        <li><a href="ipad.html" class="footer-link">iPad</a></li>
+                        <li><a href="mac.html" class="footer-link">Mac</a></li>
+                        <li><a href="watch.html" class="footer-link">Watch</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">支持</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">联系我们</a></li>
+                        <li><a href="#" class="footer-link">维修服务</a></li>
+                        <li><a href="#" class="footer-link">技术支持</a></li>
+                        <li><a href="#" class="footer-link">常见问题</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">关于 Apple</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">公司简介</a></li>
+                        <li><a href="#" class="footer-link">新闻中心</a></li>
+                        <li><a href="#" class="footer-link">工作机会</a></li>
+                        <li><a href="#" class="footer-link">可持续发展</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">联系我们</h3>
+                    <ul class="footer-contact">
+                        <li class="contact-item">
+                            <i class="fa fa-phone contact-icon"></i>
+                            <span class="contact-text">400-666-8800</span>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fa fa-map-marker contact-icon"></i>
+                            <span class="contact-text">在线客服</span>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fa fa-clock-o contact-icon"></i>
+                            <span class="contact-text">周一至周日 9:00-21:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2023 Apple Inc. 保留所有权利。</p>
+                <div class="footer-bottom-links">
+                    <a href="#" class="bottom-link">隐私政策</a>
+                    <a href="#" class="bottom-link">使用条款</a>
+                    <a href="#" class="bottom-link">网站地图</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 购物车提示 -->
+    <div id="cart-toast" class="cart-toast toast-hidden">
+        <p>商品已添加到购物车 <i class="fa fa-check ml-2"></i></p>
+    </div>
+
+    <script>
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // 移动端菜单切换
+        document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+            const icon = this.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+
+        // iPad Pro 配置选择功能
+        const productData = {
+            // 价格数据: 芯片 -> 存储 -> 价格
+            prices: {
+                'M4': {
+                    '128GB': 8999,
+                    '256GB': 9999,
+                    '512GB': 11999
+                },
+                'M4 Pro': {
+                    '256GB': 10999,
+                    '512GB': 12999,
+                    '1TB': 15499
+                }
+            },
+            // 颜色对应的图片
+            colorImages: {
+                '银色': 'https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-pro-finish-select-202405-13inch-silver?wid=5120&hei=2880&fmt=webp&qlt=90&.v=YXpaUEtKWGhlNnNrVGZkTEo4T0xsNDByMHhIZkdBbFEwRFROUE9ubkFjT0JLNkVlVkZpVE5VcEU5RHJDbXpCOXF2TWlpSzUzejRCZGt2SjJUNGl1VEE4bm1RcmlWRWp2eDN1WHNkSjNmUllZL0pKZXh4SzVKTkVSLzVNYi85bWE&traceId=1',
+                '深空黑': 'https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-pro-storage-select-202405-13inch-spaceblack?wid=5120&hei=2880&fmt=webp&qlt=90&.v=czlRMVFIQnlSdTl0T3ZTQUtJUW9rMm5pQUoxb0NIVEJFSjRVRzZ4dzV5U2NwV2FpZUdscFJrdzhxcjBnRkVONDhLcXQxZ1h0QThIT2dnUm5qbGk5OUJkSERIUjY1Wk1Od3FtNjF6NFZLVXZJV1dGRXZGakVuOTg4b2FIVGtPNjJ2d3FYVjZtcVBNOTFvLzEvcUtBMCtR&traceId=1'
+            }
+        };
+
+        // 获取DOM元素
+        const chipOptions = document.querySelectorAll('.chip-options .option');
+        const storageOptions = document.querySelectorAll('.storage-option');
+        const colorOptions = document.querySelectorAll('.color-option');
+        const currentPriceEl = document.getElementById('current-price');
+        const summaryChipEl = document.getElementById('summary-chip');
+        const summaryColorEl = document.getElementById('summary-color');
+        const summaryStorageEl = document.getElementById('summary-storage');
+        const summaryPriceEl = document.getElementById('summary-price');
+        const mainImageEl = document.querySelector('.main-image');
+        const thumbnailImages = document.querySelectorAll('.thumbnail');
+        const addToCartBtn = document.querySelector('.add-to-cart-btn');
+
+        // 初始化选中状态
+        let selectedChip = 'M4';
+        let selectedStorage = '128GB';
+        let selectedColor = '银色';
+
+        // 更新内存选项可用性
+        function updateStorageOptions(chip) {
+            // 重置所有存储选项
+            storageOptions.forEach(option => {
+                const storage = option.getAttribute('data-storage');
+                option.classList.remove('selected', 'disabled');
+
+                // 根据芯片类型设置存储选项可用性
+                if (chip === 'M4') {
+                    // M4芯片不支持1TB
+                    if (storage === '1TB') {
+                        option.classList.add('disabled');
+                    }
+                } else if (chip === 'M4 Pro') {
+                    // M4 Pro芯片不支持128GB
+                    if (storage === '128GB') {
+                        option.classList.add('disabled');
+                    }
+                }
+            });
+
+            // 设置默认选中的存储选项
+            let defaultStorage;
+            if (chip === 'M4') {
+                defaultStorage = '128GB';
+            } else {
+                defaultStorage = '256GB';
+            }
+
+            // 选中默认存储
+            storageOptions.forEach(option => {
+                if (option.getAttribute('data-storage') === defaultStorage &&
+                    !option.classList.contains('disabled')) {
+                    option.classList.add('selected');
+                    selectedStorage = defaultStorage;
+                }
+            });
+        }
+
+        // 更新价格函数
+        function updatePrice() {
+            // 获取基础价格
+            let price = productData.prices[selectedChip][selectedStorage];
+
+            // 格式化价格显示
+            const formattedPrice = `¥${price.toLocaleString()}`;
+            currentPriceEl.textContent = formattedPrice;
+
+            // 更新摘要中的价格
+            summaryPriceEl.textContent = formattedPrice;
+
+            // 更新添加到购物车按钮的数据属性
+            addToCartBtn.setAttribute('data-chip', selectedChip);
+            addToCartBtn.setAttribute('data-color', selectedColor);
+            addToCartBtn.setAttribute('data-storage', selectedStorage);
+            addToCartBtn.setAttribute('data-price', price);
+        }
+
+        // 更新图片函数
+        function updateImage(color) {
+            if (productData.colorImages[color]) {
+                // 添加淡出效果
+                mainImageEl.style.opacity = '0';
+
+                // 延迟加载新图片以显示过渡效果
+                setTimeout(() => {
+                    // 更新主图
+                    mainImageEl.src = productData.colorImages[color];
+                    mainImageEl.alt = `iPad Pro 12.9英寸 ${color}`;
+
+                    // 恢复透明度
+                    mainImageEl.style.opacity = '1';
+
+                    // 更新第一个缩略图为当前颜色图片
+                    if (thumbnailImages.length > 0) {
+                        thumbnailImages[0].src = productData.colorImages[color];
+                        thumbnailImages[0].alt = `iPad Pro 12.9英寸 ${color}`;
+                    }
+                }, 300);
+            }
+        }
+
+        // 芯片选择事件监听
+        chipOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                // 移除其他选项的选中状态
+                chipOptions.forEach(opt => opt.classList.remove('selected'));
+
+                // 添加当前选项的选中状态
+                option.classList.add('selected');
+
+                // 更新选中的芯片
+                selectedChip = option.getAttribute('data-chip');
+
+                // 更新芯片摘要
+                summaryChipEl.textContent = `${selectedChip} 芯片`;
+
+                // 更新内存选项和价格
+                updateStorageOptions(selectedChip);
+                updatePrice();
+            });
+        });
+
+        // 存储选择事件监听
+        storageOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                // 忽略禁用的选项
+                if (option.classList.contains('disabled')) return;
+
+                // 移除其他选项的选中状态
+                storageOptions.forEach(opt => opt.classList.remove('selected'));
+
+                // 添加当前选项的选中状态
+                option.classList.add('selected');
+
+                // 更新选中的存储
+                selectedStorage = option.getAttribute('data-storage');
+
+                // 更新存储摘要
+                summaryStorageEl.textContent = selectedStorage;
+
+                // 更新价格
+                updatePrice();
+            });
+        });
+
+        // 颜色选择事件监听
+        colorOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                // 移除其他选项的选中状态
+                colorOptions.forEach(opt => opt.classList.remove('selected'));
+
+                // 添加当前选项的选中状态
+                option.classList.add('selected');
+
+                // 更新选中的颜色
+                selectedColor = option.getAttribute('data-color');
+
+                // 更新颜色摘要
+                summaryColorEl.textContent = selectedColor;
+
+                // 更新图片
+                updateImage(selectedColor);
+            });
+        });
+
+        // 缩略图点击事件
+        thumbnailImages.forEach(thumb => {
+            thumb.addEventListener('click', function () {
+                // 移除所有缩略图的选中状态
+                thumbnailImages.forEach(t => t.classList.remove('border-blue'));
+                thumbnailImages.forEach(t => t.classList.add('border-transparent'));
+
+                // 添加当前缩略图的选中状态
+                this.classList.remove('border-transparent');
+                this.classList.add('border-blue');
+
+                // 更新主图
+                mainImageEl.style.opacity = '0';
+                setTimeout(() => {
+                    mainImageEl.src = this.src;
+                    mainImageEl.alt = this.alt;
+                    mainImageEl.style.opacity = '1';
+                }, 300);
+            });
+        });
+
+        // 购物车功能
+        function updateCartCount() {
+            const cartCount = document.getElementById('cart-count');
+            if (!cartCount) return;
+
+            try {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cartCount.textContent = cart.reduce((total, item) => total + item.quantity, 0);
+            } catch (e) {
+                console.error('更新购物车计数失败:', e);
+                localStorage.setItem('cart', '[]');
+                cartCount.textContent = '0';
+            }
+        }
+
+        // 初始化购物车计数
+        updateCartCount();
+
+        // 添加到购物车
+        addToCartBtn.addEventListener('click', function () {
+            const cartToast = document.getElementById('cart-toast');
+
+            try {
+                const productName = this.getAttribute('data-name');
+                const chip = this.getAttribute('data-chip');
+                const color = this.getAttribute('data-color');
+                const storage = this.getAttribute('data-storage');
+                const price = this.getAttribute('data-price');
+                const image = mainImageEl.src;
+
+                // 创建产品对象
+                const product = {
+                    id: Date.now(),
+                    name: productName,
+                    chip: chip,
+                    color: color,
+                    storage: storage,
+                    price: price,
+                    image: image,
+                    quantity: 1
+                };
+
+                // 保存到本地存储
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart.push(product);
+                localStorage.setItem('cart', JSON.stringify(cart));
+
+                // 更新计数和显示提示
+                updateCartCount();
+
+                if (cartToast) {
+                    cartToast.classList.remove('toast-hidden');
+                    cartToast.classList.add('toast-visible');
+
+                    setTimeout(() => {
+                        cartToast.classList.add('toast-hidden');
+                        cartToast.classList.remove('toast-visible');
+                    }, 3000);
+                }
+
+            } catch (e) {
+                console.error('添加到购物车失败:', e);
+                alert('添加到购物车失败，请重试');
+            }
+        });
+
+        // 初始化页面
+        document.addEventListener('DOMContentLoaded', () => {
+            updateStorageOptions(selectedChip);
+            updatePrice();
+        });
+    </script>
+</body>
+
+</html>

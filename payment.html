@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>付款方式 - Apple Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Css/payment.css">
+</head>
+
+<body class="page-bg">
+    <!-- 导航栏 -->
+    <header id="navbar" class="navbar">
+        <div class="navbar-container">
+            <nav class="navbar-content">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <i class="fa fa-apple mr-2"></i>Store
+                </a>
+
+                <!-- 主导航 - 桌面版 -->
+                <div class="main-nav">
+                    <a href="iphone.html" class="nav-item">iPhone</a>
+                    <a href="ipad.html" class="nav-item">iPad</a>
+                    <a href="mac.html" class="nav-item">Mac</a>
+                    <a href="watch.html" class="nav-item">Watch</a>
+                    <a href="airpods.html" class="nav-item">AirPods</a>
+                    <a href="accessories.html" class="nav-item">配件</a>
+                </div>
+
+                <!-- 导航工具 -->
+                <div class="nav-tools">
+                    <a href="#" class="nav-icon">
+                        <i class="fa fa-search text-lg"></i>
+                    </a>
+                    <a href="cart.html" class="nav-icon cart-icon">
+                        <i class="fa fa-shopping-bag text-lg"></i>
+                        <span id="cart-count" class="cart-badge">0</span>
+                    </a>
+
+                    <!-- 移动端菜单按钮 -->
+                    <button id="mobile-menu-button" class="mobile-menu-btn">
+                        <i class="fa fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- 移动端菜单 -->
+            <div id="mobile-menu" class="mobile-menu hidden">
+                <div class="mobile-menu-items">
+                    <a href="iphone.html" class="mobile-menu-item">iPhone</a>
+                    <a href="ipad.html" class="mobile-menu-item">iPad</a>
+                    <a href="mac.html" class="mobile-menu-item">Mac</a>
+                    <a href="watch.html" class="mobile-menu-item">Watch</a>
+                    <a href="airpods.html" class="mobile-menu-item">AirPods</a>
+                    <a href="accessories.html" class="mobile-menu-item">配件</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <h1 class="page-title">付款方式</h1>
+
+            <!-- 步骤指示器 -->
+            <div class="steps-indicator">
+                <div class="step-item">
+                    <div class="step-icon active">
+                        <i class="fa fa-shopping-cart"></i>
+                    </div>
+                    <span class="step-text active">购物车</span>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill full"></div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-icon active">
+                        <i class="fa fa-map-marker"></i>
+                    </div>
+                    <span class="step-text active">配送信息</span>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill full"></div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-icon active">
+                        <i class="fa fa-credit-card"></i>
+                    </div>
+                    <span class="step-text active">付款方式</span>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill empty"></div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-icon inactive">
+                        <i class="fa fa-check"></i>
+                    </div>
+                    <span class="step-text inactive">确认订单</span>
+                </div>
+            </div>
+
+            <div class="grid-layout">
+                <!-- 左侧：付款方式表单 -->
+                <div class="main-column">
+                    <!-- 选择付款方式 -->
+                    <div class="card">
+                        <h2 class="card-title">选择付款方式</h2>
+
+                        <div class="payment-options">
+                            <div class="payment-option">
+                                <input type="radio" id="payment-wechat" name="payment-method" value="wechat" checked
+                                    class="payment-radio-input">
+                                <label for="payment-wechat" class="payment-option-label">
+                                    <div class="radio-indicator"></div>
+                                    <div class="payment-option-icon">
+                                        <i class="fa fa-wechat text-2xl text-green-500 mr-3"></i>
+                                        <span class="payment-option-text">微信支付</span>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <div class="payment-option">
+                                <input type="radio" id="payment-alipay" name="payment-method" value="alipay"
+                                    class="payment-radio-input">
+                                <label for="payment-alipay" class="payment-option-label">
+                                    <div class="radio-indicator"></div>
+                                    <div class="payment-option-icon">
+                                        <i class="fa fa-credit-card text-2xl text-blue-500 mr-3"></i>
+                                        <span class="payment-option-text">支付宝</span>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <div class="payment-option">
+                                <input type="radio" id="payment-card" name="payment-method" value="card"
+                                    class="payment-radio-input">
+                                <label for="payment-card" class="payment-option-label">
+                                    <div class="radio-indicator"></div>
+                                    <div class="payment-option-icon">
+                                        <i class="fa fa-credit-card text-2xl text-gray-700 mr-3"></i>
+                                        <span class="payment-option-text">银行卡支付</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 银行卡信息 (仅当选择银行卡支付时显示) -->
+                    <div id="card-payment-form" class="card hidden">
+                        <h2 class="card-title">银行卡信息</h2>
+
+                        <form class="form-group">
+                            <div class="form-field">
+                                <label for="card-number" class="form-label">卡号</label>
+                                <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456"
+                                    class="form-input">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="card-expiry" class="form-label">有效期</label>
+                                    <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/YY"
+                                        class="form-input">
+                                </div>
+                                <div class="form-field">
+                                    <label for="card-cvc" class="form-label">安全码</label>
+                                    <input type="text" id="card-cvc" name="card-cvc" placeholder="CVC"
+                                        class="form-input">
+                                </div>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="card-holder" class="form-label">持卡人姓名</label>
+                                <input type="text" id="card-holder" name="card-holder" placeholder="请输入持卡人姓名"
+                                    class="form-input">
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- 发票信息 -->
+                    <div class="card">
+                        <h2 class="card-title">发票信息</h2>
+
+                        <div class="form-group">
+                            <div class="form-checkbox">
+                                <input type="checkbox" id="need-invoice" name="need-invoice" class="checkbox-input">
+                                <label for="need-invoice" class="checkbox-label">需要发票</label>
+                            </div>
+
+                            <div id="invoice-details" class="invoice-details hidden">
+                                <div class="form-field">
+                                    <label for="invoice-type" class="form-label">发票类型</label>
+                                    <select id="invoice-type" name="invoice-type" class="form-select">
+                                        <option value="personal">个人</option>
+                                        <option value="company">公司</option>
+                                    </select>
+                                </div>
+
+                                <div id="company-info" class="company-info hidden">
+                                    <div class="form-field">
+                                        <label for="company-name" class="form-label">公司名称</label>
+                                        <input type="text" id="company-name" name="company-name" placeholder="请输入公司名称"
+                                            class="form-input">
+                                    </div>
+
+                                    <div class="form-field">
+                                        <label for="tax-id" class="form-label">纳税人识别号</label>
+                                        <input type="text" id="tax-id" name="tax-id" placeholder="请输入纳税人识别号"
+                                            class="form-input">
+                                    </div>
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="invoice-content" class="form-label">发票内容</label>
+                                    <select id="invoice-content" name="invoice-content" class="form-select">
+                                        <option value="product">商品明细</option>
+                                        <option value="electronics">电子产品</option>
+                                        <option value="office">办公用品</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 优惠券 -->
+                    <div class="card">
+                        <h2 class="card-title">优惠券</h2>
+
+                        <div class="form-group">
+                            <div class="form-row">
+                                <div class="form-field coupon-field">
+                                    <input type="text" id="coupon-code" name="coupon-code" placeholder="输入优惠券代码"
+                                        class="form-input">
+                                </div>
+                                <button type="button" class="btn-apply-coupon">应用</button>
+                            </div>
+
+                            <div class="coupon-info">
+                                <div class="info-item">
+                                    <i class="fa fa-lock text-apple-blue mr-3"></i>
+                                    <span class="info-text">安全支付保障</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fa fa-credit-card text-apple-blue mr-3"></i>
+                                    <span class="info-text">支持多种支付方式</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右侧：订单摘要 -->
+                <div class="sidebar-column">
+                    <div class="card sticky-card">
+                        <h2 class="card-title">订单摘要</h2>
+
+                        <div id="order-summary-items" class="order-items">
+                            <!-- 订单商品将通过JavaScript动态加载 -->
+                        </div>
+
+                        <div class="order-summary">
+                            <div class="summary-row">
+                                <span class="summary-label">小计</span>
+                                <span id="subtotal" class="summary-value">¥0.00</span>
+                            </div>
+
+                            <div class="summary-row">
+                                <span class="summary-label">运费</span>
+                                <span id="shipping-fee" class="summary-value">¥0.00</span>
+                            </div>
+
+                            <div class="summary-row coupon-row">
+                                <span class="summary-label">优惠券</span>
+                                <span id="coupon-discount" class="summary-value">-¥0.00</span>
+                            </div>
+
+                            <div class="summary-row total-row">
+                                <span class="summary-label">总计</span>
+                                <span id="total" class="summary-value">¥0.00</span>
+                            </div>
+                        </div>
+
+                        <button id="place-order-btn" class="btn-place-order">提交订单</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-title">商店</h3>
+                    <ul class="footer-links">
+                        <li><a href="iphone.html" class="footer-link">iPhone</a></li>
+                        <li><a href="ipad.html" class="footer-link">iPad</a></li>
+                        <li><a href="mac.html" class="footer-link">Mac</a></li>
+                        <li><a href="watch.html" class="footer-link">Apple Watch</a></li>
+                        <li><a href="airpods.html" class="footer-link">AirPods</a></li>
+                        <li><a href="accessories.html" class="footer-link">配件</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">服务与支持</h3>
+                    <ul class="footer-links">
+                        <li><a href="support.html" class="footer-link">技术支持</a></li>
+                        <li><a href="https://apple-style-digital-0y1k.bolt.host/support" class="footer-link">产品维修</a>
+                        </li>
+                        <li><a href="buying-guide.html" class="footer-link">购买建议</a></li>
+                        <li><a href="apple-care.html" class="footer-link">Apple Care+</a></li>
+                        <li><a href="finance.html" class="footer-link">分期付款</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">关于我们</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html" class="footer-link">公司简介</a></li>
+                        <li><a href="news.html" class="footer-link">新闻中心</a></li>
+                        <li><a href="careers.html" class="footer-link">招贤纳士</a></li>
+                        <li><a href="contact.html" class="footer-link">联系我们</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">法律信息</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html" class="footer-link">隐私政策</a></li>
+                        <li><a href="terms.html" class="footer-link">使用条款</a></li>
+                        <li><a href="cookies.html" class="footer-link">Cookie 政策</a></li>
+                        <li><a href="legal.html" class="footer-link">法律声明</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2023 Apple Store. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 初始化付款方式选择
+        function setupPaymentMethod() {
+            const radioButtons = document.querySelectorAll('input[name="payment-method"]');
+            const radioIndicators = document.querySelectorAll('.radio-indicator');
+            const cardForm = document.getElementById('card-payment-form');
+
+            // 更新选中状态
+            function updateSelected() {
+                radioButtons.forEach((radio, index) => {
+                    if (radio.checked) {
+                        radioIndicators[index].classList.add('bg-apple-blue', 'border-apple-blue');
+                        radioIndicators[index].innerHTML = '<div class="radio-dot"></div>';
+
+                        // 显示/隐藏银行卡表单
+                        if (radio.value === 'card') {
+                            cardForm.classList.remove('hidden');
+                        } else {
+                            cardForm.classList.add('hidden');
+                        }
+                    } else {
+                        radioIndicators[index].classList.remove('bg-apple-blue', 'border-apple-blue');
+                        radioIndicators[index].innerHTML = '';
+                    }
+                });
+            }
+
+            // 初始更新
+            updateSelected();
+
+            // 添加事件监听
+            radioButtons.forEach(radio => {
+                radio.addEventListener('change', updateSelected);
+            });
+        }
+
+        // 初始化发票信息选项
+        function setupInvoiceOptions() {
+            const needInvoiceCheckbox = document.getElementById('need-invoice');
+            const invoiceDetails = document.getElementById('invoice-details');
+            const invoiceTypeSelect = document.getElementById('invoice-type');
+            const companyInfo = document.getElementById('company-info');
+
+            // 显示/隐藏发票详情
+            needInvoiceCheckbox.addEventListener('change', function () {
+                if (this.checked) {
+                    invoiceDetails.classList.remove('hidden');
+                } else {
+                    invoiceDetails.classList.add('hidden');
+                }
+            });
+
+            // 显示/隐藏公司信息
+            invoiceTypeSelect.addEventListener('change', function () {
+                if (this.value === 'company') {
+                    companyInfo.classList.remove('hidden');
+                } else {
+                    companyInfo.classList.add('hidden');
+                }
+            });
+        }
+
+        // 加载订单摘要
+        function loadOrderSummary() {
+            // 这里应该从本地存储加载购物车数据
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const orderSummaryItems = document.getElementById('order-summary-items');
+            const subtotalEl = document.getElementById('subtotal');
+            const shippingFeeEl = document.getElementById('shipping-fee');
+            const totalEl = document.getElementById('total');
+
+            let subtotal = 0;
+            const shippingFee = 0; // 假设免运费
+
+            // 清空现有内容
+            orderSummaryItems.innerHTML = '';
+
+            // 添加商品到订单摘要
+            cart.forEach(item => {
+                subtotal += item.price * item.quantity;
+
+                const itemEl = document.createElement('div');
+                itemEl.className = 'order-item';
+                itemEl.innerHTML = `
+                    <div class="order-item-details">
+                        <span class="order-item-name">${item.name} x ${item.quantity}</span>
+                        <span class="order-item-price">¥${(item.price * item.quantity).toFixed(2)}</span>
+                    </div>
+                `;
+                orderSummaryItems.appendChild(itemEl);
+            });
+
+            // 计算总计
+            const total = subtotal + shippingFee;
+
+            // 更新显示
+            subtotalEl.textContent = `¥${subtotal.toFixed(2)}`;
+            shippingFeeEl.textContent = `¥${shippingFee.toFixed(2)}`;
+            totalEl.textContent = `¥${total.toFixed(2)}`;
+        }
+
+        // 提交订单处理
+        document.getElementById('place-order-btn').addEventListener('click', function () {
+            // 验证是否选择了付款方式
+            const selectedPayment = document.querySelector('input[name="payment-method"]:checked');
+            if (!selectedPayment) {
+                alert('请选择付款方式');
+                return;
+            }
+
+            // 如果选择了银行卡支付，验证银行卡信息
+            if (selectedPayment.value === 'card') {
+                const cardNumber = document.getElementById('card-number').value;
+                const cardExpiry = document.getElementById('card-expiry').value;
+                const cardCvc = document.getElementById('card-cvc').value;
+                const cardHolder = document.getElementById('card-holder').value;
+
+                if (!cardNumber || !cardExpiry || !cardCvc || !cardHolder) {
+                    alert('请填写完整的银行卡信息');
+                    return;
+                }
+            }
+
+            // 如果需要发票，验证发票信息
+            const needInvoice = document.getElementById('need-invoice').checked;
+            if (needInvoice) {
+                const invoiceType = document.getElementById('invoice-type').value;
+                if (invoiceType === 'company') {
+                    const companyName = document.getElementById('company-name').value;
+                    const taxId = document.getElementById('tax-id').value;
+                    if (!companyName || !taxId) {
+                        alert('请填写完整的公司信息');
+                        return;
+                    }
+                }
+            }
+
+            // 创建订单对象
+            const order = {
+                id: Date.now().toString(),
+                date: new Date().toLocaleString(),
+                items: JSON.parse(localStorage.getItem('cart')) || [],
+                total: document.getElementById('total').textContent,
+                paymentMethod: selectedPayment.value,
+                needInvoice: needInvoice
+            };
+
+            // 保存订单到本地存储
+            const orders = JSON.parse(localStorage.getItem('orders')) || [];
+            orders.push(order);
+            localStorage.setItem('orders', JSON.stringify(orders));
+
+            // 清空购物车
+            localStorage.removeItem('cart');
+
+            // 保存最新订单并跳转到确认页面
+            localStorage.setItem('latestOrder', JSON.stringify(order));
+            alert('订单提交成功！');
+            window.location.href = 'order-confirmation.html';
+        });
+
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function () {
+            setupPaymentMethod();
+            setupInvoiceOptions();
+            loadOrderSummary();
+
+            // 移动端菜单切换
+            document.getElementById('mobile-menu-button').addEventListener('click', function () {
+                const mobileMenu = document.getElementById('mobile-menu');
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // 导航栏滚动效果
+            window.addEventListener('scroll', function () {
+                const navbar = document.getElementById('navbar');
+                if (window.scrollY > 10) {
+                    navbar.classList.add('navbar-scrolled');
+                } else {
+                    navbar.classList.remove('navbar-scrolled');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

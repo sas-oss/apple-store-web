@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPad - Apple Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Css/ipad.css">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <header id="navbar" class="navbar">
+        <div class="container">
+            <nav class="nav">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <i class="fa fa-apple mr-2"></i>Store
+                </a>
+
+                <!-- 主导航 - 桌面版 -->
+                <div class="main-nav hidden-md">
+                    <a href="iphone.html" class="nav-link">iPhone</a>
+                    <a href="ipad.html" class="nav-link">iPad</a>
+                    <a href="mac.html" class="nav-link">Mac</a>
+                    <a href="watch.html" class="nav-link">Watch</a>
+                    <a href="airpods.html" class="nav-link">AirPods</a>
+                    <a href="accessories.html" class="nav-link">配件</a>
+                </div>
+
+                <!-- 导航工具 -->
+                <div class="nav-tools">
+                    <a href="#" class="nav-icon hover-blue transition">
+                        <i class="fa fa-search text-lg"></i>
+                    </a>
+                    <a href="cart.html" class="nav-icon hover-blue transition relative">
+                        <i class="fa fa-shopping-bag text-lg"></i>
+                        <span id="cart-count" class="cart-count">0</span>
+                    </a>
+
+                    <!-- 移动端菜单按钮 -->
+                    <button id="mobile-menu-button" class="mobile-menu-btn hidden-lg hover-blue transition">
+                        <i class="fa fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- 移动端菜单 -->
+            <div id="mobile-menu" class="mobile-menu hidden-lg hidden">
+                <div class="mobile-menu-list">
+                    <a href="iphone.html" class="mobile-link hover-bg transition">iPhone</a>
+                    <a href="ipad.html" class="mobile-link hover-bg transition">iPad</a>
+                    <a href="mac.html" class="mobile-link hover-bg transition">Mac</a>
+                    <a href="watch.html" class="mobile-link hover-bg transition">Watch</a>
+                    <a href="airpods.html" class="mobile-link hover-bg transition">AirPods</a>
+                    <a href="accessories.html" class="mobile-link hover-bg transition">配件</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- 产品类别标题 -->
+        <section class="hero-section">
+            <!-- 背景视频 -->
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src=".vscode/img/4e825557d_large_2x.mp4" type="video/mp4">
+                <div class="video-fallback"></div>
+            </video>
+
+            <!-- 半透明遮罩 -->
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-content">
+                <h1 class="hero-title">iPad</h1>
+                <p class="hero-desc">
+                    强大性能与便携性的完美结合，为工作、学习和创作提供无限可能
+                </p>
+            </div>
+        </section>
+
+        <!-- 筛选和排序 -->
+        <section class="filter-section">
+            <div class="container">
+                <div class="filter-container">
+                    <div class="filter-buttons">
+                        <button class="filter-btn active">全部</button>
+                        <button class="filter-btn hover-border transition">iPad Pro</button>
+                        <button class="filter-btn hover-border transition">iPad Air</button>
+                        <button class="filter-btn hover-border transition">iPad</button>
+                        <button class="filter-btn hover-border transition">iPad mini</button>
+                    </div>
+
+                    <div class="sort-selector">
+                        <select class="sort-select focus-style">
+                            <option>价格: 从低到高</option>
+                            <option>价格: 从高到低</option>
+                            <option>最新发布</option>
+                            <option>最受欢迎</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 产品列表 -->
+        <section class="product-section">
+            <div class="container">
+                <div class="product-grid">
+                    <!-- iPad Pro 12.9英寸 -->
+                    <a href="ipad-pro-12-9.html" class="product-link group">
+                        <div class="product-card group-hover-shadow transition">
+                            <div class="product-img-container">
+                                <img src=".vscode\img\ipad-pro-finish-select-202405-13inch-spaceblack.webp"
+                                    alt="iPad Pro 2024 13英寸"
+                                    class="product-img group-hover-zoom transition">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-tag tag-new">最新款</div>
+                                <h3 class="product-title">iPad Pro 2024 13英寸</h3>
+                                <p class="product-desc">M4芯片，Liquid视网膜XDR显示屏，专业级性能</p>
+                                <div class="product-price-row">
+                                    <span class="product-price">¥9,299 起</span>
+                                    <span class="product-detail-link group-hover-blue transition">
+                                        查看详情 <i class="fa fa-arrow-right ml-1"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- iPad Pro 11英寸 -->
+                    <a href="ipad-pro-11.html" class="product-link group">
+                        <div class="product-card group-hover-shadow transition">
+                            <div class="product-img-container">
+                                <img src=".vscode\img\ipad-pro-finish-select-202405-11inch-spaceblack.webp"
+                                    alt="iPad Pro 2024 11英寸"
+                                    class="product-img group-hover-zoom transition">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-tag tag-new">最新款</div>
+                                <h3 class="product-title">iPad Pro 2024 11英寸</h3>
+                                <p class="product-desc">M4芯片，Liquid视网膜显示屏，全面屏设计</p>
+                                <div class="product-price-row">
+                                    <span class="product-price">¥7,999 起</span>
+                                    <span class="product-detail-link group-hover-blue transition">
+                                        查看详情 <i class="fa fa-arrow-right ml-1"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- iPad Air -->
+                    <a href="ipad-air.html" class="product-link group">
+                        <div class="product-card group-hover-shadow transition">
+                            <div class="product-img-container">
+                                <img src=".vscode\img\ipad-air-model-unselect-gallery-1-202405.webp"
+                                    alt="iPad Air5 2022"
+                                    class="product-img group-hover-zoom transition">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">iPad Air5 2022</h3>
+                                <p class="product-desc">M3芯片，12英寸Liquid视网膜显示屏</p>
+                                <div class="product-price-row">
+                                    <span class="product-price">¥4,799 起</span>
+                                    <span class="product-detail-link group-hover-blue transition">
+                                        查看详情 <i class="fa fa-arrow-right ml-1"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="ipad.html" class="product-link group">
+                        <div class="product-card group-hover-shadow transition">
+                            <div class="product-img-container">
+                                <img src="http://upload.mnw.cn/2022/0822/1661155532479.jpg" alt="iPad 10 2022"
+                                    class="product-img group-hover-zoom transition">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-tag tag-discount">优惠</div>
+                                <h3 class="product-title">iPad 11 2024</h3>
+                                <p class="product-desc">A16仿生芯片，11英寸视网膜显示屏</p>
+                                <div class="product-price-row">
+                                    <div class="price-container">
+                                        <span class="product-price">¥3,499 起</span>
+                                        <span class="original-price">¥3,599 起</span>
+                                    </div>
+                                    <span class="product-detail-link group-hover-blue transition">
+                                        查看详情 <i class="fa fa-arrow-right ml-1"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="ipad.html" class="product-link group">
+                        <div class="product-card group-hover-shadow transition">
+                            <div class="product-img-container">
+                                <img src=".vscode\img\ipad-model-unselect-gallery-1-202503.webp" alt="iPad 10 2022"
+                                    class="product-img group-hover-zoom transition">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-tag tag-discount">优惠</div>
+                                <h3 class="product-title">iPad 10 2022</h3>
+                                <p class="product-desc">A14仿生芯片，10.3英寸视网膜显示屏</p>
+                                <div class="product-price-row">
+                                    <div class="price-container">
+                                        <span class="product-price">¥2,499 起</span>
+                                        <span class="original-price">¥2,599 起</span>
+                                    </div>
+                                    <span class="product-detail-link group-hover-blue transition">
+                                        查看详情 <i class="fa fa-arrow-right ml-1"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- iPad mini -->
+                    <a href="ipad-mini.html" class="product-link group">
+                        <div class="product-card group-hover-shadow transition">
+                            <div class="product-img-container">
+                                <img src=".vscode\img\ipad-mini-finish-unselect-gallery-1-202410.webp"
+                                    alt="iPad mini7 A17Pro"
+                                    class="product-img group-hover-zoom transition">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">iPad mini7 A17Pro</h3>
+                                <p class="product-desc">A17 Pro仿生芯片，8.3英寸视网膜显示屏，全面屏设计</p>
+                                <div class="product-price-row">
+                                    <span class="product-price">¥3,799 起</span>
+                                    <span class="product-detail-link group-hover-blue transition">
+                                        查看详情 <i class="fa fa-arrow-right ml-1"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- iPad配件套装 -->
+                    <a href="ipad-accessories.html" class="product-link group">
+                        <div class="product-card group-hover-shadow transition">
+                            <div class="product-img-container">
+                                <img src=".vscode\img\ipad-alp-cases-202405_GEO_CN.png" alt="iPad配件套装"
+                                    class="product-img group-hover-zoom transition">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-tag tag-set">套装优惠</div>
+                                <h3 class="product-title">iPad配件套装</h3>
+                                <p class="product-desc">Apple Pencil + Smart Folio + 保护壳</p>
+                                <div class="product-price-row">
+                                    <span class="product-price">¥1,999 起</span>
+                                    <span class="product-detail-link group-hover-blue transition">
+                                        查看详情 <i class="fa fa-arrow-right ml-1"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 加载更多按钮 -->
+                <div class="load-more-container">
+                    <button class="load-more-btn hover-border transition">
+                        加载更多 <i class="fa fa-chevron-down ml-1"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- iPad Pro 详情横幅 -->
+        <section class="pro-banner">
+            <div class="container">
+                <div class="pro-banner-content">
+                    <div class="pro-text">
+                        <h2 class="pro-title">iPad Pro，重新定义专业</h2>
+                        <p class="pro-desc">
+                            M2芯片带来的超强性能，配合Liquid视网膜XDR显示屏，让iPad Pro成为你的移动工作站。无论是专业设计、视频编辑还是高性能计算，都能轻松应对。
+                        </p>
+                        <a href="ipad-pro-12-9.html" class="btn-primary">
+                            了解iPad Pro
+                        </a>
+                    </div>
+                    <div class="pro-img-container">
+                        <img src="https://picsum.photos/id/35/600/600" alt="iPad Pro"
+                            class="pro-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 购买指南 -->
+        <section class="guide-section">
+            <div class="container">
+                <h2 class="guide-title">iPad 购买指南</h2>
+
+                <div class="guide-cards">
+                    <div class="guide-card">
+                        <h3 class="guide-card-title">
+                            <i class="fa fa-question-circle text-apple-blue mr-3 text-xl"></i>
+                            如何选择适合我的iPad？
+                        </h3>
+                        <p class="guide-text">不同型号的iPad适用于不同场景：</p>
+                        <ul class="guide-list">
+                            <li><span class="guide-highlight">iPad Pro</span>：适合专业用户，如设计师、视频编辑和开发者</li>
+                            <li><span class="guide-highlight">iPad Air</span>：平衡性能和价格，适合学生和创意工作者</li>
+                            <li><span class="guide-highlight">iPad</span>：入门级选择，适合日常使用和娱乐</li>
+                            <li><span class="guide-highlight">iPad mini</span>：便携性优先，适合阅读和外出使用</li>
+                        </ul>
+                    </div>
+
+                    <div class="guide-card">
+                        <h3 class="guide-card-title">
+                            <i class="fa fa-pencil text-apple-blue mr-3 text-xl"></i>
+                            Apple Pencil值得购买吗？
+                        </h3>
+                        <p class="guide-text">如果你有以下需求，Apple Pencil是值得投资的配件：</p>
+                        <ul class="guide-list">
+                            <li>记笔记和手绘草图</li>
+                            <li>数字艺术创作</li>
+                            <li>精确的文档标注和签名</li>
+                            <li>学习和教育用途</li>
+                        </ul>
+                        <p class="guide-text">请注意：Apple Pencil有两代产品，分别兼容不同的iPad型号。</p>
+                    </div>
+
+                    <div class="guide-card">
+                        <h3 class="guide-card-title">
+                            <i class="fa fa-clock-o text-apple-blue mr-3 text-xl"></i>
+                            什么时候购买最划算？
+                        </h3>
+                        <p class="guide-text">以下时机购买iPad通常可以获得更好的价格：</p>
+                        <ul class="guide-list">
+                            <li>新款发布后，旧款通常会降价</li>
+                            <li>教育优惠全年可用，学生和教师可享折扣</li>
+                            <li>重大购物节期间，如618、双11等</li>
+                            <li>返校季促销，通常会赠送Apple产品或礼品卡</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-title">商店</h3>
+                    <ul class="footer-list">
+                        <li><a href="iphone.html" class="footer-link hover-white transition">iPhone</a>
+                        </li>
+                        <li><a href="ipad.html" class="footer-link active">iPad</a></li>
+                        <li><a href="mac.html" class="footer-link hover-white transition">Mac</a></li>
+                        <li><a href="watch.html" class="footer-link hover-white transition">Apple
+                                Watch</a></li>
+                        <li><a href="airpods.html" class="footer-link hover-white transition">AirPods</a>
+                        </li>
+                        <li><a href="accessories.html" class="footer-link hover-white transition">配件</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">服务与支持</h3>
+                    <ul class="footer-list">
+                        <li><a href="support.html" class="footer-link hover-white transition">技术支持</a>
+                        </li>
+                        <li><a href="repair.html" class="footer-link hover-white transition">产品维修</a></li>
+                        <li><a href="buying-guide.html"
+                                class="footer-link hover-white transition">购买建议</a></li>
+                        <li><a href="apple-care.html" class="footer-link hover-white transition">Apple
+                                Care+</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">关于我们</h3>
+                    <ul class="footer-list">
+                        <li><a href="about.html" class="footer-link hover-white transition">公司简介</a></li>
+                        <li><a href="news.html" class="footer-link hover-white transition">新闻中心</a></li>
+                        <li><a href="careers.html" class="footer-link hover-white transition">招贤纳士</a>
+                        </li>
+                        <li><a href="support.html" class="footer-link hover-white transition">联系我们</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">法律信息</h3>
+                    <ul class="footer-list">
+                        <li><a href="privacy.html" class="footer-link hover-white transition">隐私政策</a>
+                        </li>
+                        <li><a href="terms.html" class="footer-link hover-white transition">使用条款</a></li>
+                        <li><a href="cookies.html" class="footer-link hover-white transition">Cookie
+                                政策</a></li>
+                        <li><a href="legal.html" class="footer-link hover-white transition">法律声明</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2023 Apple Store. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 购物车提示框 -->
+    <div id="cart-toast" class="toast">
+        <i class="fa fa-check-circle mr-2"></i>
+        <span>已添加到购物车</span>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // 页面特定功能
+        document.addEventListener('DOMContentLoaded', function () {
+            // 配件筛选功能
+            const filterChips = document.querySelectorAll('.filter-chip');
+            const productCards = document.querySelectorAll('.product-card');
+
+            if (filterChips.length && productCards.length) {
+                filterChips.forEach(chip => {
+                    chip.addEventListener('click', function () {
+                        filterChips.forEach(c => c.classList.remove('active'));
+                        this.classList.add('active');
+
+                        // 这里可以添加实际筛选逻辑
+                    });
+                });
+            }
+
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirPods - Apple Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Css/airpods.css">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <header id="navbar" class="navbar">
+        <div class="nav-container">
+            <nav class="nav-main">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <i class="fa fa-apple mr-2"></i>Store
+                </a>
+
+                <!-- 主导航 - 桌面版 -->
+                <div class="nav-desktop">
+                    <a href="iphone.html" class="nav-link">iPhone</a>
+                    <a href="ipad.html" class="nav-link">iPad</a>
+                    <a href="mac.html" class="nav-link">Mac</a>
+                    <a href="watch.html" class="nav-link">Watch</a>
+                    <a href="airpods.html" class="nav-link">AirPods</a>
+                    <a href="accessories.html" class="nav-link">配件</a>
+                </div>
+
+                <!-- 导航工具 -->
+                <div class="nav-tools">
+                    <a href="#" class="tool-icon">
+                        <i class="fa fa-search"></i>
+                    </a>
+                    <a href="checkout.html" class="tool-icon cart-icon">
+                        <i class="fa fa-shopping-bag"></i>
+                        <span id="cart-count" class="cart-badge">0</span>
+                    </a>
+
+                    <!-- 移动端菜单按钮 -->
+                    <button id="mobile-menu-button" class="mobile-menu-btn">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- 移动端菜单 -->
+            <div id="mobile-menu" class="mobile-menu hidden">
+                <div class="mobile-menu-list">
+                    <a href="iphone.html" class="mobile-menu-item">iPhone</a>
+                    <a href="ipad.html" class="mobile-menu-item">iPad</a>
+                    <a href="mac.html" class="mobile-menu-item">Mac</a>
+                    <a href="watch.html" class="mobile-menu-item">Watch</a>
+                    <a href="airpods.html" class="mobile-menu-item active">AirPods</a>
+                    <a href="accessories.html" class="mobile-menu-item">配件</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- 英雄区域 -->
+        <section class="hero-banner">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">AirPods</h1>
+                    <p class="hero-subtitle">
+                        无线自由，卓越音质，与 Apple 设备无缝协作。
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#products" class="btn primary-btn">
+                            浏览产品
+                        </a>
+                        <a href="#compare" class="btn secondary-btn">
+                            对比型号
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 产品分类 -->
+        <section class="section product-categories">
+            <div class="container">
+                <h2 class="section-title">AirPods 系列</h2>
+
+                <div class="category-grid">
+                    <a href="#pro" class="category-item">
+                        <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airpods-pro-2-hero-select-202409?wid=976&hei=916&fmt=jpeg&qlt=90&.v=WTk1dTl5UTBnZXdKN2tua2pFb1hvQ3hmVXd6RnorM2pzUlRIKzNkUEN0U2VDYXovZDMyN1dXU211bjZoVlVUcWJGcXNRQnFCV0w3WVRjTExvdm1ic1dyYTFZWlpPczBocnFKR3FYSlo5L1FXZEdHNUFPR0hYUU12cjI0VlFzM1A"
+                            alt="AirPods Pro 2" class="category-img">
+                        <div class="category-info">
+                            <h3 class="category-name">AirPods Pro 2</h3>
+                            <p class="category-desc">主动降噪，空间音频</p>
+                            <span class="category-link">了解更多 <i class="fa fa-arrow-right ml-1"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="#max" class="category-item">
+                        <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airpods-max-hero-select-202409?wid=976&hei=916&fmt=jpeg&qlt=90&.v=WXBZVEZCOUNiUWlBYUtjZmtBc0J2N1V1ZldxRmdZVjlvL2IxaEY3dzY3SG0ybW5TK3prTnlNTURRc1V2clYydHZvdUZlR0V0VUdJSjBWaDVNVG95YkJTUUExTVpiaXRIUnFOM1YxY0hPWFU"
+                            alt="AirPods Max" class="category-img">
+                        <div class="category-info">
+                            <h3 class="category-name">AirPods Max</h3>
+                            <p class="category-desc">高端音质，头戴式设计</p>
+                            <span class="category-link">了解更多 <i class="fa fa-arrow-right ml-1"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="#airpods" class="category-item">
+                        <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airpods-4-hero-select-202409?wid=976&hei=916&fmt=jpeg&qlt=90&.v=NFNYUnZEZG9WdmVKZzdXRW9IVzNoQVV5N29UUE5sYkU5bzFjbnV4MlZFL2kyVU55U21PWTMyajVGNTlWWnhwak14MXJScFRZN3Y5OWZsRXVrN1k4cFZyQ2FPOWYvcVVkNFcyRXFtUGhFUW8"
+                            alt="AirPods 4nd" class="category-img">
+                        <div class="category-info">
+                            <h3 class="category-name">AirPods (第4代)</h3>
+                            <p class="category-desc">超长续航，无线充电盒，Siri 支持</p>
+                            <span class="category-link">了解更多 <i class="fa fa-arrow-right ml-1"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 产品展示 -->
+        <section id="products" class="section product-showcase">
+            <div class="container">
+                <h2 class="section-title">热门型号</h2>
+
+                <div class="product-grid">
+                    <!-- AirPods Pro 2 -->
+                    <div id="pro" class="product-card">
+                        <div class="product-img-container">
+                            <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airpods-pro-2-hero-select-202409?wid=976&hei=916&fmt=jpeg&qlt=90&.v=WTk1dTl5UTBnZXdKN2tua2pFb1hvQ3hmVXd6RnorM2pzUlRIKzNkUEN0U2VDYXovZDMyN1dXU211bjZoVlVUcWJGcXNRQnFCV0w3WVRjTExvdm1ic1dyYTFZWlpPczBocnFKR3FYSlo5L1FXZEdHNUFPR0hYUU12cjI0VlFzM1A"
+                                alt="AirPods Pro 2" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">AirPods Pro (第2代)</h3>
+                            <p class="product-desc">主动降噪，自适应通透模式，空间音频</p>
+                            <div class="product-price">
+                                <span class="price">¥1,899</span>
+                            </div>
+
+                            <div class="color-options">
+                                <div class="color-option active" style="background-color: white; border: 1px solid #e5e7eb;"></div>
+                                <div class="color-option" style="background-color: #1F2937;"></div>
+                            </div>
+
+                            <div class="product-actions">
+                                <a href="product-airpodspro.html" class="btn primary-btn action-btn">
+                                    查看详情
+                                </a>
+                                <button class="add-to-cart cart-btn" data-product="AirPods Pro">
+                                    <i class="fa fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AirPods Max -->
+                    <div id="max" class="product-card">
+                        <div class="product-img-container">
+                            <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airpods-max-hero-select-202409?wid=976&hei=916&fmt=jpeg&qlt=90&.v=WXBZVEZCOUNiUWlBYUtjZmtBc0J2N1V1ZldxRmdZVjlvL2IxaEY3dzY3SG0ybW5TK3prTnlNTURRc1V2clYydHZvdUZlR0V0VUdJSjBWaDVNVG95YkJTUUExTVpiaXRIUnFOM1YxY0hPWFU"
+                                alt="AirPods Max" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">AirPods Max</h3>
+                            <p class="product-desc">高保真音频，主动降噪，智能耳机壳</p>
+                            <div class="product-price">
+                                <span class="price">¥4,399</span>
+                            </div>
+
+                            <div class="color-options">
+                                <div class="color-option active" style="background-color: #F5F5F7;"></div>
+                                <div class="color-option" style="background-color: #1F2937;"></div>
+                                <div class="color-option" style="background-color: #7C2D12;"></div>
+                                <div class="color-option" style="background-color: #3B82F6;"></div>
+                            </div>
+
+                            <div class="product-actions">
+                                <a href="product-airpodsmax.html" class="btn primary-btn action-btn">
+                                    查看详情
+                                </a>
+                                <button class="add-to-cart cart-btn" data-product="AirPods Max">
+                                    <i class="fa fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AirPods 2nd -->
+                    <div id="2nd" class="product-card">
+                        <div class="product-img-container">
+                            <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airpods-4-hero-select-202409?wid=976&hei=916&fmt=jpeg&qlt=90&.v=NFNYUnZEZG9WdmVKZzdXRW9IVzNoQVV5N29UUE5sYkU5bzFjbnV4MlZFL2kyVU55U21PWTMyajVGNTlWWnhwak14MXJScFRZN3Y5OWZsRXVrN1k4cFZyQ2FPOWYvcVVkNFcyRXFtUGhFUW8"
+                                alt="AirPods 4nd" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">AirPods (第4代)</h3>
+                            <p class="product-desc">无线充电盒，Siri 支持，长效续航</p>
+                            <div class="product-price">
+                                <span class="price">¥999</span>
+                            </div>
+
+                            <div class="color-options">
+                                <div class="color-option active" style="background-color: white; border: 1px solid #e5e7eb;"></div>
+                            </div>
+
+                            <div class="product-actions">
+                                <a href="product-airpods2.html" class="btn primary-btn action-btn">
+                                    查看详情
+                                </a>
+                                 <button class="add-to-cart cart-btn" data-product="AirPods Max">
+                                    <i class="fa fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 产品特性 -->
+        <section class="section product-features">
+            <div class="container">
+                <h2 class="section-title">AirPods 特性</h2>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon-container">
+                            <i class="fa fa-volume-up feature-icon"></i>
+                        </div>
+                        <h3 class="feature-title">卓越音质</h3>
+                        <p class="feature-desc">定制动态驱动单元，呈现丰富饱满的音效和清晰的高音。</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-container">
+                            <i class="fa fa-ban feature-icon"></i>
+                        </div>
+                        <h3 class="feature-title">主动降噪</h3>
+                        <p class="feature-desc">实时降噪技术，阻隔外界噪音，让你沉浸在音乐世界。</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-container">
+                            <i class="fa fa-bluetooth feature-icon"></i>
+                        </div>
+                        <h3 class="feature-title">无缝连接</h3>
+                        <p class="feature-desc">与所有 Apple 设备自动连接，在设备间轻松切换。</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-container">
+                            <i class="fa fa-clock-o feature-icon"></i>
+                        </div>
+                        <h3 class="feature-title">长效续航</h3>
+                        <p class="feature-desc">单次充电可聆听数小时，充电盒提供额外多次充电。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 产品对比 -->
+        <section id="compare" class="section product-comparison">
+            <div class="container">
+                <h2 class="section-title">比较 AirPods 机型</h2>
+
+                <div class="comparison-table-wrapper">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th class="comparison-header">功能</th>
+                                <th class="comparison-header">AirPods Pro (第2代)</th>
+                                <th class="comparison-header">AirPods Max</th>
+                                <th class="comparison-header">AirPods (第4代)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="comparison-row">
+                                <td class="comparison-feature">主动降噪</td>
+                                <td class="comparison-value"><i class="fa fa-check text-apple-blue"></i></td>
+                                <td class="comparison-value"><i class="fa fa-check text-apple-blue"></i></td>
+                                <td class="comparison-value"><i class="fa fa-times text-apple-red"></i></td>
+                            </tr>
+                            <tr class="comparison-row">
+                                <td class="comparison-feature">空间音频</td>
+                                <td class="comparison-value"><i class="fa fa-check text-apple-blue"></i></td>
+                                <td class="comparison-value"><i class="fa fa-check text-apple-blue"></i></td>
+                                <td class="comparison-value"><i class="fa fa-times text-apple-red"></i></td>
+                            </tr>
+                            <tr class="comparison-row">
+                                <td class="comparison-feature">续航时间</td>
+                                <td class="comparison-value">6小时</td>
+                                <td class="comparison-value">20小时</td>
+                                <td class="comparison-value">5小时</td>
+                            </tr>
+                            <tr class="comparison-row">
+                                <td class="comparison-feature">无线充电</td>
+                                <td class="comparison-value"><i class="fa fa-check text-apple-blue"></i></td>
+                                <td class="comparison-value"><i class="fa fa-check text-apple-blue"></i></td>
+                                <td class="comparison-value"><i class="fa fa-check text-apple-blue"></i></td>
+                            </tr>
+                            <tr class="comparison-row">
+                                <td class="comparison-feature">价格</td>
+                                <td class="comparison-value">1899 RMB</td>
+                                <td class="comparison-value">2899 RMB</td>
+                                <td class="comparison-value">1399 RMB</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 购买帮助 -->
+        <section class="section buying-help">
+            <div class="container help-container">
+                <h2 class="section-title">需要购买建议？</h2>
+                <p class="section-desc">我们的专家可以帮助您找到最适合的 AirPods</p>
+
+                <div class="help-options">
+                    <div class="help-card">
+                        <i class="fa fa-file-text-o help-icon"></i>
+                        <h3 class="help-title">购买指南</h3>
+                        <p class="help-desc">了解如何选择适合您的 AirPods 型号</p>
+                        <a href="buying-guide-airpods.html" class="help-link">查看指南</a>
+                    </div>
+
+                    <div class="help-card">
+                        <i class="fa fa-headphones help-icon"></i>
+                        <h3 class="help-title">试听体验</h3>
+                        <p class="help-desc">预约到店试听不同型号的 AirPods</p>
+                        <a href="store-appointment.html" class="help-link">预约试听</a>
+                    </div>
+
+                    <div class="help-card">
+                        <i class="fa fa-comments-o help-icon"></i>
+                        <h3 class="help-title">在线咨询</h3>
+                        <p class="help-desc">与我们的音频专家实时交流</p>
+                        <a href="contact.html" class="help-link">开始咨询</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-column-title">商店</h3>
+                    <ul class="footer-links">
+                        <li><a href="iphone.html" class="footer-link">iPhone</a></li>
+                        <li><a href="ipad.html" class="footer-link">iPad</a></li>
+                        <li><a href="mac.html" class="footer-link">Mac</a></li>
+                        <li><a href="watch.html" class="footer-link">Apple Watch</a></li>
+                        <li><a href="airpods.html" class="footer-link active">AirPods</a></li>
+                        <li><a href="accessories.html" class="footer-link">配件</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-column-title">服务与支持</h3>
+                    <ul class="footer-links">
+                        <li><a href="support.html" class="footer-link">技术支持</a></li>
+                        <li><a href="https://apple-style-digital-0y1k.bolt.host/support" class="footer-link">产品维修</a></li>
+                        <li><a href="buying-guide.html" class="footer-link">购买建议</a></li>
+                        <li><a href="apple-care.html" class="footer-link">Apple Care+</a></li>
+                        <li><a href="finance.html" class="footer-link">分期付款</a></li>
+                    </ul>
+                </div>
+
+                 <div class="footer-column">
+                    <h3 class="footer-column-title">关于我们</h3>
+                    <ul class="footer-links">
+                        <li><a href="support.html" class="footer-link">公司简介</a></li>
+                        <li><a href="#" class="footer-link">新闻中心</a></li>
+                        <li><a href="buying-guide.html" class="footer-link">招贤纳士</a></li>
+                        <li><a href="apple-care.html" class="footer-link">联系我们</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-column-title">法律信息</h3>
+                    <ul class="footer-links">
+                        <li><a href="support.html" class="footer-link">隐私政策</a></li>
+                        <li><a href="#" class="footer-link">使用条款</a></li>
+                        <li><a href="buying-guide.html" class="footer-link">Cookie政策</a></li>
+                        <li><a href="apple-care.html" class="footer-link">法律声明</a></li>
+                    </ul>
+                </div>
+            </div>
+             <div class="border-t border-gray-800 pt-6 text-center text-gray-500 text-sm">
+                <p>&copy; 2023 Apple Store. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 购物车提示框 -->
+    <div id="cart-toast" class="toast">
+        <span id="toast-message">产品已添加到购物车</span>
+    </div>
+
+    <script>
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // 移动端菜单切换
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 购物车功能
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                const productName = this.getAttribute('data-product');
+                const cartCount = document.getElementById('cart-count');
+                const currentCount = parseInt(cartCount.textContent);
+                cartCount.textContent = currentCount + 1;
+
+                // 显示提示
+                const cartToast = document.getElementById('cart-toast');
+                document.getElementById('toast-message').textContent = `${productName} 已添加到购物车`;
+                cartToast.classList.add('show');
+
+                // 3秒后隐藏提示
+                setTimeout(() => {
+                    cartToast.classList.remove('show');
+                }, 3000);
+            });
+        });
+
+        // 颜色选择功能
+        document.querySelectorAll('.color-option').forEach(option => {
+            option.addEventListener('click', function() {
+                // 找到同一组中的所有颜色选项
+                const siblings = this.parentElement.querySelectorAll('.color-option');
+                // 移除其他选项的active类
+                siblings.forEach(sib => sib.classList.remove('active'));
+                // 给当前点击的选项添加active类
+                this.classList.add('active');
+            });
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

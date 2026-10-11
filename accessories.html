@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>配件 - Apple Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Css/accessories.css"> <!-- 修正路径分隔符为/ -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            black: '#1D1D1F',
+                            gray: '#86868B',
+                            lightgray: '#F5F5F7',
+                            blue: '#0071E3',
+                            hover: '#F0F0F0',
+                            red: '#FF3B30'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['SF Pro Display', 'Helvetica', 'Arial', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <header id="navbar">
+        <div class="nav-container">
+            <nav class="nav">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center text-2xl font-bold text-apple-black">
+                    <!-- 苹果图标和"Store"文本的组合，通常用于网站导航栏或页脚 -->
+                    <i class="apple-icon-with-margin"></i>Store
+                </a>
+
+                <!-- 主导航 - 桌面版 -->
+                <div class="main-nav">
+                    <a href="iphone.html"
+                        class="nav-link">iPhone</a>
+                    <a href="ipad.html"
+                        class="nav-link">iPad</a>
+                    <a href="mac.html" class="nav-link">Mac</a>
+                    <a href="watch.html"
+                        class="nav-link ">Watch</a>
+                    <a href="airpods.html"
+                        class="nav-link">AirPods</a>
+                    <a href="accessories.html" class="nav-link">配件</a>
+                </div>
+
+                <!-- 导航工具 -->
+                <div class="target-element">
+                    <a href="#" class="hover:text-apple-blue transition-colors text-apple-black">
+                        <i class="fa fa-search text-lg"></i>
+                    </a>
+                    <a href="checkout.html" class="hover:text-apple-blue transition-colors relative text-apple-black">
+                        <i class="fa fa-shopping-bag text-lg"></i>
+                        <span id="cart-count"
+                            class="absolute -top-2 -right-2 bg-apple-blue text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">0</span>
+                    </a>
+
+                    <!-- 移动端菜单按钮 -->
+                    <button id="mobile-menu-button"
+                        class="md:hidden hover:text-apple-blue transition-colors text-apple-black">
+                        <i class="fa fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- 移动端菜单 -->
+            <div id="mobile-menu">
+                <div class="space-y-3"> 
+                    <a href="iphone.html"
+                         class="target-class">iPhone</a>
+                    <a href="ipad.html" class="target-class">iPad</a>
+                    <a href="mac.html" class="target-class">Mac</a>
+                    <a href="watch.html"
+                        class="target-class">Watch</a>
+                    <a href="airpods.html"
+                        class="target-class">AirPods</a>
+                    <a href="accessories.html"
+                        class="target-class">配件</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-16">
+        <!-- 英雄区域 -->
+        <section class="hero-banner bg-cover bg-center"
+            style="background-image: url('https://picsum.photos/id/160/1920/1080');">
+            <div class="hero-overlay"></div>
+            <div class="container mx-auto px-4 h-full flex items-center relative z-10">
+                <div class="max-w-2xl text-white">
+                    <h1 class="text-5xl md:text-7xl font-bold mb-6">Apple 配件</h1>
+                    <p class="text-xl md:text-2xl mb-8 opacity-90">
+                        为你的 Apple 设备增添更多可能，提升使用体验。
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#all-accessories"
+                            class="bg-apple-blue hover:bg-apple-blue/90 text-white px-8 py-4 rounded-md transition-colors text-lg">
+                            浏览全部配件
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 配件分类 -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">配件分类</h2>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16">
+                    <a href="#iphone-accessories"
+                        class="category-item flex flex-col items-center p-6 bg-apple-lightgray rounded-xl">
+                        <i class="fa fa-mobile text-4xl mb-4 text-apple-black"></i>
+                        <span class="font-medium">iPhone 配件</span>
+                    </a>
+
+                    <a href="ipad-accessories.html"
+                        class="category-item flex flex-col items-center p-6 bg-apple-lightgray rounded-xl">
+                        <i class="fa fa-tablet text-4xl mb-4 text-apple-black"></i>
+                        <span class="font-medium">iPad 配件</span>
+                    </a>
+
+                    <a href="#mac-accessories"
+                        class="category-item flex flex-col items-center p-6 bg-apple-lightgray rounded-xl">
+                        <i class="fa fa-laptop text-4xl mb-4 text-apple-black"></i>
+                        <span class="font-medium">Mac 配件</span>
+                    </a>
+
+                    <a href="#watch-accessories"
+                        class="category-item flex flex-col items-center p-6 bg-apple-lightgray rounded-xl">
+                        <i class="fa fa-clock-o text-4xl mb-4 text-apple-black"></i>
+                        <span class="font-medium">Watch 配件</span>
+                    </a>
+
+                    <a href="#airpods-accessories"
+                        class="category-item flex flex-col items-center p-6 bg-apple-lightgray rounded-xl">
+                        <i class="fa fa-headphones text-4xl mb-4 text-apple-black"></i>
+                        <span class="font-medium">AirPods 配件</span>
+                    </a>
+
+                    <a href="#power-accessories"
+                        class="category-item flex flex-col items-center p-6 bg-apple-lightgray rounded-xl">
+                        <i class="fa fa-battery-full text-4xl mb-4 text-apple-black"></i>
+                        <span class="font-medium">电源配件</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 所有配件 -->
+        <section id="all-accessories" class="py-16 bg-apple-lightgray">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-12">全部配件</h2>
+
+                <div class="product-grid">
+                    <!-- iPhone 配件 -->
+                    <div id="iphone-accessories" class="accessory-category w-full">
+                        <h3 class="text-2xl font-bold mb-6 pb-2 border-b border-gray-300">iPhone 配件</h3>
+                    </div>
+
+                    <!-- iPhone配件产品卡片1 -->
+                    <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm" data-category="iphone">
+                        <div class="overflow-hidden h-56">
+                            <img src="https://2c.zol-img.com.cn/product/215_400x300/474/ceNhm1lRi6Vlc.jpg"
+                                alt="iPhone 保护壳" class="product-image w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-lg font-semibold mb-2">iPhone 硅胶保护壳</h4>
+                            <p class="text-apple-gray mb-4">柔软触感，全面保护</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg font-bold">¥329</span>
+                                <button
+                                    class="bg-apple-blue hover:bg-apple-blue/90 text-white px-4 py-2 rounded-md transition-colors">
+                                    加入购物袋
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- iPhone配件产品卡片2 -->
+                    <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm" data-category="iphone">
+                        <div class="overflow-hidden h-56">
+                            <img src="https://img.alicdn.com/imgextra/i1/2200814403950/O1CN018yANq41f39KpeezRb_!!2200814403950.jpg"
+                                alt="MagSafe 充电器" class="product-image w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-lg font-semibold mb-2">MagSafe 无线充电器</h4>
+                            <p class="text-apple-gray mb-4">15W 快速充电，精准对位</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg font-bold">¥329</span>
+                                <button
+                                    class="bg-apple-blue hover:bg-apple-blue/90 text-white px-4 py-2 rounded-md transition-colors">
+                                    加入购物袋
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mac 配件 -->
+                    <div id="mac-accessories" class="accessory-category w-full mt-12">
+                        <h3 class="text-2xl font-bold mb-6 pb-2 border-b border-gray-300">Mac 配件</h3>
+                    </div>
+
+                    <!-- Mac配件产品卡片1 -->
+                    <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm" data-category="mac">
+                        <div class="overflow-hidden h-56">
+                            <img src="https://ts2.tc.mm.bing.net/th/id/OIP-C.opyz4ee2zZj582RM-zSUuwHaHa?cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3"
+                                alt="MacBook 保护壳" class="product-image w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-lg font-semibold mb-2">MacBook 透明保护壳</h4>
+                            <p class="text-apple-gray mb-4">轻薄防刮，精准贴合</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg font-bold">¥499</span>
+                                <button
+                                    class="bg-apple-blue hover:bg-apple-blue/90 text-white px-4 py-2 rounded-md transition-colors">
+                                    加入购物袋
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 其他分类产品卡片可按相同格式添加 -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-apple-black text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">商店</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-apple-gray hover:text-white transition-colors">查找门店</a></li>
+                        <li><a href="#" class="text-apple-gray hover:text-white transition-colors">Genius Bar</a></li>
+                        <li><a href="#" class="text-apple-gray hover:text-white transition-colors">今日特惠</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">支持</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-apple-gray hover:text-white transition-colors">联系我们</a></li>
+                        <li><a href="#" class="text-apple-gray hover:text-white transition-colors">维修服务</a></li>
+                        <li><a href="#" class="text-apple-gray hover:text-white transition-colors">知识库</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-apple-gray text-sm">
+                <p>© 2023 Apple Store. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 移动端菜单交互脚本 -->
+    <script>
+        // 移动端菜单切换
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 导航栏滚动效果
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.remove('shadow-sm');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.add('shadow-sm');
+            }
+        });
+    </script>
+</body>
+
+</html>

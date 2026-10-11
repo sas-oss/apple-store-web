@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone - Apple Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Css/iPhone.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            black: '#1D1D1F',
+                            gray: '#86868B',
+                            lightgray: '#F5F5F7',
+                            blue: '#0071E3',
+                            hover: '#F0F0F0'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['SF Pro Display', 'Helvetica', 'Arial', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <header class="navbar">
+        <div class="container">
+            <nav class="nav-container">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <i class="fa fa-apple mr-2"></i>Store
+                </a>
+
+                <!-- 主导航 - 桌面版 -->
+                <div class="main-nav">
+                    <a href="iphone.html" class="nav-link">iPhone</a>
+                    <a href="ipad.html" class="nav-link">iPad</a>
+                    <a href="mac.html" class="nav-link">Mac</a>
+                    <a href="watch.html" class="nav-link">Watch</a>
+                    <a href="airpods.html" class="nav-link">AirPods</a>
+                    <a href="accessories.html" class="nav-link">配件</a>
+                </div>
+
+                <!-- 导航工具 -->
+                <div class="nav-tools">
+                    <a href="#" class="nav-icon">
+                        <i class="fa fa-search text-lg"></i>
+                    </a>
+                    <a href="cart.html" class="nav-icon cart-icon">
+                        <i class="fa fa-shopping-bag text-lg"></i>
+                        <span id="cart-count" class="cart-badge">0</span>
+                    </a>
+
+                    <!-- 移动端菜单按钮 -->
+                    <button id="mobile-menu-button" class="mobile-menu-btn">
+                        <i class="fa fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- 移动端菜单 -->
+            <div id="mobile-menu" class="mobile-menu">
+                <div class="mobile-menu-links">
+                    <a href="iphone.html" class="mobile-link">iPhone</a>
+                    <a href="ipad.html" class="mobile-link">iPad</a>
+                    <a href="mac.html" class="mobile-link">Mac</a>
+                    <a href="watch.html" class="mobile-link">Watch</a>
+                    <a href="airpods.html" class="mobile-link">AirPods</a>
+                    <a href="accessories.html" class="mobile-link">配件</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- 产品类别标题 -->
+        <section class="hero-section">
+            <!-- 视频背景 -->
+            <div class="hero-bg">
+                <video autoplay muted loop playsinline class="hero-video">
+                    <source src=".vscode\img\large_2x.mp4" type="video/mp4">
+                    <img src="https://picsum.photos/id/119/1200/600" alt="iPhone背景图" class="hero-bg-img">
+                </video>
+                <div class="hero-overlay"></div>
+            </div>
+
+            <!-- 内容区域 -->
+            <div class="hero-content">
+                <h1 class="hero-title">iPhone</h1>
+                <p class="hero-subtitle">
+                    超视网膜 XDR 显示屏，A系列芯片，专业级摄像头系统，一切尽在iPhone
+                </p>
+            </div>
+        </section>
+
+
+        <!-- 筛选和排序 -->
+        <section class="filter-section">
+            <div class="container">
+                <div class="filter-container">
+                    <div class="filter-buttons">
+                        <button class="filter-btn active">
+                            全部
+                        </button>
+                        <button class="filter-btn">
+                            iPhone 15 系列
+                        </button>
+                        <button class="filter-btn">
+                            iPhone 14 系列
+                        </button>
+                        <button class="filter-btn">
+                            优惠机型
+                        </button>
+                    </div>
+
+                    <div class="sort-container">
+                        <select class="sort-select">
+                            <option>价格: 从低到高</option>
+                            <option>价格: 从高到低</option>
+                            <option>最新发布</option>
+                            <option>最受欢迎</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 产品列表 -->
+        <section class="product-list">
+            <div class="container">
+                <div class="product-grid">
+                    <!-- iPhone 15 -->
+                    <a href="iphone15.html" class="product-link">
+                        <div class="product-card">
+                            <div class="product-img-container">
+                                <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-model-unselect-gallery-2-202309?wid=5120&hei=2880&fmt=webp&qlt=90&.v=aVFiZEF4WDEvUWJNSU5HRDg4cklnTGdzSmpObkZCM3MrNmJ5SkhESlNDaU00NGE1MW1TNWM0aU1qbjRuMkdmMUpFd0xhWDVibStLdGRYRmxkNGI4VTR2UjRaSC9URTlmd0FSb1ZTWjRnb3VvSENINmdsRnQ5dUdQR0RpRENOcVA&traceId=1"
+                                    alt="iPhone 15"
+                                    class="product-img">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-tag new">
+                                    最新款
+                                </div>
+                                <h3 class="product-title">iPhone 15</h3>
+                                <p class="product-desc">A16 芯片，Dynamic Island，4800万像素主摄</p>
+                                <div class="product-price-container">
+                                    <span class="product-price">¥5,999 起</span>
+                                    <span class="product-detail-link">
+                                        查看详情 <i class="fa fa-arrow-right ml-1"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- iPhone 15 Pro-->
+                    <a href="iphone15Pro.html" class="product-link">
+                        <div class="product-card">
+                            <div class="product-img-container">
+                                <img src="https://m.360buyimg.com/rank/jfs/t1/227194/34/403/457761/652f7f6dF7e2e9545/21fccf3fca45576e.png"
+                                    alt="iPhone 15 Pro"
+                                    class="product-img">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-tag new">
+                                    最新款
+                                </div>
+                                <h3 class="product-title">iPhone 15 Pro</h3>
+                                <p class="product-desc">钛金属设计，A17 Pro 芯片，创新摄像系统，8GB内存，新式设计操作式按钮，屏幕边框1.78mm</p>
+                                <div class="product-price-container">
+                                    <span class="product-price">¥9,999 起</span>
+                                    <span class="product-detail-link">
+                                        查看详情 <i class="fa fa-arrow-right ml-1"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- iPhone 14 Pro -->
+                    <a href="iphone14-pro.html" class="product-link">
+                        <div class="product-card">
+                            <div class="product-img-container">
+                                <img src="https://p5.ssl.qhimgs1.com/t0175add0b640ddc9b5.jpg" alt="iPhone 14 Pro"
+                                    class="product-img">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-tag discount">
+                                    优惠
+                                </div>
+                                <h3 class="product-title">iPhone 14 Pro</h3>
+                                <p class="product-desc">A16 芯片，Dynamic Island，ProMotion 显示屏</p>
+                                <div class="product-price-container">
+                                    <div class="price-group">
+                                        <span class="product-price">¥7,999 起</span>
+                                        <span class="original-price">¥8,999 起</span>
+                                    </div>
+                                    <span class="product-detail-link">
+                                        查看详情 <i class="fa fa-arrow-right ml-1"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- iPhone 14 -->
+                    <a href="iphone14.html" class="product-link">
+                        <div class="product-card">
+                            <div class="product-img-container">
+                                <img src="http://dingyue.ws.126.net/2022/1101/1f886585j00rkna5v00isc0010n00sem.jpg"
+                                    alt="iPhone 14"
+                                    class="product-img">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-tag discount">
+                                    优惠
+                                </div>
+                                <h3 class="product-title">iPhone 14</h3>
+                                <p class="product-desc">A15 芯片，6G运存，超视网膜 XDR 显示屏</p>
+                                <div class="product-price-container">
+                                    <div class="price-group">
+                                        <span class="product-price">¥4,599 起</span>
+                                        <span class="original-price">¥5,199 起</span>
+                                    </div>
+                                    <span class="product-detail-link">
+                                        查看详情 <i class="fa fa-arrow-right ml-1"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- iPhone SE -->
+                    <a href="iphone-se.html" class="product-link">
+                        <div class="product-card">
+                            <div class="product-img-container">
+                                <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16e-finish-unselect-gallery-1-202502?wid=5120&hei=2880&fmt=webp&qlt=90&.v=bGxrMXRYSllVRTZGbi82ZklwWis2MnJ2UHBBV3orM3VMYVQ4cFJXZmQxVy9IbW1seHEzWFVmQzNncWxCTDlmWXF2TWlpSzUzejRCZGt2SjJUNGl1VEE4bm1RcmlWRWp2eDN1WHNkSjNmUmFUckxxVUVhL2tKOUVJckdsem5seUU&traceId=1"
+                                    alt="iPhone 16e (SE4)"
+                                    class="product-img">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">iPhone 16e (SE4)</h3>
+                                <p class="product-desc">A18芯片，FaceID,6.1 英寸超视网膜 XDR 显示屏,二合一摄像头系统,
+                                    4800 万像素融合式摄像头，iPhone 16e 拥有与 iPhone 16
+                                </p>
+                                <div class="product-price-container">
+                                    <span class="product-price">¥3,499 起</span>
+                                    <span class="product-detail-link">
+                                        查看详情 <i class="fa fa-arrow-right ml-1"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- iPhone 13 -->
+                    <a href="iphone13.html" class="product-link">
+                        <div class="product-card">
+                            <div class="product-img-container">
+                                <img src="https://img13.360buyimg.com/n5/s702x702_jfs/t1/83850/1/19877/350379/62ba6856E8ecd17d7/13c6c8cd2a4e4e12.png"
+                                    alt="iPhone 13"
+                                    class="product-img">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-tag discount">
+                                    超值优惠
+                                </div>
+                                <h3 class="product-title">iPhone 13</h3>
+                                <p class="product-desc">A15 芯片，超视网膜 XDR 显示屏</p>
+                                <div class="product-price-container">
+                                    <div class="price-group">
+                                        <span class="product-price">¥3,999 起</span>
+                                        <span class="original-price">¥4,599 起</span>
+                                    </div>
+                                    <span class="product-detail-link">
+                                        查看详情 <i class="fa fa-arrow-right ml-1"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 加载更多按钮 -->
+                <div class="load-more-container">
+                    <button class="load-more-btn">
+                        加载更多 <i class="fa fa-chevron-down ml-1"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 购买指南 -->
+        <section class="guide-section">
+            <div class="container guide-container">
+                <h2 class="guide-title">iPhone 购买指南</h2>
+
+                <div class="guide-cards">
+                    <div class="guide-card">
+                        <h3 class="guide-card-title">
+                            <i class="fa fa-question-circle text-apple-blue mr-3 text-xl"></i>
+                            如何选择适合我的iPhone？
+                        </h3>
+                        <p class="guide-card-desc">选择iPhone时，可以考虑以下几个因素：</p>
+                        <ul class="guide-list">
+                            <li><span class="guide-list-bold">预算</span>：不同型号的iPhone价格差异较大，从3000元到13000元不等
+                            </li>
+                            <li><span class="guide-list-bold">屏幕尺寸</span>：从4.7英寸到6.7英寸，根据个人偏好选择</li>
+                            <li><span class="guide-list-bold">性能需求</span>：Pro系列搭载更强大的芯片，适合游戏和专业应用</li>
+                            <li><span class="guide-list-bold">摄影需求</span>：Pro系列拥有更先进的摄像系统，适合摄影爱好者</li>
+                            <li><span class="guide-list-bold">存储需求</span>：根据照片、视频和应用的存储需求选择合适容量</li>
+                        </ul>
+                    </div>
+
+                    <div class="guide-card">
+                        <h3 class="guide-card-title">
+                            <i class="fa fa-calendar-check-o text-apple-blue mr-3 text-xl"></i>
+                            如何获取最新的iPhone？
+                        </h3>
+                        <p class="guide-card-desc">你可以通过以下方式获取最新的iPhone：</p>
+                        <ul class="guide-list">
+                            <li>在Apple Store官方网站预订或购买</li>
+                            <li>前往Apple Store零售店体验并购买</li>
+                            <li>通过授权经销商购买</li>
+                            <li>参与运营商合约计划，享受分期付款优惠</li>
+                        </ul>
+                    </div>
+
+                    <div class="guide-card">
+                        <h3 class="guide-card-title">
+                            <i class="fa fa-refresh text-apple-blue mr-3 text-xl"></i>
+                            以旧换新计划
+                        </h3>
+                        <p class="guide-card-desc">通过我们的以旧换新计划，你可以用现有的智能手机换购新iPhone，享受额外优惠：</p>
+                        <ul class="guide-list">
+                            <li>支持iPhone、Android等主流智能手机以旧换新</li>
+                            <li>根据设备型号、成色和功能状态评估折价金额</li>
+                            <li>折抵金额可直接用于购买新iPhone，降低支出</li>
+                        </ul>
+                        <a href="#" class="guide-link">
+                            查看以旧换新估价 <i class="fa fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-column-title">商店</h3>
+                    <ul class="footer-links">
+                        <li><a href="iphone.html" class="footer-link active">iPhone</a>
+                        </li>
+                        <li><a href="ipad.html" class="footer-link">iPad</a></li>
+                        <li><a href="mac.html" class="footer-link">Mac</a></li>
+                        <li><a href="watch.html" class="footer-link">Apple Watch</a></li>
+                        <li><a href="airpods.html" class="footer-link">AirPods</a>
+                        </li>
+                        <li><a href="accessories.html" class="footer-link">配件</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-column-title">服务与支持</h3>
+                    <ul class="footer-links">
+                        <li><a href="support.html" class="footer-link">技术支持</a>
+                        </li>
+                        <li><a href="https://apple-style-digital-0y1k.bolt.host/support" class="footer-link">产品维修</a></li>
+                        <li><a href="buying-guide.html" class="footer-link">购买建议</a></li>
+                        <li><a href="apple-care.html" class="footer-link">Apple Care+</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-column-title">关于我们</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html" class="footer-link">公司简介</a></li>
+                        <li><a href="news.html" class="footer-link">新闻中心</a></li>
+                        <li><a href="careers.html" class="footer-link">招贤纳士</a>
+                        </li>
+                        <li><a href="contact.html" class="footer-link">联系我们</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-column-title">法律信息</h3>
+                    <ul class="footer-links">
+                        <!-- 此处省略部分法律信息链接 -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+
+        // 移动端菜单切换
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 颜色选择功能
+        document.querySelectorAll('.color-option').forEach(option => {
+            option.addEventListener('click', function () {
+                const siblings = this.parentElement.querySelectorAll('.color-option');
+                siblings.forEach(sib => sib.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

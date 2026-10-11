@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone 15 Pro - Apple 官方在线商店</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Css/iphone15Pro.css">
+</head>
+
+<body class="body">
+    <!-- 导航栏 -->
+    <header id="navbar" class="navbar">
+        <div class="container">
+            <nav class="nav-container">
+                <a href="index.html" class="logo">
+                    <i class="fa fa-apple mr-2"></i>Store
+                </a>
+
+                <div class="nav-links">
+                    <a href="iphone.html" class="nav-link">iPhone</a>
+                    <a href="ipad.html" class="nav-link">iPad</a>
+                    <a href="mac.html" class="nav-link">Mac</a>
+                    <a href="watch.html" class="nav-link">Watch</a>
+                    <a href="accessories.html" class="nav-link">配件</a>
+                </div>
+
+                <div class="nav-icons">
+                    <a href="#" class="icon-link">
+                        <i class="fa fa-search text-lg"></i>
+                    </a>
+                    <a href="cart.html" class="icon-link cart-icon">
+                        <i class="fa fa-shopping-bag text-lg"></i>
+                        <span id="cart-count" class="cart-count">0</span>
+                    </a>
+                    <button id="mobile-menu-btn" class="icon-link mobile-menu-btn">
+                        <i class="fa fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- 移动端菜单 -->
+            <div id="mobile-menu" class="mobile-menu">
+                <div class="mobile-menu-links">
+                    <a href="#" class="mobile-link">iPhone</a>
+                    <a href="#" class="mobile-link">iPad</a>
+                    <a href="#" class="mobile-link">Mac</a>
+                    <a href="#" class="mobile-link">Watch</a>
+                    <a href="#" class="mobile-link">配件</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- 产品标题区域 -->
+        <section class="product-header">
+            <div class="container">
+                <h1 class="product-title">iPhone 15 Pro</h1>
+                <p class="product-subtitle">钛金属设计，A17 Pro 芯片，创新体验，尽显专业。</p>
+                <div class="product-nav">
+                    <a href="#specs" class="product-nav-link">技术规格</a>
+                    <a href="#features" class="product-nav-link">主要特性</a>
+                    <a href="#buy" class="product-nav-link">购买方式</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 产品展示与配置选择区域 -->
+        <section id="buy" class="product-section">
+            <div class="container">
+                <div class="product-grid">
+                    <!-- 产品图片区域 -->
+                    <div class="product-images">
+                        <img src="https://img14.360buyimg.com/pop/jfs/t1/223204/37/36323/69740/6572c956F14111b09/c563f223c6658056.png"
+                            alt="iPhone 15 Pro 原色钛金属" class="main-image">
+
+                        <!-- 缩略图 -->
+                        <div class="thumbnails">
+                            <img src="https://img14.360buyimg.com/pop/jfs/t1/223204/37/36323/69740/6572c956F14111b09/c563f223c6658056.png"
+                                alt="iPhone 15 Pro 正面" class="thumbnail">
+                            <img src="https://imgservice.suning.cn/uimg1/b2c/image/abynviQT3VPiLCt9uhOoOA.jpg_800w_800h_4e_80Q_is"
+                                alt="iPhone 15 Pro 侧面" class="thumbnail">
+                            <img src="https://p2.ssl.qhimgs1.com/t04f03472abdf9993c8.jpg" alt="iPhone 15 Pro 背面"
+                                class="thumbnail">
+                            <!-- <img src="https://qna.smzdm.com/202309/26/6511b2140d5ab1864.jpg_d320.jpg"
+                                alt="iPhone 15 Pro 摄像头" class="thumbnail"> -->
+                        </div>
+                    </div>
+
+                    <!-- 配置选择区域 -->
+                    <div class="product-config">
+                        <h2 class="section-title">选择您的 iPhone 15 Pro</h2>
+
+                        <!-- 颜色选择区域 -->
+                        <div class="color-selector">
+                            <h3 class="selector-title">选择颜色</h3>
+                            <div class="color-options">
+                                <div class="color-option" data-color="白色钛金属">
+                                    <div class="color-swatch white-titanium"></div>
+                                    <span class="color-name">白色钛金属</span>
+                                </div>
+                                <div class="color-option color-option-selected" data-color="原色钛金属">
+                                    <div class="color-swatch natural-titanium"></div>
+                                    <span class="color-name">原色钛金属</span>
+                                </div>
+                                <div class="color-option" data-color="黑色钛金属">
+                                    <div class="color-swatch black-titanium"></div>
+                                    <span class="color-name">黑色钛金属</span>
+                                </div>
+                                <div class="color-option" data-color="蓝色钛金属">
+                                    <div class="color-swatch blue-titanium"></div>
+                                    <span class="color-name">蓝色钛金属</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 存储选择区域 -->
+                        <div class="storage-selector">
+                            <h3 class="selector-title">选择存储容量</h3>
+                            <div class="storage-options">
+                                <div class="storage-option" data-storage="128GB">128GB</div>
+                                <div class="storage-option selected" data-storage="256GB">256GB</div>
+                                <div class="storage-option" data-storage="512GB">512GB</div>
+                                <div class="storage-option" data-storage="1TB">1TB</div>
+                            </div>
+                        </div>
+
+                        <!-- 价格和购买按钮 -->
+                        <div class="price-section">
+                            <p class="current-price" id="current-price">¥8799 起</p>
+                            <button class="add-to-cart-btn">加入购物车</button>
+                        </div>
+
+                        <!-- 配置摘要 -->
+                        <div class="config-summary">
+                            <h3 class="summary-title">配置摘要</h3>
+                            <ul class="summary-details">
+                                <li><span class="summary-label">颜色:</span> <span id="summary-color"
+                                        class="summary-value">原色钛金属</span></li>
+                                <li><span class="summary-label">存储容量:</span> <span id="summary-storage"
+                                        class="summary-value">256GB</span></li>
+                                <li><span class="summary-label">价格:</span> <span id="summary-price"
+                                        class="summary-value">¥8799</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 产品特性区域 -->
+        <section id="features" class="features-section">
+            <div class="container">
+                <h2 class="section-title">iPhone 15 Pro 特性</h2>
+
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fa fa-microchip"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">A17 Pro 芯片</h3>
+                            <p class="feature-desc">首款采用 3 纳米工艺的芯片，性能更强劲，能效更出色，支持硬件光线追踪。</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fa fa-camera"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">专业级摄像头系统</h3>
+                            <p class="feature-desc">4800 万像素主摄，支持 2 倍光学变焦，低光拍摄能力提升，让每一张照片都精彩。</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fa fa-mobile"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">钛金属设计</h3>
+                            <p class="feature-desc">采用航空级钛金属边框，更轻更坚固，搭配纹理磨砂背板，手感出众。</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fa fa-battery-full"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">全天续航</h3>
+                            <p class="feature-desc">长达 20 小时视频播放，配备更高效的充电系统，支持 20W 有线快充和 15W MagSafe 无线充电。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 技术规格区域 -->
+        <section id="specs" class="specs-section">
+            <div class="specs-container">
+                <h2 class="specs-title">技术规格</h2>
+
+                <div class="specs-table-wrapper">
+                    <table class="specs-table">
+                        <thead>
+                            <tr class="specs-table-header">
+                                <th class="specs-table-header-cell">项目</th>
+                                <th class="specs-table-header-cell">详细信息</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="specs-table-row">
+                                <td class="specs-table-cell">尺寸与重量</td>
+                                <td class="specs-table-cell">146.6 x 70.6 x 8.25 毫米，约 187 克</td>
+                            </tr>
+                            <tr class="specs-table-row">
+                                <td class="specs-table-cell">显示屏</td>
+                                <td class="specs-table-cell">6.1 英寸 Super Retina XDR OLED，2532 x 1170 分辨率，460 ppi</td>
+                            </tr>
+                            <tr class="specs-table-row">
+                                <td class="specs-table-cell">芯片</td>
+                                <td class="specs-table-cell">A17 Pro 芯片，8 核 CPU，8 核 GPU，16 核神经网络引擎</td>
+                            </tr>
+                            <tr class="specs-table-row">
+                                <td class="specs-table-cell">摄像头</td>
+                                <td class="specs-table-cell">4800 万像素主摄，1200 万像素超广角，1200 万像素 2 倍长焦</td>
+                            </tr>
+                            <tr class="specs-table-row">
+                                <td class="specs-table-cell">电池续航</td>
+                                <td class="specs-table-cell">最长可达 20 小时视频播放</td>
+                            </tr>
+                            <tr class="specs-table-row">
+                                <td class="specs-table-cell">充电</td>
+                                <td class="specs-table-cell">支持 20W 有线快充，15W MagSafe 无线充电，7.5W Qi 无线充电</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-title">商店</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">iPhone</a></li>
+                        <li><a href="#" class="footer-link">iPad</a></li>
+                        <li><a href="#" class="footer-link">Mac</a></li>
+                        <li><a href="#" class="footer-link">Watch</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">支持</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">联系我们</a></li>
+                        <li><a href="#" class="footer-link">维修服务</a></li>
+                        <li><a href="#" class="footer-link">技术支持</a></li>
+                        <li><a href="#" class="footer-link">常见问题</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">关于 Apple</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">公司简介</a></li>
+                        <li><a href="#" class="footer-link">新闻中心</a></li>
+                        <li><a href="#" class="footer-link">工作机会</a></li>
+                        <li><a href="#" class="footer-link">可持续发展</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">联系我们</h3>
+                    <ul class="footer-contact">
+                        <li class="contact-item">
+                            <i class="fa fa-phone text-apple-blue mr-3"></i>
+                            <span class="contact-text">400-666-8800</span>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fa fa-map-marker text-apple-blue mr-3"></i>
+                            <span class="contact-text">在线客服</span>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fa fa-clock-o text-apple-blue mr-3"></i>
+                            <span class="contact-text">周一至周日 9:00-21:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2023 Apple Inc. 保留所有权利。</p>
+                <div class="footer-bottom-links">
+                    <a href="#" class="bottom-link">隐私政策</a>
+                    <a href="#" class="bottom-link">使用条款</a>
+                    <a href="#" class="bottom-link">网站地图</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 购物车提示 -->
+    <div id="cart-toast" class="toast">
+        <p>商品已添加到购物车 <i class="fa fa-check ml-2"></i></p>
+    </div>
+
+    <script>
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // 移动端菜单切换
+        document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+            const icon = this.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+
+        // 选项选择功能
+        const productData = {
+            basePrices: {
+                '128GB': 7999,
+                '256GB': 8799,
+                '512GB': 10399,
+                '1TB': 11999
+            },
+            colorImages: {
+                '白色钛金属': '8db2b2b0c950bfec.png',
+                '原色钛金属': 'https://img14.360buyimg.com/pop/jfs/t1/223204/37/36323/69740/6572c956F14111b09/c563f223c6658056.png',
+                '黑色钛金属': 'c70fd7722dc95f52.png',
+                '蓝色钛金属': 'https://m.360buyimg.com/rank/jfs/t1/236930/22/75/444165/652f80a1F0c84aa90/959f6f11fbad07bc.png'
+            }
+        };
+
+        // 获取DOM元素
+        const colorOptions = document.querySelectorAll('.color-option');
+        const storageOptions = document.querySelectorAll('.storage-option');
+        const currentPriceEl = document.getElementById('current-price');
+        const summaryColorEl = document.getElementById('summary-color');
+        const summaryStorageEl = document.getElementById('summary-storage');
+        const summaryPriceEl = document.getElementById('summary-price');
+        const mainImageEl = document.querySelector('.main-image');
+        const thumbnailImages = document.querySelectorAll('.thumbnail');
+        const addToCartBtn = document.querySelector('.add-to-cart-btn');
+
+        // 初始值
+        let selectedColor = '原色钛金属';
+        let selectedStorage = '256GB';
+
+        // 更新图片函数
+        function updateImage(color) {
+            // 降低透明度
+            mainImageEl.style.opacity = '0';
+
+            // 延迟加载新图片
+            setTimeout(() => {
+                mainImageEl.src = productData.colorImages[color];
+                mainImageEl.alt = `iPhone 15 Pro ${color}`;
+
+                // 恢复透明度
+                mainImageEl.style.opacity = '1';
+
+                // 更新第一个缩略图为当前颜色图片
+                if (thumbnailImages.length > 0) {
+                    thumbnailImages[0].src = productData.colorImages[color];
+                    thumbnailImages[0].alt = `iPhone 15 Pro ${color}`;
+                }
+            }, 300);
+        }
+
+        // 更新价格函数
+        function updatePrice() {
+            const price = productData.basePrices[selectedStorage];
+            currentPriceEl.textContent = `¥${price} 起`;
+            summaryPriceEl.textContent = `¥${price}`;
+        }
+
+        // 颜色选择事件监听
+        colorOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                // 移除其他选项的选中状态
+                colorOptions.forEach(opt => opt.classList.remove('color-option-selected'));
+
+                // 添加当前选项的选中状态
+                option.classList.add('color-option-selected');
+
+                // 更新选中的颜色
+                selectedColor = option.getAttribute('data-color');
+
+                // 更新颜色摘要
+                summaryColorEl.textContent = selectedColor;
+
+                // 更新图片和价格
+                updateImage(selectedColor);
+                updatePrice();
+            });
+        });
+
+        // 存储选择事件监听
+        storageOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                // 移除其他选项的选中状态
+                storageOptions.forEach(opt => opt.classList.remove('selected'));
+
+                // 添加当前选项的选中状态
+                option.classList.add('selected');
+
+                // 更新选中的存储
+                selectedStorage = option.getAttribute('data-storage');
+
+                // 更新存储摘要
+                summaryStorageEl.textContent = selectedStorage;
+
+                // 更新价格
+                updatePrice();
+            });
+        });
+
+        // 缩略图点击事件
+        thumbnailImages.forEach(thumb => {
+            thumb.addEventListener('click', function () {
+                // 移除所有缩略图的选中状态
+                thumbnailImages.forEach(t => t.classList.remove('border-blue'));
+                thumbnailImages.forEach(t => t.classList.add('border-transparent'));
+
+                // 添加当前缩略图的选中状态
+                this.classList.remove('border-transparent');
+                this.classList.add('border-blue');
+
+                // 更新主图
+                mainImageEl.style.opacity = '0';
+                setTimeout(() => {
+                    mainImageEl.src = this.src;
+                    mainImageEl.alt = this.alt;
+                    mainImageEl.style.opacity = '1';
+                }, 300);
+            });
+        });
+
+        // 加入购物车按钮事件
+        addToCartBtn.addEventListener('click', function () {
+            // 显示提示框
+            const toast = document.getElementById('cart-toast');
+            toast.classList.add('show');
+
+            // 更新购物车数量
+            const cartCount = document.getElementById('cart-count');
+            cartCount.textContent = parseInt(cartCount.textContent) + 1;
+
+            // 3秒后隐藏提示框
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        });
+    </script>
+</body>
+
+</html>
